@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+html, body {
+  width: 100%;
+}
+
+body {
+  background: #EC6F66;
+  background: -webkit-gradient(linear, left top, right top, from(#F3A183), to(#EC6F66));
+  background: linear-gradient(to right, #F3A183, #EC6F66);
+}
+
+.taskCard {
+  background: white;
+  font-family: "Montserrat";
+  font-weight: 100;
+}
+
+.taskCard:hover {
+  -webkit-filter: drop-shadow(5px 2px 0px #a73737);
+          filter: drop-shadow(5px 2px 0px #a73737);
+}
+
+#task-card--Header {
+  padding: 0 0 10px 10px;
+  font-size: 2em;
+  font-weight: 100;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.task-card--separator {
+  position: relative;
+  bottom: 20px;
+  height: 5px;
+  widows: 100;
+  background-color: rgba(121, 203, 202, 0.3);
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  background: #EC6F66;
+  background: -webkit-gradient(linear, left top, right top, from(#F3A183), to(#EC6F66));
+  background: linear-gradient(to right, #F3A183, #EC6F66);
+}
+
+.taskCard {
+  background: white;
+  font-family: "Montserrat";
+  font-weight: 100;
+}
+
+.taskCard:hover {
+  -webkit-filter: drop-shadow(5px 2px 0px #a73737);
+          filter: drop-shadow(5px 2px 0px #a73737);
+}
+
+#task-card--Header {
+  padding: 0 0 10px 10px;
+  font-size: 2em;
+  font-weight: 100;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.task-card--separator {
+  position: relative;
+  bottom: 20px;
+  height: 5px;
+  widows: 100;
+  background-color: rgba(121, 203, 202, 0.3);
+}
+
+.taskCard {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  left: 25%;
+  top: 10%;
+}
+
+.task-sort, select {
+  position: absolute;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  -webkit-transform: translate(295px, -68px);
+          transform: translate(295px, -68px);
+  font-family: "Montserrat";
+  border-radius: 0px;
+  height: 25px;
+  width: 200px;
+  background-color: #ffdde1;
+}
+
+.task-box {
+  position: relative;
+  top: 0.5%;
+  left: 25px;
+  width: 450px;
+  height: 150px;
+  background-color: #ECE9E6;
+  border-radius: 10px;
+}
+
+.task-box .task-box__tag {
+  position: relative;
+  top: 4px;
+  left: 0.2px;
+  height: 140px;
+  width: 5px;
+  background-color: #FFC837;
+  border-radius: 2px;
+}
+
+#priori-off, #priori-on, #archive-off, #completed-off {
+  height: 15px;
+  width: 15px;
+  -webkit-transform: translate(380px, -133px);
+          transform: translate(380px, -133px);
+  margin: 2px;
+}
+
+#float-add {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  -webkit-transform: translate(1150px, 600px);
+          transform: translate(1150px, 600px);
+}
+/*# sourceMappingURL=main.css.map */

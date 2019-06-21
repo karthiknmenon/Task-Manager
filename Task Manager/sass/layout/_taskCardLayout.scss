@@ -1,0 +1,11 @@
+@import "../abstracts/variables";
+@import "../components/taskCard";
+@import "../abstracts/mixins";
+.taskCard{
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $taskBgColor;
+    left: 25%;
+    top: 10%;
+}

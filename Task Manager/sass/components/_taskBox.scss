@@ -1,0 +1,39 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+.task-box{
+    position: relative;
+    top: $tboxTop;
+    left: $tboxLeft;
+    width: $tboxWidth;
+    height: $tboxHeight;
+    background-color: $taskBoxColor;
+    border-radius: $tboxBorderRadius;
+    .task-box__tag{
+        position: relative;
+        top:$tboxTagTop;
+        left:$tboxTagLeft; 
+        height: $tboxTagHeight; 
+        width: $tboxTagWidth;
+        background-color: $tboxTagBgColor;
+        border-radius: $tboxTagBorRadius;
+    }
+   
+}
+%star{ 
+    height:15px;
+    width:15px;
+    transform: translate(380px, -133px);
+    margin:2px;
+}
+#priori-off{
+   @extend %star;
+}
+#priori-on{
+    @extend %star;
+}
+#archive-off{
+    @extend %star;
+}
+#completed-off{
+    @extend %star;
+}

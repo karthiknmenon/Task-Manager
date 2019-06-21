@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap');
+//colors
+$taskBgColor: white;
+$taskCardShadow:#a73737;
+$sepColor: rgba(121, 203, 202, 0.3);
+$taskBoxColor: #ECE9E6;
+$font:'Montserrat';
+// $cardHeaderColor: 
+//task-card-dimensions
+$width:500px;
+$height:500px;
+$sepHeight:5px;
+$sepWidth:100;
+$cardHeaderFontSize: 2em !default;
+//task-box-dimensions
+$tboxTop: 0.5%;
+$tboxLeft:25px;
+$tboxWidth:450px;
+$tboxHeight:150px;
+$tboxBorderRadius: 10px;
+//task-box-tag
+$tboxTagTop:4px;
+$tboxTagLeft:0.2px;
+$tboxTagHeight: 140px;
+$tboxTagWidth:5px;
+$tboxTagBgColor:#FFC837;
+$tboxTagBorRadius: 2px;
+//drop-down
+$dDownBorderRadius: 0px;
+$dDownHeight:25px;
+$dDownWidth:200px;
+$dDownX: 295px;
+$dDownY: -68px;
+$dDownBgColor: #ffdde1;
+//layout
