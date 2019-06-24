@@ -168,6 +168,10 @@ input {
   padding: 5px;
 }
 
+input:focus {
+  border: 1px solid #03A9F4;
+}
+
 input[type=date] {
   width: 150px;
 }
