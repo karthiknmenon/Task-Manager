@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+html, body {
+  width: 100%;
+}
+
+body {
+  background: #E91E63;
+}
+
+.taskCard {
+  position: relative;
+  background: white;
+  font-family: "Montserrat";
+  font-weight: 100;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  background: #E91E63;
+}
+
+.taskCard {
+  position: relative;
+  background: white;
+  font-family: "Montserrat";
+  font-weight: 100;
+}
+
+.taskCard {
+  position: absolute;
+  width: 1041px;
+  height: 600px;
+  background-color: white;
+  right: 7%;
+  top: 7%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.task-sort, select {
+  position: absolute;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  -webkit-transform: translate(295px, -68px);
+          transform: translate(295px, -68px);
+  font-family: "Montserrat";
+  border-radius: 0px;
+  height: 25px;
+  width: 200px;
+  background-color: #ffdde1;
+}
+
+.task-box {
+  position: relative;
+  top: 0.5%;
+  left: 25px;
+  width: 450px;
+  height: 150px;
+  background-color: #ECE9E6;
+  border-radius: 10px;
+}
+
+.task-box .task-box__tag {
+  position: relative;
+  top: 4px;
+  left: 0.2px;
+  height: 140px;
+  width: 5px;
+  background-color: #FFC837;
+  border-radius: 2px;
+}
+
+#priori-off, #priori-on, #archive-off, #completed-off {
+  height: 15px;
+  width: 15px;
+  -webkit-transform: translate(380px, -133px);
+          transform: translate(380px, -133px);
+  margin: 2px;
+}
+
+#float-add {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  -webkit-transform: translate(1150px, 600px);
+          transform: translate(1150px, 600px);
+}
+
+.task-body__card {
+  top: 20px;
+  left: 20px;
+  position: relative;
+  height: 200px;
+  width: 150px;
+  background: #FFFFFF;
+  border: 1px solid rgba(236, 236, 236, 0.5);
+  -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+          box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+}
+
+.task-body__card #add-task {
+  position: relative;
+  height: 70px;
+  top: 50px;
+  left: 40px;
+}
+
+.task-body__card h2 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-weight: 200;
+}
+
+.task-body__card:hover {
+  -webkit-box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+          box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+}
+
+.task-body--add {
+  display: none;
+}
+
+#task-illustration {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  top: 5%;
+  left: 47%;
+}
+
+form {
+  margin: 50px 50px 50px 42px;
+}
+
+input, input[type=color], button {
+  border: none;
+  outline: none;
+  display: block;
+}
+
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 8px;
+  width: 337px;
+  height: 43px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+input[type=date] {
+  width: 150px;
+}
+
+input[type=color] {
+  display: inline;
+  width: 40px;
+  height: 30px;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+:-ms-input-placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+::-ms-input-placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+::placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  width: 337px;
+  height: 50px;
+  border: 1px solid #03A9F4;
+  border-radius: 3px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #03A9F4;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=main.css.map */

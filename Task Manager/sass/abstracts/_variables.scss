@@ -4,11 +4,13 @@ $taskBgColor: white;
 $taskCardShadow:#a73737;
 $sepColor: rgba(121, 203, 202, 0.3);
 $taskBoxColor: #ECE9E6;
+$whiteColor: #FFFFFF;
+$bodyBgColor: #E91E63; 
 $font:'Montserrat';
 // $cardHeaderColor: 
 //task-card-dimensions
-$width:500px;
-$height:500px;
+$width:1041px;
+$height:600px;
 $sepHeight:5px;
 $sepWidth:100;
 $cardHeaderFontSize: 2em !default;
@@ -33,3 +35,23 @@ $dDownX: 295px;
 $dDownY: -68px;
 $dDownBgColor: #ffdde1;
 //layout
+//form-variables
+$formWidth: 337px;
+$formHeight:43px;
+$formBorder: 1px solid rgba(0, 0, 0, 0.2);
+$formRadius: 3px;
+$formPadding: 5px;
+$formMargin: 8px;
+//form-input-color
+$formColorWidth:40px;
+$formColorHeight:30px;
+//form-placeholers
+$placeholderWeight:100;
+//form-add-task-button
+$addButtonWidth: 337px;
+$addButtonHeight: 50px;
+$addButtonBorder: 1px solid #03A9F4;
+$addButtonRadius: 3px;
+$addButtonFontWeight:400;
+$addButtonFontSize:15px;
+$addButtonHoverColor:#03A9F4;

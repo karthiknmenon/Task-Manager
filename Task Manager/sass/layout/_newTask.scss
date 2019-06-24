@@ -1,0 +1,13 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+.task-body--add{
+    display: none;
+}
+#task-illustration{
+    // display: inline;
+    position: absolute;
+    width: 550px;
+    height: 500px;
+    top:5%;
+    left:47%;
+}

@@ -1,0 +1,51 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+form{
+    @include margin(50px,50px,50px,42px);
+}
+%default{
+    border: none;
+    outline: none;
+    display: block;
+}
+input{
+    @extend %default;
+    box-sizing: border-box;
+    margin: $formMargin;
+    width: $formWidth;
+    height: $formHeight;
+    border: $formBorder;
+    border-radius: $formRadius;
+    padding: $formPadding;
+}
+input[type=date]
+{
+    width:150px;
+}
+input[type=color]{
+    @extend %default;
+    display:inline;
+    width: $formColorWidth;
+    height: $formColorHeight; 
+}
+::placeholder{
+    font-family: 'Montserrat';
+    font-weight: $placeholderWeight;
+}
+
+button{
+    @extend %default;
+    box-sizing: border-box;
+    background:transparent;
+    width: $addButtonWidth;
+    height: $addButtonHeight;
+    border: $addButtonBorder;
+    border-radius: $addButtonRadius;
+    font-family: 'Montserrat';
+    font-weight: $addButtonFontWeight;
+    font-size:$addButtonFontSize;
+    &:hover{
+        background-color: $addButtonHoverColor;
+        color: $whiteColor;
+    }
+}

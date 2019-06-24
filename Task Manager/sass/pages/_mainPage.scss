@@ -3,7 +3,5 @@ html,body{
     width: 100%;
 }
 body{
-    background: #EC6F66;  
-    background: -webkit-linear-gradient(to right, #F3A183, #EC6F66);  
-    background: linear-gradient(to right, #F3A183, #EC6F66); 
+    background: $bodyBgColor;
 }

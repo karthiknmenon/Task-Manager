@@ -1,24 +1,8 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 .taskCard{
+    position: relative;
     background: $taskBgColor;
     font-family: $font;
     font-weight: 100;
-    &:hover{
-        @include dropShadow(5px,2px,0px,$taskCardShadow);
-    }
-}
-#task-card--Header{
-    @include padding(0,0,10px,10px);
-    font-size: $cardHeaderFontSize;
-    font-weight: 100;
-    text-align: left;
-    text-transform: uppercase;
-}
-.task-card--separator{
-    position: relative;
-    bottom: 20px;
-    height: $sepHeight;
-    widows: $sepWidth;
-    background-color: $sepColor;
 }

@@ -4,30 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <title>Task Manager</title>
 </head>
 <body>
+    <!-- <div class="taskCard" onClick="addTasks">
+        <div class="task-body__card">
+            <img src="/Task Manager/images/outline-add-24px.svg" id="add-task">
+            <h2>New Task</h2>
+        </div>
+    </div> -->
     <div class="taskCard">
-        <h1 id="task-card--Header">Task Manager</h1>
-        <div class="task-card--separator"></div>
-        <select name="sort" class="task-sort">
-            <option value="#" default class="task-sort">Filter</option>
-            <option value="due-date" class="task-sort-on">Due Date</option>
-            <option value="start-date" class="task-sort-on">Start Date</option>
-            <option value="completed" class="task-sort-on">Completed</option>
-            <option value="archived" class="task-sort-on">Archived</option>
-            <option value="priority" class="task-sort-on">Priority</option>
-        </select>
-        <div class="task-box">
-            <div class="task-box__tag"></div>
-            <!-- id="component-on" to switch-on -->
-            <img src="/images/check-solid.svg" id="completed-off">
-            <img src="/images/star-regular.svg" id="priori-off">
-            <img src="/images/archive-solid.svg" id="archive-off">
+        <img src="../Task Manager/images/task illustration.png" id="task-illustration">
+        <div class="task-body--new">
+            <form>
+                <label for="taskName">Add Task Name
+                    <input type="text" name="taskName" placeholder="Enter Task Name">
+                </label>
+                <label for="taskDescription">Add Description
+                    <input type="text" name="taskDescription" placeholder="Enter Task Description">
+                </label>
+                <label for="taskTags">Add Tags
+                    <input type="text" name="taskTags" placeholder="Enter Task Tags">
+                </label>
+                <label for="taskDate">Assigned Date
+                    <input type="date" name="taskDate" placeholder="Enter Task Tags">
+                </label>
+                <label for="taskDate">Due Date
+                        <input type="date" name="taskDate" placeholder="Enter Task Tags">
+                </label>
+                <label for="taskDate">Tag Color
+                        <input type="color" name="taskDate" placeholder="Enter Task Tags">
+                </label>
+                <button class="submit">Add Task</button>
+            </form>
         </div>
     </div>
-    <img src="/images/plus-circle-solid.svg" id="float-add">
+    <script type="text/javascript">
+        function addTasks(){
+            document.getElementsByClassName('task-body__card').t
+    }
+</script>
 </body>
 </html>
