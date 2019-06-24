@@ -147,14 +147,14 @@ body {
   left: 95%;
 }
 
-form {
-  margin: 50px 50px 50px 42px;
-}
-
 input, input[type=color], button {
   border: none;
   outline: none;
   display: block;
+}
+
+form {
+  margin: 50px 50px 50px 42px;
 }
 
 input {
@@ -170,6 +170,11 @@ input {
 
 input:focus {
   border: 1px solid #03A9F4;
+}
+
+label {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 input[type=date] {

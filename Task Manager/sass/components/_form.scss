@@ -1,12 +1,12 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-form{
-    @include margin(50px,50px,50px,42px);
-}
 %default{
     border: none;
     outline: none;
     display: block;
+}
+form{
+    @include margin(50px,50px,50px,42px);
 }
 input{
     @extend %default;
@@ -20,6 +20,10 @@ input{
     &:focus{
         border: 1px solid #03A9F4;
     }
+}
+label{
+    display: inline-block;
+    margin-top:10px;
 }
 input[type=date]
 {
