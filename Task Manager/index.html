@@ -33,7 +33,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="task-body__card--preview">
+            <!-- <div class="task-body__card--preview">
                 <span id="tag-color"></span>
                 <h5>Project Proposal</h5>
                 <span id="sep"></span>
@@ -62,7 +62,7 @@
                         <img id="archive" src="/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
                     </div>
                 </div>  
-            </div>
+            </div> -->
             <!-- search-form -->
             <form id="search-form"> 
                 <label for="search-task">
@@ -86,7 +86,7 @@
             <img src="/images/outline-close-24px.svg" id="close" style='cursor: pointer' onclick='goback()'>
             <img src="/images/task-illustration.png"  type="image/png" id="task-illustration">
             <div class="task-body--new">
-                <form class="new-form">
+                <form class="new-form" name="newTaskForm">
                     <label for="taskName">Add Task Name
                         <input type="text" name="taskName" placeholder="Enter Task Name">
                     </label><br>
@@ -97,15 +97,15 @@
                         <input type="text" name="taskTags" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Assigned Date
-                        <input type="date" name="taskDate" placeholder="Enter Task Tags">
+                        <input type="date" name="taskADate" placeholder="Enter Task Tags">
                     </label>
                     <label for="taskDate">Due Date
-                            <input type="date" name="taskDate" placeholder="Enter Task Tags">
+                            <input type="date" name="taskDDate" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Tag Color
-                            <input type="color" name="taskDate" placeholder="Enter Task Tags">
+                            <input type="color" name="taskColor" placeholder="Enter Task Tags">
                     </label><br>
-                    <button class="submit">Add Task</button>
+                    <button class="submit" onclick="validate()">Add Task</button>
                 </form>
             </div>
         </div>
@@ -156,6 +156,20 @@
         function black()
         {
             obj.style.filter="grayscale(1)";
+        }
+        // form
+        function validate(){
+            var tName= document.forms.newTaskForm.taskName.value;
+            var descrip = document.forms.newTaskForm.taskDescription.value;
+            var tags = document.forms.newTaskForm.taskTags.value;
+            var due = document.forms.newTaskForm.taskDDate.value;
+            var col = document.forms.newTaskForm.taskColor.value;
+            create(tName, descrip, tags, due, col);
+        }
+        function create(tn,ds,tg,dd,cl){
+            var div = document.createElement('div');
+            div.setAttribute('class', 'task-body__card--preview');
+            document.body.appendChild(div);
         }
     </script> 
 </body>
