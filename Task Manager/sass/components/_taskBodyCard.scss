@@ -42,7 +42,7 @@
     }
     #card-calendar{
         display: inline;
-        padding: 0px, 3px, 0px, 5px;
+        padding: 0px, 3px, 0px, 6px;
         margin-left:10px;
         height:12px;
         width:12px;
@@ -120,6 +120,7 @@
             opacity: 0.2;
         }
         p{
+            display:none;
             font-weight: 100;
             font-size: 13px;
             padding: 5px;
@@ -138,7 +139,7 @@
         #card-calendar{
             display: inline;
             padding: 0px, 3px, 0px, 5px;
-            margin-left:5px;
+            // margin-left:5px;
             height:12px;
             width:12px;
             opacity: 0.2;
@@ -147,13 +148,13 @@
             font-size: 12px;
             position: absolute;
             display:inline;
-            bottom:50px;
+            bottom:10px;
             color: #BDBDBD;
         }
         .icons{
             display:none;
             position: absolute;
-            top:85%;
+            top:75%;
             left:65%;
         }
         #completed{

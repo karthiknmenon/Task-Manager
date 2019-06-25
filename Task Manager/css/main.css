@@ -131,7 +131,6 @@ body {
 }
 
 .task-body__card h2, .task-body__card--preview h2 {
-  margin: 7px auto;
   font-weight: 200;
 }
 
@@ -183,7 +182,7 @@ body {
 
 .task-body__card--preview #card-calendar {
   display: inline;
-  padding: 0px, 3px, 0px, 5px;
+  padding: 0px, 3px, 0px, 6px;
   margin-left: 10px;
   height: 12px;
   width: 12px;
@@ -257,7 +256,7 @@ body {
     margin: 0px 10px 30px 10px;
     top: 20px;
     position: relative;
-    height: 200px;
+    height: 100px;
     width: 250px;
     background: #FFFFFF;
     border: 1px solid rgba(236, 236, 236, 0.5);
@@ -265,14 +264,13 @@ body {
             box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
   }
   .task-body__card #add-task {
-    position: relative;
+    position: absolute;
     height: 70px;
-    top: 50px;
+    top: 10px;
     left: 80px;
   }
   .task-body__card h2 {
     position: relative;
-    top: 20px;
     left: 80px;
     font-weight: 200;
     margin: 20px auto;
@@ -286,7 +284,7 @@ body {
     margin: 0px 10px 30px 10px;
     top: 20px;
     position: relative;
-    height: 200px;
+    height: 100px;
     width: 250px;
     background: #FFFFFF;
     border: 1px solid rgba(236, 236, 236, 0.5);
@@ -294,14 +292,13 @@ body {
             box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
   }
   .task-body__card--preview #add-task {
-    position: relative;
+    position: absolute;
     height: 70px;
-    top: 50px;
+    top: 10px;
     left: 80px;
   }
   .task-body__card--preview h2 {
     position: relative;
-    top: 20px;
     left: 80px;
     font-weight: 200;
     margin: 20px auto;
@@ -326,6 +323,7 @@ body {
     opacity: 0.2;
   }
   .task-body__card--preview p {
+    display: none;
     font-weight: 100;
     font-size: 13px;
     padding: 5px;
@@ -342,7 +340,6 @@ body {
   .task-body__card--preview #card-calendar {
     display: inline;
     padding: 0px, 3px, 0px, 5px;
-    margin-left: 5px;
     height: 12px;
     width: 12px;
     opacity: 0.2;
@@ -351,13 +348,13 @@ body {
     font-size: 12px;
     position: absolute;
     display: inline;
-    bottom: 50px;
+    bottom: 10px;
     color: #BDBDBD;
   }
   .task-body__card--preview .icons {
     display: none;
     position: absolute;
-    top: 85%;
+    top: 75%;
     left: 65%;
   }
   .task-body__card--preview #completed {
@@ -656,8 +653,8 @@ button:hover {
 @media only screen and (max-width: 767px) {
   #tSearch {
     position: relative;
-    bottom: 1003px;
-    right: 82px;
+    bottom: 600px;
+    right: 80px;
     border: none;
     border-bottom: 2px solid #BDBDBD;
     width: 298px;
@@ -680,6 +677,120 @@ button:hover {
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;
     z-index: 5;
+  }
+}
+
+.search-result {
+  position: relative;
+}
+
+.search-result h3 {
+  margin-left: 70px;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.search-result #disc {
+  float: left;
+  margin-left: 70px;
+  margin-right: 100px;
+  width: 300px;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.search-result #date {
+  margin: 0px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.search-result .res-icons {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.5;
+  position: absolute;
+  bottom: 1px;
+  left: 800px;
+  top: 35px;
+}
+
+.search-result .res-icons #completed {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+.search-result .res-icons #priority {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+.search-result .res-icons #archive {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+@media only screen and (max-width: 767px) {
+  .search-result {
+    display: none;
+    position: relative;
+    right: 43px;
+    bottom: 620px;
+    height: 50px;
+    /* width: 6700px; */
+    background-color: #bdbdbd6b;
+  }
+  .search-result h3 {
+    margin-left: 12px;
+    font-weight: 300;
+    margin-bottom: 0px;
+  }
+  .search-result #disc {
+    display: none;
+  }
+  .search-result #date {
+    margin: 0px;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  .search-result .res-icons {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    opacity: 0.5;
+    position: absolute;
+    bottom: 1px;
+    left: 800px;
+    top: 35px;
+  }
+  .search-result .res-icons #completed {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
+  }
+  .search-result .res-icons #priority {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
+  }
+  .search-result .res-icons #archive {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
   }
 }
 /*# sourceMappingURL=main.css.map */

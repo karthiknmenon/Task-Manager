@@ -68,6 +68,16 @@
                 <label for="search-task">
                     <img src="/images/search-solid.svg" id="search-icon">
                     <input type="text" name="search-task" placeholder="Search Tasks Here" id="tSearch" onfocus="hide()" onblur="show()">
+                    <div class="search-result">
+                        <h3>Project Proposal</h3>
+                        <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
+                        <p id="date"> Due: 21/07/19</p>
+                        <div class="res-icons">
+                                <img id="completed" src="/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                                <img id="priority" src="/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
+                                <img id="archive" src="/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                        </div>
+                    </div>
                 </label>
              </form>
         </div>
@@ -128,12 +138,16 @@
         {
             var x = document.getElementById('search-icon');
             x.style.visibility="hidden";
+            var z = document.getElementsByClassName('search-result');
+            z[0].style.display="block";
         }
         // to bring back search icon
         function show()
         {
             var y = document.getElementById('search-icon');
             y.style.visibility="visible";
+            var z = document.getElementsByClassName('search-result');
+            z[0].style.display="none";
         }
         function color(obj)
         {
