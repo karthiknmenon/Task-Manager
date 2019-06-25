@@ -14,7 +14,20 @@
 #close{
     position: absolute;
     top: 1%;
-    left:95%;
+    left:97%;
+}
+@media only screen and (max-width: 767px){
+    #task-illustration{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top:5%;
+        left:0%;
+    }
+    #close{
+        top:1%;
+        left:90%;
+    }
 }
 // .task-body--view{
 //     display: none;

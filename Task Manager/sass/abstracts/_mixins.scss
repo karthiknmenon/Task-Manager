@@ -36,3 +36,8 @@
         box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
     }
 }
+@mixin formDefault(){
+    border: none;
+    outline: none;
+    display: block;
+}

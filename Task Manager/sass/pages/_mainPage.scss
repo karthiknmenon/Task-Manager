@@ -1,7 +1,15 @@
 @import "../abstracts/variables";
 html,body{
     width: 100%;
+    overflow-x:hidden;
+   
 }
 body{
     background: $bodyBgColor;
+}
+@media only screen and (max-width: 767px){
+
+   body {width: 100%;
+    overflow-x:hidden;
+    margin:0px;}
 }

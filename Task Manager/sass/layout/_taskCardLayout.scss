@@ -2,6 +2,7 @@
 @import "../components/taskCard";
 @import "../abstracts/mixins";
 .taskCard{
+   
     position: absolute;
     width: $width;
     height: $height;
@@ -9,12 +10,18 @@
     right: 7%;
     top: 7%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+   
 }
 //phone
 @media only screen and (max-width: 767px){
     .taskCard{
+        right:0;
+        left:0;
+    margin:0 auto;
     position: absolute;
     width:300px;
     height:1000px;
+    overflow-x: hidden;
+  
     }
 }

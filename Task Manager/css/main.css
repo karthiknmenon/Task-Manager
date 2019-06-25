@@ -9,10 +9,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 html, body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background: #E91E63;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+  }
 }
 
 .taskCard {
@@ -20,14 +29,24 @@ body {
   background: white;
   font-family: "Montserrat";
   font-weight: 100;
+  margin: 0 auto;
 }
 
 html, body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background: #E91E63;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+  }
 }
 
 .taskCard {
@@ -35,6 +54,7 @@ body {
   background: white;
   font-family: "Montserrat";
   font-weight: 100;
+  margin: 0 auto;
 }
 
 .taskCard {
@@ -50,9 +70,13 @@ body {
 
 @media only screen and (max-width: 767px) {
   .taskCard {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     position: absolute;
     width: 300px;
     height: 1000px;
+    overflow-x: hidden;
   }
 }
 
@@ -391,7 +415,21 @@ body {
 #close {
   position: absolute;
   top: 1%;
-  left: 95%;
+  left: 97%;
+}
+
+@media only screen and (max-width: 767px) {
+  #task-illustration {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 0%;
+  }
+  #close {
+    top: 1%;
+    left: 90%;
+  }
 }
 
 input, input[type=color], button {
@@ -491,6 +529,100 @@ button {
 button:hover {
   background-color: #03A9F4;
   color: #FFFFFF;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  .new-form {
+    margin: 400px 50px 50px 42px;
+  }
+  input {
+    border: none;
+    outline: none;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-top: 8px;
+    width: 200px;
+    height: 43px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    text-indent: 16px;
+    padding: 0px;
+  }
+  input:focus {
+    border: 1px solid #03A9F4;
+    -webkit-transition: all 5ms linear;
+    transition: all 5ms linear;
+  }
+  label {
+    display: inline-block;
+    margin-top: 17px;
+  }
+  input[type=date] {
+    width: 200px;
+    text-indent: 6px;
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  input[type=date]:nth-of-type(1) {
+    margin-right: 8px;
+  }
+  input[type=color] {
+    border: none;
+    outline: none;
+    display: block;
+    border: 1px;
+    display: inline;
+    margin-bottom: 16px;
+    width: 30px;
+    height: 30px;
+  }
+  ::-webkit-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  :-ms-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  ::-ms-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  ::placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  ::-moz-selection {
+    background-color: #03A9F4;
+  }
+  ::selection {
+    background-color: #03A9F4;
+  }
+  button {
+    border: none;
+    outline: none;
+    display: block;
+    margin-top: 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: transparent;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #03A9F4;
+    border-radius: 3px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 15px;
+  }
+  button:hover {
+    background-color: #03A9F4;
+    color: #FFFFFF;
+    -webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+  }
 }
 
 #tSearch {
