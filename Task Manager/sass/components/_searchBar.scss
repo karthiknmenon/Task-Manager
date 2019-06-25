@@ -31,3 +31,32 @@
     opacity: 0.3;
     transition: all 50ms ease-in;
 }
+
+//phone
+@media only screen and (max-width: 767px){
+    #tSearch{
+        position: relative;
+        bottom:1000px;
+        right:41px;
+        border: none;
+        border-bottom: 2px solid #BDBDBD;
+        width: 298px;
+        border-radius: 0;
+        &:focus{
+            border-bottom: 2px solid #03A9F4;
+            transition: all 50ms ease-in;
+        }
+        text-indent:35px;
+    }
+    #search-icon{
+        @include margin(20px,5px,10px,5px);
+        position: absolute;
+        height: 15px;
+        width:15px;
+        left:3%;
+        bottom:96%;
+        opacity: 0.3;
+        transition: all 50ms ease-in;
+        z-index:5;
+    }
+}

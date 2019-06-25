@@ -7,7 +7,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 html, body {
   width: 100%;
 }
@@ -49,18 +48,12 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.task-sort, select {
-  position: absolute;
-  outline: none;
-  border: none;
-  font-weight: 300;
-  -webkit-transform: translate(295px, -68px);
-          transform: translate(295px, -68px);
-  font-family: "Montserrat";
-  border-radius: 0px;
-  height: 25px;
-  width: 200px;
-  background-color: #ffdde1;
+@media only screen and (max-width: 767px) {
+  .taskCard {
+    position: absolute;
+    width: 300px;
+    height: 1000px;
+  }
 }
 
 .task-box {
@@ -89,14 +82,6 @@ body {
   -webkit-transform: translate(380px, -133px);
           transform: translate(380px, -133px);
   margin: 2px;
-}
-
-#float-add {
-  position: relative;
-  height: 75px;
-  width: 75px;
-  -webkit-transform: translate(1150px, 600px);
-          transform: translate(1150px, 600px);
 }
 
 .task-body__card, .task-body__card--preview {
@@ -243,6 +228,154 @@ body {
           filter: grayscale(0);
 }
 
+@media only screen and (max-width: 767px) {
+  .task-body__card {
+    float: left;
+    margin: 0px 10px 30px 10px;
+    top: 20px;
+    position: relative;
+    height: 200px;
+    width: 250px;
+    background: #FFFFFF;
+    border: 1px solid rgba(236, 236, 236, 0.5);
+    -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+            box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+  }
+  .task-body__card #add-task {
+    position: relative;
+    height: 70px;
+    top: 50px;
+    left: 80px;
+  }
+  .task-body__card h2 {
+    position: relative;
+    top: 20px;
+    left: 80px;
+    font-weight: 200;
+  }
+  .task-body__card:hover {
+    -webkit-box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+            box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+  }
+  .task-body__card--preview {
+    float: left;
+    margin: 0px 10px 30px 10px;
+    top: 20px;
+    position: relative;
+    height: 200px;
+    width: 250px;
+    background: #FFFFFF;
+    border: 1px solid rgba(236, 236, 236, 0.5);
+    -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+            box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+  }
+  .task-body__card--preview #add-task {
+    position: relative;
+    height: 70px;
+    top: 50px;
+    left: 80px;
+  }
+  .task-body__card--preview h2 {
+    position: relative;
+    top: 20px;
+    left: 80px;
+    font-weight: 200;
+  }
+  .task-body__card--preview:hover {
+    -webkit-box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+            box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+  }
+  .task-body__card--preview #tag-color {
+    display: block;
+    height: 2px;
+    width: 250px;
+    background-color: #03A9F4;
+  }
+  .task-body__card--preview #sep {
+    display: block;
+    height: 1px;
+    width: 130px;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: #BDBDBD;
+    opacity: 0.2;
+  }
+  .task-body__card--preview p {
+    font-weight: 100;
+    font-size: 13px;
+    padding: 5px;
+    text-align: justify;
+    margin: 5px;
+  }
+  .task-body__card--preview h5 {
+    padding: 5px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .task-body__card--preview #card-calendar {
+    display: inline;
+    padding: 0px, 3px, 0px, 5px;
+    margin-left: 5px;
+    height: 12px;
+    width: 12px;
+    opacity: 0.2;
+  }
+  .task-body__card--preview #due-date {
+    font-size: 12px;
+    position: absolute;
+    display: inline;
+    bottom: 50px;
+    color: #BDBDBD;
+  }
+  .task-body__card--preview .icons {
+    display: none;
+    position: absolute;
+    top: 85%;
+    left: 65%;
+  }
+  .task-body__card--preview #completed {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
+    left: 2%;
+  }
+  .task-body__card--preview #priority {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
+    left: 2%;
+  }
+  .task-body__card--preview #archive {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100);
+            filter: grayscale(100);
+    left: 2%;
+  }
+  .task-body__card--preview:hover .icons {
+    display: block;
+  }
+  .task-body__card--preview:hover #archive:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  .task-body__card--preview:hover #priority:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  .task-body__card--preview:hover #completed:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+
 .task-body--add {
   display: none;
 }
@@ -384,5 +517,35 @@ button:hover {
   opacity: 0.3;
   -webkit-transition: all 50ms ease-in;
   transition: all 50ms ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  #tSearch {
+    position: relative;
+    bottom: 1000px;
+    right: 41px;
+    border: none;
+    border-bottom: 2px solid #BDBDBD;
+    width: 298px;
+    border-radius: 0;
+    text-indent: 35px;
+  }
+  #tSearch:focus {
+    border-bottom: 2px solid #03A9F4;
+    -webkit-transition: all 50ms ease-in;
+    transition: all 50ms ease-in;
+  }
+  #search-icon {
+    margin: 20px 5px 10px 5px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 3%;
+    bottom: 96%;
+    opacity: 0.3;
+    -webkit-transition: all 50ms ease-in;
+    transition: all 50ms ease-in;
+    z-index: 5;
+  }
 }
 /*# sourceMappingURL=main.css.map */
