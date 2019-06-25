@@ -1,12 +1,12 @@
 %task-body_card{
     float: left;
-    @include margin(0px,10px,30px,10px);
+    @include margin(0px,5px,30px,5px);
     margin-left:56px;
     top: 20px;
     left: 20px;
     position: relative;
     height: 200px;
-    width:166px;
+    width:180px;
     background: $whiteColor;
     border: 1px solid rgba(236, 236, 236, 0.5);
     box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
@@ -14,12 +14,10 @@
             position: relative;
             height: 70px;
             top:50px;
-            left:40px;    
+            left:50px;    
     }
     h2{
-        position: relative;
-        top:20px;
-        left:20px;
+        margin:7px auto;
         font-weight: 200;
     }
     &:hover{

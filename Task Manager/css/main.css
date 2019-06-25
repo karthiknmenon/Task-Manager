@@ -110,13 +110,13 @@ body {
 
 .task-body__card, .task-body__card--preview {
   float: left;
-  margin: 0px 10px 30px 10px;
+  margin: 0px 5px 30px 5px;
   margin-left: 56px;
   top: 20px;
   left: 20px;
   position: relative;
   height: 200px;
-  width: 166px;
+  width: 180px;
   background: #FFFFFF;
   border: 1px solid rgba(236, 236, 236, 0.5);
   -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
@@ -127,13 +127,11 @@ body {
   position: relative;
   height: 70px;
   top: 50px;
-  left: 40px;
+  left: 50px;
 }
 
 .task-body__card h2, .task-body__card--preview h2 {
-  position: relative;
-  top: 20px;
-  left: 20px;
+  margin: 7px auto;
   font-weight: 200;
 }
 
@@ -156,7 +154,7 @@ body {
 .task-body__card--preview #tag-color {
   display: block;
   height: 2px;
-  width: 166px;
+  width: 180px;
   background-color: #03A9F4;
 }
 
@@ -170,9 +168,9 @@ body {
 }
 
 .task-body__card--preview p {
+  font-size: 11px;
   font-weight: 100;
-  font-size: 13px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .task-body__card--preview h5 {
@@ -186,7 +184,7 @@ body {
 .task-body__card--preview #card-calendar {
   display: inline;
   padding: 0px, 3px, 0px, 5px;
-  margin-left: 5px;
+  margin-left: 10px;
   height: 12px;
   width: 12px;
   opacity: 0.2;
@@ -196,8 +194,9 @@ body {
   font-size: 12px;
   position: absolute;
   display: inline;
-  bottom: 11px;
+  bottom: 20px;
   color: #BDBDBD;
+  padding: 10px;
 }
 
 .task-body__card--preview .icons {
@@ -276,6 +275,7 @@ body {
     top: 20px;
     left: 80px;
     font-weight: 200;
+    margin: 20px auto;
   }
   .task-body__card:hover {
     -webkit-box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
@@ -304,6 +304,7 @@ body {
     top: 20px;
     left: 80px;
     font-weight: 200;
+    margin: 20px auto;
   }
   .task-body__card--preview:hover {
     -webkit-box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
@@ -630,6 +631,7 @@ button:hover {
   border-bottom: 2px solid #BDBDBD;
   width: 900px;
   border-radius: 0;
+  margin: 10px 40px;
   text-indent: 35px;
 }
 
@@ -644,7 +646,7 @@ button:hover {
   position: absolute;
   height: 15px;
   width: 15px;
-  left: 5%;
+  left: 8%;
   bottom: 42%;
   opacity: 0.3;
   -webkit-transition: all 50ms ease-in;
@@ -654,8 +656,8 @@ button:hover {
 @media only screen and (max-width: 767px) {
   #tSearch {
     position: relative;
-    bottom: 1000px;
-    right: 41px;
+    bottom: 1003px;
+    right: 82px;
     border: none;
     border-bottom: 2px solid #BDBDBD;
     width: 298px;

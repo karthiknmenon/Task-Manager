@@ -17,7 +17,7 @@
     #tag-color{
         display: block;
         height:2px;
-        width:166px;
+        width:180px;
         background-color:#03A9F4;
     }
     #sep{
@@ -29,9 +29,9 @@
         opacity: 0.2;
     }
     p{
+        font-size: 11px;
         font-weight: 100;
-        font-size: 13px;
-        padding: 5px;
+        padding: 10px;
     }
     h5{
         padding:5px;
@@ -43,7 +43,7 @@
     #card-calendar{
         display: inline;
         padding: 0px, 3px, 0px, 5px;
-        margin-left:5px;
+        margin-left:10px;
         height:12px;
         width:12px;
         opacity: 0.2;
@@ -52,8 +52,9 @@
         font-size: 12px;
         position: absolute;
         display:inline;
-        bottom:11px;
+        bottom:20px;
         color: #BDBDBD;
+        padding: 10px;
     }
     .icons{
         display:none;
