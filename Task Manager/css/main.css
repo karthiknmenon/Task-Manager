@@ -5,41 +5,22 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 html, body {
   width: 100%;
 }
 
 body {
-  background: #EC6F66;
-  background: -webkit-gradient(linear, left top, right top, from(#F3A183), to(#EC6F66));
-  background: linear-gradient(to right, #F3A183, #EC6F66);
+  background: #E91E63;
 }
 
 .taskCard {
+  position: relative;
   background: white;
   font-family: "Montserrat";
   font-weight: 100;
-}
-
-.taskCard:hover {
-  -webkit-filter: drop-shadow(5px 2px 0px #a73737);
-          filter: drop-shadow(5px 2px 0px #a73737);
-}
-
-#task-card--Header {
-  padding: 0 0 10px 10px;
-  font-size: 2em;
-  font-weight: 100;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.task-card--separator {
-  position: relative;
-  bottom: 20px;
-  height: 5px;
-  widows: 100;
-  background-color: rgba(121, 203, 202, 0.3);
 }
 
 html, body {
@@ -47,45 +28,25 @@ html, body {
 }
 
 body {
-  background: #EC6F66;
-  background: -webkit-gradient(linear, left top, right top, from(#F3A183), to(#EC6F66));
-  background: linear-gradient(to right, #F3A183, #EC6F66);
+  background: #E91E63;
 }
 
 .taskCard {
+  position: relative;
   background: white;
   font-family: "Montserrat";
   font-weight: 100;
-}
-
-.taskCard:hover {
-  -webkit-filter: drop-shadow(5px 2px 0px #a73737);
-          filter: drop-shadow(5px 2px 0px #a73737);
-}
-
-#task-card--Header {
-  padding: 0 0 10px 10px;
-  font-size: 2em;
-  font-weight: 100;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.task-card--separator {
-  position: relative;
-  bottom: 20px;
-  height: 5px;
-  widows: 100;
-  background-color: rgba(121, 203, 202, 0.3);
 }
 
 .taskCard {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 1041px;
+  height: 600px;
   background-color: white;
-  left: 25%;
-  top: 10%;
+  right: 7%;
+  top: 7%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .task-sort, select {
@@ -136,5 +97,292 @@ body {
   width: 75px;
   -webkit-transform: translate(1150px, 600px);
           transform: translate(1150px, 600px);
+}
+
+.task-body__card, .task-body__card--preview {
+  float: left;
+  margin: 0px 10px 30px 10px;
+  margin-left: 56px;
+  top: 20px;
+  left: 20px;
+  position: relative;
+  height: 200px;
+  width: 166px;
+  background: #FFFFFF;
+  border: 1px solid rgba(236, 236, 236, 0.5);
+  -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+          box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+}
+
+.task-body__card #add-task, .task-body__card--preview #add-task {
+  position: relative;
+  height: 70px;
+  top: 50px;
+  left: 40px;
+}
+
+.task-body__card h2, .task-body__card--preview h2 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-weight: 200;
+}
+
+.task-body__card:hover, .task-body__card--preview:hover {
+  -webkit-box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+          box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+}
+
+.task-body__card h2 {
+  position: absolute;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  top: 53%;
+  left: 23%;
+}
+
+.task-body__card--preview #tag-color {
+  display: block;
+  height: 2px;
+  width: 166px;
+  background-color: #03A9F4;
+}
+
+.task-body__card--preview #sep {
+  display: block;
+  height: 1px;
+  width: 130px;
+  margin: 1px 12px 2px 12px;
+  background-color: #BDBDBD;
+  opacity: 0.2;
+}
+
+.task-body__card--preview p {
+  font-weight: 100;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.task-body__card--preview h5 {
+  padding: 5px;
+  text-indent: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.task-body__card--preview #card-calendar {
+  display: inline;
+  padding: 0px, 3px, 0px, 5px;
+  margin-left: 5px;
+  height: 12px;
+  width: 12px;
+  opacity: 0.2;
+}
+
+.task-body__card--preview #due-date {
+  font-size: 12px;
+  position: absolute;
+  display: inline;
+  bottom: 11px;
+  color: #BDBDBD;
+}
+
+.task-body__card--preview .icons {
+  display: none;
+  position: relative;
+  left: 55%;
+}
+
+.task-body__card--preview #completed {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  left: 2%;
+}
+
+.task-body__card--preview #priority {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  left: 2%;
+}
+
+.task-body__card--preview #archive {
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  left: 2%;
+}
+
+.task-body__card--preview:hover .icons {
+  display: block;
+}
+
+.task-body__card--preview:hover #archive:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.task-body__card--preview:hover #priority:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.task-body__card--preview:hover #completed:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.task-body--add {
+  display: none;
+}
+
+#task-illustration {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  top: 5%;
+  left: 47%;
+}
+
+#close {
+  position: absolute;
+  top: 1%;
+  left: 95%;
+}
+
+input, input[type=color], button {
+  border: none;
+  outline: none;
+  display: block;
+}
+
+form {
+  margin: 50px 50px 50px 42px;
+}
+
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 8px;
+  width: 337px;
+  height: 43px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  text-indent: 16px;
+  padding: 0px;
+}
+
+input:focus {
+  border: 1px solid #03A9F4;
+  -webkit-transition: all 5ms linear;
+  transition: all 5ms linear;
+}
+
+label {
+  display: inline-block;
+  margin-top: 17px;
+}
+
+input[type=date] {
+  width: 150px;
+  text-indent: 6px;
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+input[type=date]:nth-of-type(1) {
+  margin-right: 8px;
+}
+
+input[type=color] {
+  border: 1px;
+  display: inline;
+  margin-bottom: 16px;
+  width: 30px;
+  height: 30px;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+:-ms-input-placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+::-ms-input-placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+::placeholder {
+  font-family: 'Montserrat';
+  font-weight: 100;
+}
+
+::-moz-selection {
+  background-color: #03A9F4;
+}
+
+::selection {
+  background-color: #03A9F4;
+}
+
+button {
+  margin-top: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  width: 337px;
+  height: 50px;
+  border: 1px solid #03A9F4;
+  border-radius: 3px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #03A9F4;
+  color: #FFFFFF;
+}
+
+#tSearch {
+  border: none;
+  border-bottom: 2px solid #BDBDBD;
+  width: 900px;
+  border-radius: 0;
+  text-indent: 35px;
+}
+
+#tSearch:focus {
+  border-bottom: 2px solid #03A9F4;
+  -webkit-transition: all 50ms ease-in;
+  transition: all 50ms ease-in;
+}
+
+#search-icon {
+  margin: 20px 5px 10px 5px;
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  left: 5%;
+  bottom: 42%;
+  opacity: 0.3;
+  -webkit-transition: all 50ms ease-in;
+  transition: all 50ms ease-in;
 }
 /*# sourceMappingURL=main.css.map */

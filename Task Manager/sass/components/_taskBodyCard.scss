@@ -1,25 +1,98 @@
+@import "../abstracts/placeholders";
 .task-body__card{
-    top: 20px;
-    left: 20px;
-    position: relative;
-    height: 200px;
-    width:150px;
-    background: $whiteColor;
-    border: 1px solid rgba(236, 236, 236, 0.5);
-    box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
-    #add-task{
-            position: relative;
-            height: 70px;
-            top:50px;
-            left:40px;    
-    }
+    @extend %task-body_card;
     h2{
+        position: absolute;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        top:53%;
+        left: 23%;
+    }
+}
+.task-body__card--preview{
+    @extend %task-body_card;
+    #tag-color{
+        display: block;
+        height:2px;
+        width:166px;
+        background-color:#03A9F4;
+    }
+    #sep{
+        display: block;
+        height:1px;
+        width:130px;
+        @include margin(1px,12px,2px,12px);
+        background-color:#BDBDBD;
+        opacity: 0.2;
+    }
+    p{
+        font-weight: 100;
+        font-size: 13px;
+        padding: 5px;
+    }
+    h5{
+        padding:5px;
+        text-indent: 3px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    #card-calendar{
+        display: inline;
+        padding: 0px, 3px, 0px, 5px;
+        margin-left:5px;
+        height:12px;
+        width:12px;
+        opacity: 0.2;
+    }
+    #due-date{
+        font-size: 12px;
+        position: absolute;
+        display:inline;
+        bottom:11px;
+        color: #BDBDBD;
+    }
+    .icons{
+        display:none;
         position: relative;
-        top:20px;
-        left:20px;
-        font-weight: 200;
+        left:55%;
+    }
+    #completed{
+        height:20px;
+        width:20px;
+        opacity:0.5;
+        filter: grayscale(100);
+        left:2%;
+    }
+    #priority{
+        height:20px;
+        width:20px;
+        opacity:0.5;
+        filter: grayscale(100);
+        left:2%;
+    }
+    #archive{
+        height:20px;
+        width:20px;
+        opacity:0.5;
+        filter: grayscale(100);
+        left:2%;
     }
     &:hover{
-        box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+        .icons{
+            display:block;
+        }
+        #archive:hover{
+            filter:grayscale(0);
+        }
+        #priority:hover {
+            filter:grayscale(0);
+        }
+        #completed:hover{
+            filter:grayscale(0);
+        }
     }
 }

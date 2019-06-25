@@ -9,43 +9,140 @@
     <title>Task Manager</title>
 </head>
 <body>
-    <!-- <div class="taskCard" onClick="addTasks">
-        <div class="task-body__card">
-            <img src="/Task Manager/images/outline-add-24px.svg" id="add-task">
-            <h2>New Task</h2>
-        </div>
-    </div> -->
-    <div class="taskCard">
-        <img src="../Task Manager/images/outline-close-24px.svg" id="close">
-        <img src="../Task Manager/images/task illustration.png"  type="image/png" id="task-illustration">
-        <div class="task-body--new">
-            <form>
-                <label for="taskName">Add Task Name
-                    <input type="text" name="taskName" placeholder="Enter Task Name">
-                </label><br>
-                <label for="taskDescription">Add Description
-                    <input type="text" name="taskDescription" placeholder="Enter Task Description">
-                </label> <br>
-                <label for="taskTags">Add Tags
-                    <input type="text" name="taskTags" placeholder="Enter Task Tags">
-                </label><br>
-                <label for="taskDate">Assigned Date
-                    <input type="date" name="taskDate" placeholder="Enter Task Tags">
+    <div class="taskCard" >
+        <!-- landing page -->
+        <div class="task-body--view">
+            <!-- new task card -->
+            <div class="task-body__card" style='cursor: pointer' onclick='addTasks()' >
+                <img src="/images/outline-add-24px.svg" id="add-task">
+                <h2>New Task</h2>
+            </div>
+            <!-- task cards -->
+            <div class="task-body__card--preview">
+                <span id="tag-color"></span>
+                <h5>Project Proposal</h5>
+                <span id="sep"></span>
+                <div class="task-body__card--preview_body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum nesciunt.</p>
+                    <img src="/images/outline-calendar_today-24px.svg" id="card-calendar">
+                    <p id="due-date">21/06/2019</p>
+                    <div class="icons">
+                        <img id="completed" src="/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                        <img id="priority" src="/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
+                        <img id="archive" src="/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                    </div>
+                </div>  
+            </div>
+            <div class="task-body__card--preview">
+                <span id="tag-color"></span>
+                <h5>Project Proposal</h5>
+                <span id="sep"></span>
+                <div class="task-body__card--preview_body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum nesciunt.</p>
+                    <img src="/images/outline-calendar_today-24px.svg" id="card-calendar">
+                    <p id="due-date">21/06/2019</p>
+                    <div class="icons">
+                        <img id="completed" src="/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                        <img id="priority" src="/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
+                        <img id="archive" src="/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                    </div>
+                </div>  
+            </div>
+            <div class="task-body__card--preview">
+                <span id="tag-color"></span>
+                <h5>Project Proposal</h5>
+                <span id="sep"></span>
+                <div class="task-body__card--preview_body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum nesciunt.</p>
+                    <img src="/images/outline-calendar_today-24px.svg" id="card-calendar">
+                    <p id="due-date">21/06/2019</p>
+                    <div class="icons">
+                        <img id="completed" src="/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                        <img id="priority" src="/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
+                        <img id="archive" src="/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
+                    </div>
+                </div>  
+            </div>
+            <!-- search-form -->
+            <form id="search-form"> 
+                <label for="search-task">
+                    <img src="/images/search-solid.svg" id="search-icon">
+                    <input type="text" name="search-task" placeholder="Search Tasks Here" id="tSearch" onfocus="hide()" onblur="show()">
                 </label>
-                <label for="taskDate">Due Date
+             </form>
+        </div>
+        <!-- on add task -->
+        <div class="task-body--add">
+            <img src="/images/outline-close-24px.svg" id="close" style='cursor: pointer' onclick='goback()'>
+            <img src="/images/task-illustration.png"  type="image/png" id="task-illustration">
+            <div class="task-body--new">
+                <form>
+                    <label for="taskName">Add Task Name
+                        <input type="text" name="taskName" placeholder="Enter Task Name">
+                    </label><br>
+                    <label for="taskDescription">Add Description
+                        <input type="text" name="taskDescription" placeholder="Enter Task Description" maxlength="80">
+                    </label> <br>
+                    <label for="taskTags">Add Tags
+                        <input type="text" name="taskTags" placeholder="Enter Task Tags">
+                    </label><br>
+                    <label for="taskDate">Assigned Date
                         <input type="date" name="taskDate" placeholder="Enter Task Tags">
-                </label><br>
-                <label for="taskDate">Tag Color
-                        <input type="color" name="taskDate" placeholder="Enter Task Tags">
-                </label><br>
-                <button class="submit">Add Task</button>
-            </form>
+                    </label>
+                    <label for="taskDate">Due Date
+                            <input type="date" name="taskDate" placeholder="Enter Task Tags">
+                    </label><br>
+                    <label for="taskDate">Tag Color
+                            <input type="color" name="taskDate" placeholder="Enter Task Tags">
+                    </label><br>
+                    <button class="submit">Add Task</button>
+                </form>
+            </div>
         </div>
     </div>
+    <!-- <div class="taskCard">    
+    </div> -->
     <script type="text/javascript">
+        // to add new tasks
         function addTasks(){
-            document.getElementsByClassName('task-body__card').t
-    }
-</script>
+            var x = document.getElementsByClassName('task-body--view');
+            x[0].style.display="none";
+            reveal();
+        }
+        // to display new task form
+        function reveal()
+        {
+            var x = document.getElementsByClassName('task-body--add');
+            x[0].style.display="inline";
+        }
+        // to exit new task form
+        function goback()
+        {
+            var x = document.getElementsByClassName('task-body--add');
+            var y = document.getElementsByClassName('task-body--view');
+            x[0].style.display="none";
+            y[0].style.display="block";
+        }
+        // to hide search icon
+        function hide()
+        {
+            var x = document.getElementById('search-icon');
+            x.style.visibility="hidden";
+        }
+        // to bring back search icon
+        function show()
+        {
+            var y = document.getElementById('search-icon');
+            y.style.visibility="visible";
+        }
+        function color(obj)
+        {
+            obj.style.filter="grayscale(0)";
+        }
+        function black()
+        {
+            obj.style.filter="grayscale(1)";
+        }
+    </script> 
 </body>
 </html>

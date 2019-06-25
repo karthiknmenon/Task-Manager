@@ -5,7 +5,8 @@ $taskCardShadow:#a73737;
 $sepColor: rgba(121, 203, 202, 0.3);
 $taskBoxColor: #ECE9E6;
 $whiteColor: #FFFFFF;
-$bodyBgColor: #E91E63; 
+$bodyBgColor: #E91E63;
+$selectionColor:  #03A9F4;
 $font:'Montserrat';
 // $cardHeaderColor: 
 //task-card-dimensions
@@ -43,7 +44,7 @@ $formRadius: 3px;
 $formPadding: 5px;
 $formMargin: 8px;
 //form-input-color
-$formColorWidth:40px;
+$formColorWidth:30px;
 $formColorHeight:30px;
 //form-placeholers
 $placeholderWeight:100;
@@ -55,3 +56,9 @@ $addButtonRadius: 3px;
 $addButtonFontWeight:400;
 $addButtonFontSize:15px;
 $addButtonHoverColor:#03A9F4;
+//search-bar
+$searchPosition: relative;
+$searchTop:50%;
+$searchHeight: 2px;
+$searchWidth:90%;
+$searchBgColor:#BDBDBD;

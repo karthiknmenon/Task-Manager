@@ -207,6 +207,14 @@ input[type=color] {
   font-weight: 100;
 }
 
+::-moz-selection {
+  background-color: #03A9F4;
+}
+
+::selection {
+  background-color: #03A9F4;
+}
+
 button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
