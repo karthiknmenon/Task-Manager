@@ -9,8 +9,8 @@ $(document).ready(function() {
         var tADate = $('.new-form').find('input[name="taskADate"]').val();
         var tColor = $('.new-form').find('input[name="taskColor"]').val();
         createTask(tName,tDesc,tTags,tDDate,tADate,tColor);
+        goback(); 
         return false;
-   
     });
 });
 // create new task

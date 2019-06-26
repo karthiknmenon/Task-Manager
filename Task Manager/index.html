@@ -47,7 +47,7 @@
             <div class="task-body--new">
                 <form class="new-form" name="newTaskForm" action="index.html" autocomplete="off">
                     <label for="taskName">Add Task Name
-                        <input data-validation="text" type="text" name="taskName" placeholder="Enter Task Name">
+                        <input data-validation="text" type="text" name="taskName" required placeholder="Enter Task Name">
                     </label><br>
                     <label for="taskDescription">Add Description
                         <input data-validation="text" type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="80">
@@ -59,7 +59,7 @@
                         <input data-validation="date" data-validation-format="yyyy-mm-dd" type="date" name="taskADate" placeholder="Enter Task Tags">
                     </label>
                     <label for="taskDate">Due Date
-                        <input data-validation="date" data-validation-format="yyyy-mm-dd" type="date" name="taskDDate" placeholder="Enter Task Tags">
+                        <input data-validation="date" data-validation-format="yyyy-mm-dd" required type="date" name="taskDDate" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Tag Color
                         <input data-validation="color" type="color" name="taskColor" placeholder="Enter Task Tags">

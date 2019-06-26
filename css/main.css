@@ -653,8 +653,8 @@ button:hover {
 @media only screen and (max-width: 767px) {
   #tSearch {
     position: relative;
-    bottom: 600px;
-    right: 80px;
+    bottom: 215px;
+    right: 81px;
     border: none;
     border-bottom: 2px solid #BDBDBD;
     width: 298px;
@@ -667,12 +667,11 @@ button:hover {
     transition: all 50ms ease-in;
   }
   #search-icon {
-    margin: 20px 5px 10px 5px;
     position: absolute;
     height: 15px;
     width: 15px;
     left: 3%;
-    bottom: 96%;
+    top: 10px;
     opacity: 0.3;
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;
@@ -766,7 +765,6 @@ button:hover {
 
 @media only screen and (max-width: 767px) {
   .search-result {
-    display: none;
     position: relative;
     right: 43px;
     bottom: 620px;
