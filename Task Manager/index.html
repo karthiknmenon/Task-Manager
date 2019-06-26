@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,66 +9,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <title>Task Manager</title>
 </head>
+
 <body>
-    <div class="taskCard" >
+    <div class="taskCard">
         <!-- landing page -->
         <div class="task-body--view">
+
             <!-- new task card -->
-            <div class="task-body__card" style='cursor: pointer' onclick='addTasks()' >
+            <div class="task-body__card" style='cursor: pointer' onclick='addTasks()'>
                 <img src="/Task Manager/images/outline-add-24px.svg" id="add-task">
                 <h2>New Task</h2>
+            </div> 
+
+            <!-- task cards container -->
+            <div class="featured-task--container">
+
             </div>
-            <!-- task cards -->
-            <div class="task-body__card--preview">
-                <span id="tag-color"></span>
-                <h5>Project Proposal</h5>
-                <span id="sep"></span>
-                <div class="task-body__card--preview_body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum nesciunt.</p>
-                    <img src="/Task Manager/images/outline-calendar_today-24px.svg" id="card-calendar">
-                    <p id="due-date">21/06/2019</p>
-                    <div class="icons">
-                        <img id="completed" src="/Task Manager/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                        <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
-                        <img id="archive" src="/Task Manager/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                    </div>
-                </div>  
-            </div>
-            <!-- <div class="task-body__card--preview">
-                <span id="tag-color"></span>
-                <h5>Project Proposal</h5>
-                <span id="sep"></span>
-                <div class="task-body__card--preview_body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum nesciunt.</p>
-                    <img src="/images/outline-calendar_today-24px.svg" id="card-calendar">
-                    <p id="due-date">21/06/2019</p>
-                    <div class="icons" >
-                        <img id="completed" src="/images/outline-done-24px.svg" style='cursor: pointer' onclick="color(this)" ondbclick="black(this)">
-                        <img id="priority" src="/images/outline-star_border-24px (1).svg" style='cursor: pointer' onclick="color(this)" ondbclick="black(this)">
-                        <img id="archive" src="/images/outline-archive-24px.svg" style='cursor: pointer' onclick="color(this)" ondbclick="black(this)">
-                    </div>
-                </div>  
-            </div>
-            <div class="task-body__card--preview">
-                <span id="tag-color"></span>
-                <h5>Project Proposal</h5>
-                <span id="sep"></span>
-                <div class="task-body__card--preview_body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum nesciunt.</p>
-                    <img src="/images/outline-calendar_today-24px.svg" id="card-calendar">
-                    <p id="due-date">21/06/2019</p>
-                    <div class="icons">
-                        <img id="completed" src="/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                        <img id="priority" src="/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
-                        <img id="archive" src="/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                    </div>
-                </div>  
-            </div> -->
+            <!-- task cards container ends here -->
+
             <!-- search-form -->
-            <form id="search-form" autocomplete="OFF"> 
+            <form id="search-form" autocomplete="OFF">
                 <label for="search-task">
                     <img src="/Task Manager/images/search-solid.svg" id="search-icon">
-                    <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="myFunction()" id="tSearch" onfocus="hide()" onblur="show()">
+                    <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="search()"
+                        id="tSearch" onfocus="hide()" onblur="show()">
                     <div class="search-result">
                         <!-- <h3>Project Proposal</h3>
                         <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
@@ -79,41 +44,36 @@
                         </div> -->
                         <ul id="search-re">
                             <li>
-                                    <h3>Project Proposal</h3>
-                                    <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
-                                    <p id="date"> Due: 21/07/19</p>
-                                    <div class="res-icons">
-                                            <img id="completed" src="/Task Manager/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                                            <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
-                                            <img id="archive" src="/Task Manager/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                                    </div>
-                            </li>
-                            <li>
-                                    <h3>Karthik Menon</h3>
-                                    <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
-                                    <p id="date"> Due: 21/07/19</p>
-                                    <div class="res-icons">
-                                            <img id="completed" src="/Task Manager/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                                            <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
-                                            <img id="archive" src="/Task Manager/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                                    </div>
-                            </li>
+                                <h3>Project Proposal</h3>
+                                <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae
+                                    asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
+                                <p id="date"> Due: 21/07/19</p>
+                                <div class="res-icons">
+                                    <img id="completed" src="/Task Manager/images/outline-done-24px.svg"
+                                        onclick="color(this)" ondbclick="black(this)">
+                                    <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg"
+                                        onclick="color(this)" ondbclick="black(this)">
+                                    <img id="archive" src="/Task Manager/images/outline-archive-24px.svg"
+                                        onclick="color(this)" ondbclick="black(this)">
+                                </div>
+                            </li><br>
                         </ul>
                     </div>
                 </label>
-             </form>
+            </form>
         </div>
         <!-- on add task -->
         <div class="task-body--add">
-            <img src="/Task Manager/images/outline-close-24px.svg" id="close" style='cursor: pointer' onclick='goback()'>
-            <img src="/Task Manager/images/task-illustration.png"  type="image/png" id="task-illustration">
+            <img src="/Task Manager/images/outline-close-24px.svg" id="close" style='cursor: pointer'
+                onclick='goback()'>
+            <img src="/Task Manager/images/task-illustration.png" type="image/png" id="task-illustration">
             <div class="task-body--new">
-                <form class="new-form" name="newTaskForm">
+                <form class="new-form" name="newTaskForm" action="index.html">
                     <label for="taskName">Add Task Name
                         <input type="text" name="taskName" placeholder="Enter Task Name">
                     </label><br>
                     <label for="taskDescription">Add Description
-                        <input type="text" name="taskDescription" placeholder="Enter Task Description" maxlength="80">
+                        <input type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="80">
                     </label> <br>
                     <label for="taskTags">Add Tags
                         <input type="text" name="taskTags" placeholder="Enter Task Tags">
@@ -122,81 +82,79 @@
                         <input type="date" name="taskADate" placeholder="Enter Task Tags">
                     </label>
                     <label for="taskDate">Due Date
-                            <input type="date" name="taskDDate" placeholder="Enter Task Tags">
+                        <input type="date" name="taskDDate" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Tag Color
-                            <input type="color" name="taskColor" placeholder="Enter Task Tags">
+                        <input type="color" name="taskColor" placeholder="Enter Task Tags">
                     </label><br>
-                    <button class="submit" onclick="validate()">Add Task</button>
+                    <button class="submit" type="submit">Add Task</button>
                 </form>
             </div>
         </div>
     </div>
-    <!-- <div class="taskCard">    
-    </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         // to add new tasks
-        function addTasks(){
+        function addTasks() {
             var x = document.getElementsByClassName('task-body--view');
-            x[0].style.display="none";
+            x[0].style.display = "none";
             reveal();
         }
         // to display new task form
-        function reveal()
-        {
+        function reveal() {
             var x = document.getElementsByClassName('task-body--add');
-            x[0].style.display="inline";
+            x[0].style.display = "inline";
         }
         // to exit new task form
-        function goback()
-        {
+        function goback() {
             var x = document.getElementsByClassName('task-body--add');
             var y = document.getElementsByClassName('task-body--view');
-            x[0].style.display="none";
-            y[0].style.display="block";
+            x[0].style.display = "none";
+            y[0].style.display = "block";
         }
         // to hide search icon
-        function hide()
-        {
+        function hide() {
             var x = document.getElementById('search-icon');
-            x.style.visibility="hidden";
+            x.style.visibility = "hidden";
             var z = document.getElementsByClassName('search-result');
-            z[0].style.display="block";
+            z[0].style.display = "block";
         }
         // to bring back search icon
-        function show()
-        {
+        function show() {
             var y = document.getElementById('search-icon');
-            y.style.visibility="visible";
+            y.style.visibility = "visible";
             var z = document.getElementsByClassName('search-result');
-            z[0].style.display="none";
+            z[0].style.display = "none";
         }
-        function color(obj)
-        {
-            obj.style.filter="grayscale(0)";
+
+        function color(obj) {
+            obj.style.filter = "grayscale(0)";
         }
-        function black()
-        {
-            obj.style.filter="grayscale(1)";
+
+        function black() {
+            obj.style.filter = "grayscale(1)";
         }
         // form
-        function validate(){
-            var tName= document.forms.newTaskForm.taskName.value;
-            var descrip = document.forms.newTaskForm.taskDescription.value;
-            var tags = document.forms.newTaskForm.taskTags.value;
-            var due = document.forms.newTaskForm.taskDDate.value;
-            var col = document.forms.newTaskForm.taskColor.value;
-            create(tName, descrip, tags, due, col);
-        }
-        function create(tn,ds,tg,dd,cl){
-            var div = document.createElement('div');
+        $(document).ready(function() {
+            $(document).on('submit', '.new-form', function() {
+                var tName = $('.new-form').find('input[name="taskName"]').val();
+                var tDesc = $('.new-form').find('input[name="taskDesc"]').val();
+                var tTags = $('.new-form').find('input[name="taskTags"]').val();
+                var tDDate = $('.new-form').find('input[name="taskDdate"]').val();
+                var tADate = $('.new-form').find('input[name="taskADate"]').val();
+                var tColor = $('.new-form').find('input[name="taskColor"]').val();
+                create(tName,tDesc,tTags,tDDate,tADate,tColor);
+            return false;
            
-           div.className = 'task-body__card--preview';       
-             //div.style.backgroundColor = "black";
- 
-        document.getElementsByTagName('task-body--view')[0].appendChild(div);
+            });
+        });
+        function create(tName,tDesc,tTags,tDDate,tADate,tColor){
+            var card_element = '<li> <h3>'+tName+'</h3> <p id="disc">'+tDesc+'</p> <p id="date">'+tDDate+'</p> <div class="res-icons"> <img id="completed" src="/Task Manager/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)"> <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)"> <img id="archive" src="/Task Manager/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)"> </div> </li><br>'
+            $("#search-re").append(card_element);
         }
-        function myFunction() {
+        //search functiom
+        function search() {
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById("tSearch");
             filter = input.value.toUpperCase();
@@ -212,6 +170,7 @@
                 }
             }
         }
-    </script> 
+    </script>
 </body>
+
 </html>

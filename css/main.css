@@ -638,6 +638,10 @@ button:hover {
   transition: all 50ms ease-in;
 }
 
+#tSearch:focus ul {
+  display: none;
+}
+
 #search-icon {
   margin: 20px 5px 10px 5px;
   position: absolute;
@@ -705,6 +709,8 @@ button:hover {
 
 .search-result ul li {
   display: none;
+  padding: 5px;
+  margin: 5px;
 }
 
 .search-result #date {

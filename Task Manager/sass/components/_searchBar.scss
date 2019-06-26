@@ -19,6 +19,9 @@
     &:focus{
         border-bottom: 2px solid #03A9F4;
         transition: all 50ms ease-in;
+        ul{
+            display:none;
+        }
     }
     text-indent:35px;
 }
