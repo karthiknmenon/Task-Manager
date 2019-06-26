@@ -1,55 +1,86 @@
 
+.result-area{
+   padding:1px;
+}
 .search-result{
     // text-indent:70px;
     position: relative;
-    h3{
-        margin-left:70px;
-        font-weight: 300;
-        margin-bottom:0px;
-    }
-    #disc{
-        // display: block;
-        float:left;
-        margin-left:70px;
-        margin-right:100px;
-        width:300px;
-        font-weight: 200;
-        font-size:12px;
-        // text-align: justify;
-    }
     ul{
+   
         list-style-type: none;
         li{
             padding:5px;
             margin:5px;
+                  
+            h3{
+                margin-left:70px;
+                font-weight: 300;
+                margin-bottom:0px;
+            }
+            #disc{
+                // display: block;
+                float:left;
+                margin-left:70px;
+                margin-right:100px;
+                width:300px;
+                font-weight: 200;
+                font-size:12px;
+                // text-align: justify;
+            }
             #date{
                 margin: 0px;
-                margin-top: 15px;
+                // margin-top: 10px;
                 font-size:12px;
             }
               
             #completed{
-                position: absolute;
-                left:800px;
+                position: relative;
+                left: 280px;
+                bottom: 20px;
                 opacity:0.5;
-                filter: grayscale(0);
-                transition: all 10ms linear;
+                filter: grayscale(1);
+                
             }
             #priority{
-                position: absolute;
-                left:830px;
-                transition: all 10ms linear;
+                position: relative;
+                left: 280px;
+                bottom: 20px;
+        
                 opacity:0.5;
-                filter: grayscale(0);
+                filter: grayscale(1);
             }
             #archive{
-                position: absolute;
-                left:860px;
+                position: relative;
+                left: 280px;
+                bottom: 20px;
+                opacity:0.5;
+                filter: grayscale(1);
+            }
+            
+            #completed:focus{
+                position: relative;
+                left: 280px;
+                bottom: 20px;
+                opacity:0.5;
+                filter: grayscale(0);
+                transition: all 10ms linear;
+            }
+            #priority:focus{
+                position: relative;
+                left: 280px;
+                bottom: 20px;
                 transition: all 10ms linear;
                 opacity:0.5;
                 filter: grayscale(0);
             }
-            
+            #archive:focus{
+                position: relative;
+                left: 280px;
+                bottom: 20px;
+                transition: all 10ms linear;
+                opacity:0.5;
+                filter: grayscale(1);
+            }
         }
     }
 }

@@ -680,23 +680,12 @@ button:hover {
   }
 }
 
+.result-area {
+  padding: 1px;
+}
+
 .search-result {
   position: relative;
-}
-
-.search-result h3 {
-  margin-left: 70px;
-  font-weight: 300;
-  margin-bottom: 0px;
-}
-
-.search-result #disc {
-  float: left;
-  margin-left: 70px;
-  margin-right: 100px;
-  width: 300px;
-  font-weight: 200;
-  font-size: 12px;
 }
 
 .search-result ul {
@@ -708,25 +697,68 @@ button:hover {
   margin: 5px;
 }
 
+.search-result ul li h3 {
+  margin-left: 70px;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.search-result ul li #disc {
+  float: left;
+  margin-left: 70px;
+  margin-right: 100px;
+  width: 300px;
+  font-weight: 200;
+  font-size: 12px;
+}
+
 .search-result ul li #date {
   margin: 0px;
-  margin-top: 15px;
   font-size: 12px;
 }
 
 .search-result ul li #completed {
-  position: absolute;
-  left: 800px;
+  position: relative;
+  left: 280px;
+  bottom: 20px;
   opacity: 0.5;
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-  -webkit-transition: all 10ms linear;
-  transition: all 10ms linear;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 .search-result ul li #priority {
-  position: absolute;
-  left: 830px;
+  position: relative;
+  left: 280px;
+  bottom: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.search-result ul li #archive {
+  position: relative;
+  left: 280px;
+  bottom: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.search-result ul li #completed:focus {
+  position: relative;
+  left: 280px;
+  bottom: 20px;
+  opacity: 0.5;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all 10ms linear;
+  transition: all 10ms linear;
+}
+
+.search-result ul li #priority:focus {
+  position: relative;
+  left: 280px;
+  bottom: 20px;
   -webkit-transition: all 10ms linear;
   transition: all 10ms linear;
   opacity: 0.5;
@@ -734,14 +766,15 @@ button:hover {
           filter: grayscale(0);
 }
 
-.search-result ul li #archive {
-  position: absolute;
-  left: 860px;
+.search-result ul li #archive:focus {
+  position: relative;
+  left: 280px;
+  bottom: 20px;
   -webkit-transition: all 10ms linear;
   transition: all 10ms linear;
   opacity: 0.5;
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 @media only screen and (max-width: 767px) {
