@@ -1,16 +1,8 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-// .search-bar{
-//     @include margin(20px, 20px, 20px, 20px);
-//     position: absolute;
-//     box-sizing: border-box;
-//     top: $searchTop;
-//     height: $searchHeight;
-//     width:$searchWidth;;
-//     background-color: $searchBgColor;
-   
-// }
+
 #tSearch{
+    position: relative;
     border: none;
     border-bottom: 2px solid #BDBDBD;
     width: 900px;
@@ -19,22 +11,21 @@
     &:focus{
         border-bottom: 2px solid #03A9F4;
         transition: all 50ms ease-in;
-        ul{
-            display:none;
-        }
     }
     text-indent:35px;
 }
 #search-icon{
-    @include margin(20px,5px,10px,5px);
-    position: absolute;
+    position: fixed;
+    left:240px;
+
+    z-index: 5;
+   
     height: 15px;
     width:15px;
-    left:8%;
-    bottom:42%;
     opacity: 0.3;
     transition: all 50ms ease-in;
 }
+
 
 //phone
 @media only screen and (max-width: 767px){

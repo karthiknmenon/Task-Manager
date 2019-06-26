@@ -19,7 +19,7 @@
             <div class="task-body__card" style='cursor: pointer' onclick='addTasks()'>
                 <img src="/Task Manager/images/outline-add-24px.svg" id="add-task">
                 <h2>New Task</h2>
-            </div> 
+            </div>
 
             <!-- task cards container -->
             <div class="featured-task--container">
@@ -34,29 +34,7 @@
                     <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="search()"
                         id="tSearch" onfocus="hide()" onblur="show()">
                     <div class="search-result">
-                        <!-- <h3>Project Proposal</h3>
-                        <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
-                        <p id="date"> Due: 21/07/19</p>
-                        <div class="res-icons">
-                                <img id="completed" src="/Task Manager/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                                <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)">
-                                <img id="archive" src="/Task Manager/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)">
-                        </div> -->
                         <ul id="search-re">
-                            <li>
-                                <h3>Project Proposal</h3>
-                                <p id="disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam molestiae
-                                    asperiores explicabo, nemo ipsam, cupiditate, id placeat modi.</p>
-                                <p id="date"> Due: 21/07/19</p>
-                                <div class="res-icons">
-                                    <img id="completed" src="/Task Manager/images/outline-done-24px.svg"
-                                        onclick="color(this)" ondbclick="black(this)">
-                                    <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg"
-                                        onclick="color(this)" ondbclick="black(this)">
-                                    <img id="archive" src="/Task Manager/images/outline-archive-24px.svg"
-                                        onclick="color(this)" ondbclick="black(this)">
-                                </div>
-                            </li><br>
                         </ul>
                     </div>
                 </label>
@@ -94,83 +72,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        // to add new tasks
-        function addTasks() {
-            var x = document.getElementsByClassName('task-body--view');
-            x[0].style.display = "none";
-            reveal();
-        }
-        // to display new task form
-        function reveal() {
-            var x = document.getElementsByClassName('task-body--add');
-            x[0].style.display = "inline";
-        }
-        // to exit new task form
-        function goback() {
-            var x = document.getElementsByClassName('task-body--add');
-            var y = document.getElementsByClassName('task-body--view');
-            x[0].style.display = "none";
-            y[0].style.display = "block";
-        }
-        // to hide search icon
-        function hide() {
-            var x = document.getElementById('search-icon');
-            x.style.visibility = "hidden";
-            var z = document.getElementsByClassName('search-result');
-            z[0].style.display = "block";
-        }
-        // to bring back search icon
-        function show() {
-            var y = document.getElementById('search-icon');
-            y.style.visibility = "visible";
-            var z = document.getElementsByClassName('search-result');
-            z[0].style.display = "none";
-        }
-
-        function color(obj) {
-            obj.style.filter = "grayscale(0)";
-        }
-
-        function black() {
-            obj.style.filter = "grayscale(1)";
-        }
-        // form
-        $(document).ready(function() {
-            $(document).on('submit', '.new-form', function() {
-                var tName = $('.new-form').find('input[name="taskName"]').val();
-                var tDesc = $('.new-form').find('input[name="taskDesc"]').val();
-                var tTags = $('.new-form').find('input[name="taskTags"]').val();
-                var tDDate = $('.new-form').find('input[name="taskDdate"]').val();
-                var tADate = $('.new-form').find('input[name="taskADate"]').val();
-                var tColor = $('.new-form').find('input[name="taskColor"]').val();
-                create(tName,tDesc,tTags,tDDate,tADate,tColor);
-            return false;
-           
-            });
-        });
-        function create(tName,tDesc,tTags,tDDate,tADate,tColor){
-            var card_element = '<li> <h3>'+tName+'</h3> <p id="disc">'+tDesc+'</p> <p id="date">'+tDDate+'</p> <div class="res-icons"> <img id="completed" src="/Task Manager/images/outline-done-24px.svg" onclick="color(this)" ondbclick="black(this)"> <img id="priority" src="/Task Manager/images/outline-star_border-24px (1).svg" onclick="color(this)" ondbclick="black(this)"> <img id="archive" src="/Task Manager/images/outline-archive-24px.svg" onclick="color(this)" ondbclick="black(this)"> </div> </li><br>'
-            $("#search-re").append(card_element);
-        }
-        //search functiom
-        function search() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("tSearch");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("search-re");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("h3")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "block";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-    </script>
+    <script type="text/javascript" src="../Task Manager/js/index.js"></script>
 </body>
 
 </html>

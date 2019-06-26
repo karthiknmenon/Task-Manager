@@ -60,7 +60,6 @@ body {
 .taskCard {
   position: absolute;
   width: 1041px;
-  height: 600px;
   background-color: white;
   right: 7%;
   top: 7%;
@@ -624,6 +623,7 @@ button:hover {
 }
 
 #tSearch {
+  position: relative;
   border: none;
   border-bottom: 2px solid #BDBDBD;
   width: 900px;
@@ -638,17 +638,12 @@ button:hover {
   transition: all 50ms ease-in;
 }
 
-#tSearch:focus ul {
-  display: none;
-}
-
 #search-icon {
-  margin: 20px 5px 10px 5px;
-  position: absolute;
+  position: fixed;
+  left: 240px;
+  z-index: 5;
   height: 15px;
   width: 15px;
-  left: 8%;
-  bottom: 42%;
   opacity: 0.3;
   -webkit-transition: all 50ms ease-in;
   transition: all 50ms ease-in;
@@ -708,18 +703,17 @@ button:hover {
 }
 
 .search-result ul li {
-  display: none;
   padding: 5px;
   margin: 5px;
 }
 
-.search-result #date {
+.search-result ul li #date {
   margin: 0px;
   margin-top: 15px;
   font-size: 12px;
 }
 
-.search-result .res-icons {
+.search-result ul li .res-icons {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: 0.5;
@@ -729,28 +723,28 @@ button:hover {
   top: 35px;
 }
 
-.search-result .res-icons #completed {
-  height: 20px;
-  width: 20px;
+.search-result ul li .res-icons #completed:hover {
   opacity: 0.5;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all 10ms linear;
+  transition: all 10ms linear;
 }
 
-.search-result .res-icons #priority {
-  height: 20px;
-  width: 20px;
+.search-result ul li .res-icons #priority:hover {
+  -webkit-transition: all 10ms linear;
+  transition: all 10ms linear;
   opacity: 0.5;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
-.search-result .res-icons #archive {
-  height: 20px;
-  width: 20px;
+.search-result ul li .res-icons #archive:hover {
+  -webkit-transition: all 10ms linear;
+  transition: all 10ms linear;
   opacity: 0.5;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 @media only screen and (max-width: 767px) {
