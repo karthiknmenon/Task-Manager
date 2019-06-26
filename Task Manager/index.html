@@ -47,22 +47,22 @@
             <div class="task-body--new">
                 <form class="new-form" name="newTaskForm" action="index.html" autocomplete="off">
                     <label for="taskName">Add Task Name
-                        <input type="text" name="taskName" placeholder="Enter Task Name">
+                        <input data-validation="text" type="text" name="taskName" placeholder="Enter Task Name">
                     </label><br>
                     <label for="taskDescription">Add Description
-                        <input type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="80">
+                        <input data-validation="text" type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="80">
                     </label> <br>
                     <label for="taskTags">Add Tags
-                        <input type="text" name="taskTags" placeholder="Enter Task Tags">
+                        <input data-validation="text" type="text" name="taskTags" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Assigned Date
-                        <input type="date" name="taskADate" placeholder="Enter Task Tags">
+                        <input data-validation="date" data-validation-format="yyyy-mm-dd" type="date" name="taskADate" placeholder="Enter Task Tags">
                     </label>
                     <label for="taskDate">Due Date
-                        <input type="date" name="taskDDate" placeholder="Enter Task Tags">
+                        <input data-validation="date" data-validation-format="yyyy-mm-dd" type="date" name="taskDDate" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Tag Color
-                        <input type="color" name="taskColor" placeholder="Enter Task Tags">
+                        <input data-validation="color" type="color" name="taskColor" placeholder="Enter Task Tags">
                     </label><br>
                     <button class="submit" type="submit">Add Task</button>
                 </form>
@@ -72,6 +72,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <!-- data validation -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+        $.validate({
+            lang: 'en'
+        });
+    </script>
     <script type="text/javascript" src="../Task Manager/js/index.js"></script>
     <script type="text/javascript" src="../Task Manager/js/form.js"></script>
 </body>
