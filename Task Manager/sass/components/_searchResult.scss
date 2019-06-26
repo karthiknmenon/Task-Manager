@@ -17,6 +17,12 @@
         font-size:12px;
         // text-align: justify;
     }
+    ul{
+        list-style-type: none;
+        li{
+            display: none;
+        }
+    }
     #date{
         margin: 0px;
         margin-top: 15px;
