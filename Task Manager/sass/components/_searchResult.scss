@@ -27,30 +27,29 @@
                 margin-top: 15px;
                 font-size:12px;
             }
-            .res-icons{
-                filter:grayscale(1);
-                opacity:0.5;
+              
+            #completed{
                 position: absolute;
-                bottom: 1px;
-                left: 800px;
-                top: 35px;
-                #completed:hover{
-                    
-                    opacity:0.5;
-                    filter: grayscale(0);
-                    transition: all 10ms linear;
-                }
-                #priority:hover{
-                    transition: all 10ms linear;
-                    opacity:0.5;
-                    filter: grayscale(0);
-                }
-                #archive:hover{
-                    transition: all 10ms linear;
-                    opacity:0.5;
-                    filter: grayscale(0);
-                }
+                left:800px;
+                opacity:0.5;
+                filter: grayscale(0);
+                transition: all 10ms linear;
             }
+            #priority{
+                position: absolute;
+                left:830px;
+                transition: all 10ms linear;
+                opacity:0.5;
+                filter: grayscale(0);
+            }
+            #archive{
+                position: absolute;
+                left:860px;
+                transition: all 10ms linear;
+                opacity:0.5;
+                filter: grayscale(0);
+            }
+            
         }
     }
 }

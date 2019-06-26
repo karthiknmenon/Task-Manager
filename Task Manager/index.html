@@ -23,22 +23,21 @@
 
             <!-- task cards container -->
             <div class="featured-task--container">
-
             </div>
             <!-- task cards container ends here -->
 
             <!-- search-form -->
+            <img src="/Task Manager/images/search-solid.svg" id="search-icon">
             <form id="search-form" autocomplete="OFF">
                 <label for="search-task">
-                    <img src="/Task Manager/images/search-solid.svg" id="search-icon">
+                    
                     <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="search()"
                         id="tSearch" onfocus="hide()" onblur="show()">
-                    <div class="search-result">
-                        <ul id="search-re">
-                        </ul>
-                    </div>
                 </label>
             </form>
+            <div class="search-result">
+                    <ul id="search-re"></ul>
+            </div>
         </div>
         <!-- on add task -->
         <div class="task-body--add">
@@ -46,7 +45,7 @@
                 onclick='goback()'>
             <img src="/Task Manager/images/task-illustration.png" type="image/png" id="task-illustration">
             <div class="task-body--new">
-                <form class="new-form" name="newTaskForm" action="index.html">
+                <form class="new-form" name="newTaskForm" action="index.html" autocomplete="off">
                     <label for="taskName">Add Task Name
                         <input type="text" name="taskName" placeholder="Enter Task Name">
                     </label><br>
@@ -72,7 +71,9 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script type="text/javascript" src="../Task Manager/js/index.js"></script>
+    <script type="text/javascript" src="../Task Manager/js/form.js"></script>
 </body>
 
 </html>

@@ -639,8 +639,9 @@ button:hover {
 }
 
 #search-icon {
-  position: fixed;
-  left: 240px;
+  position: absolute;
+  left: 90px;
+  top: 325px;
   z-index: 5;
   height: 15px;
   width: 15px;
@@ -713,17 +714,9 @@ button:hover {
   font-size: 12px;
 }
 
-.search-result ul li .res-icons {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  opacity: 0.5;
+.search-result ul li #completed {
   position: absolute;
-  bottom: 1px;
   left: 800px;
-  top: 35px;
-}
-
-.search-result ul li .res-icons #completed:hover {
   opacity: 0.5;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
@@ -731,7 +724,9 @@ button:hover {
   transition: all 10ms linear;
 }
 
-.search-result ul li .res-icons #priority:hover {
+.search-result ul li #priority {
+  position: absolute;
+  left: 830px;
   -webkit-transition: all 10ms linear;
   transition: all 10ms linear;
   opacity: 0.5;
@@ -739,7 +734,9 @@ button:hover {
           filter: grayscale(0);
 }
 
-.search-result ul li .res-icons #archive:hover {
+.search-result ul li #archive {
+  position: absolute;
+  left: 860px;
   -webkit-transition: all 10ms linear;
   transition: all 10ms linear;
   opacity: 0.5;

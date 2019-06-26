@@ -15,11 +15,10 @@
     text-indent:35px;
 }
 #search-icon{
-    position: fixed;
-    left:240px;
-
+    position: absolute;
+    left: 90px;
+    top: 325px;
     z-index: 5;
-   
     height: 15px;
     width:15px;
     opacity: 0.3;
