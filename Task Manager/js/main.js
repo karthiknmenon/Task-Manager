@@ -1,3 +1,26 @@
+// on click event to mark task as completed
+$("document").ready(function(){
+    $('#completed').on('click', function() {
+      color(this);
+    })
+
+  });
+//   on click event to mark task as important
+  $("document").ready(function(){
+
+    $('#priority').on('click', function() {
+      color(this);
+    })
+
+  });
+//   on click event to mark task as archived
+  $("document").ready(function(){
+
+    $('#archive').on('click', function() {
+      color(this);
+    })
+
+  });
 // to add new tasks
 function addTasks() {
     var x = $('.task-body--view').css("display", "none");
@@ -29,9 +52,9 @@ function color(obj) {
 function black(obj) {
     obj.style.filter = "grayscale(1)";
 }
-// to check if dataSet is empty 
 
-// new task form
+// initialize dataSet array to null or previous object if defined.
+// call object create method on submit
 $(document).ready(function () {
     var dataSet = JSON.parse(localStorage.getItem("dataSet")) || [];
     $(document).on('submit', '.new-form', function () {
@@ -63,17 +86,16 @@ $(document).ready(function () {
 });
 // create new task
 function createTask(tName, tDesc, tTags, tDDate, tADate, tColor) {
-    var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + tColor + '"></div> <h3>' + tName + '</h3> <p>' + tDesc + '</p> </div> <div class="date-item"> <p>Due Date:' + tDDate + '</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
+    var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + tColor + '"></div> <h3>' + tName + '</h3> <p>' + tDesc + '</p> </div> <div class="date-item"> <p>Due Date:' + tDDate + '</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-done-24px.svg" alt="complete"> <img id="priority" onclick="color(this)" class="sIcon" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
     $("#search-re").append(card_element);
 }
 // to load tasks on refrest
 $(document).ready(function () {
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
-    var i=0;
-    for(i=0;i<x.length;i++)
-    {
-        var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' +x[i].TaskColor+ '"></div> <h3>' +x[i].TaskName+ '</h3> <p>' +x[i].TaskDec+'</p> </div> <div class="date-item"> <p>Due Date:' +x[i].DueDate+'</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
+    var i = 0;
+    for (i = 0; i < x.length; i++) {
+        var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p>' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
         $("#search-re").append(card_element);
 
     }

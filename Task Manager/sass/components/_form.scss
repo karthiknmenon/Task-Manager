@@ -27,14 +27,11 @@ input {
     height: $formHeight;
     border: $formBorder;
     border-radius: $formRadius;
-    text-indent: 16px;
-    // padding: $formPadding;
+    text-indent: $formInputTextIndent;
     padding: 0px;
-
     &:focus {
         border: 1px solid #03A9F4;
         transition: all 5ms linear;
-
     }
 }
 
