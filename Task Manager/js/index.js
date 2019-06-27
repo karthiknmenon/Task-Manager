@@ -55,7 +55,7 @@ $(document).ready(function() {
 });
 // create new task
 function createTask(tName,tDesc,tTags,tDDate,tADate,tColor){
-    var card_element = ' <div class="result-area"> <li> <div id="task-color" style="background-color:'+tColor+'"></div><h3>asdasd</h3> <p id="disc">'+tDesc+'</p> <p id="date">Due Date: '+tDDate+'</p> <img id="completed" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-archive-24px.svg"> </li></div><br>'
+    var card_element = ' <div class="result-area"> <li> <div id="task-color" style="background-color:'+tColor+'"></div><h3>'+tName+'</h3> <p id="disc">'+tDesc+'</p> <p id="date">Due Date: '+tDDate+'</p> <img id="completed" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-archive-24px.svg"> </li></div><br>'
     $("#search-re").append(card_element);
 }
 //search functiom
