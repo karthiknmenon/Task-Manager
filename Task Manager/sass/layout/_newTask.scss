@@ -16,6 +16,19 @@
     top: 1%;
     left:97%;
 }
+#toaster-success{
+    width: 337px;
+    height: 50px;
+    border-radius: 3px;
+    border:2px solid #F8BBD0;
+    color:#212121;
+    p{
+        margin-top: 15px;
+        margin-bottom: 15px;    
+        text-align: center;
+        font-weight: 400;
+    }
+}
 @media only screen and (max-width: 767px){
     #task-illustration{
         position: absolute;

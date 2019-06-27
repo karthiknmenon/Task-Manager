@@ -1,4 +1,5 @@
 // to add new tasks
+$('#toaster-success').hide();
 function addTasks() {
     var x = document.getElementsByClassName('task-body--view');
     x[0].style.display = "none";

@@ -583,11 +583,11 @@ button:hover {
 }
 
 .search-result ul li #task-color {
-  position: absolute;
+  position: relative;
   bottom: 0px;
   /* right: 30px; */
-  top: 32px;
-  left: 100px;
+  top: 72px;
+  left: 60px;
   height: 50px;
   width: 4px;
 }
@@ -821,6 +821,21 @@ button:hover {
   position: absolute;
   top: 1%;
   left: 97%;
+}
+
+#toaster-success {
+  width: 337px;
+  height: 50px;
+  border-radius: 3px;
+  border: 2px solid #F8BBD0;
+  color: #212121;
+}
+
+#toaster-success p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 767px) {
