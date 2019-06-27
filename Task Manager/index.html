@@ -50,27 +50,41 @@
             <div class="task-body--new">
                 <!-- form starts here -->
                 <form class="new-form" id="newForm" name="newTaskForm" autocomplete="off">
-                    <label for="taskName">Add Task Name
-                        <input type="text" name="taskName" placeholder="Enter Task Name"
-                            maxlength="20" required>
-                    </label><br>
-                    <label for="taskDescription">Add Description
-                        <input type="text" name="taskDesc" placeholder="Enter Task Description"
-                            maxlength="30">
-                    </label> <br>
-                    <label for="taskTags">Add Tags
-                        <input type="text" name="taskTags" placeholder="Enter Task Tags"
-                            maxlength="10">
-                    </label><br>
-                    <label for="taskDate">Assigned Date
-                        <input type="date" name="taskADate">
-                    </label>
-                    <label for="taskDate">Due Date
-                        <input type="date" name="taskDDate" required>
-                    </label><br>
-                    <label for="taskDate">Tag Color
-                        <input type="color" data-validation="required" name="taskColor" placeholder="Enter Task Tags">
-                    </label><br>
+                    <div class="taskName">
+                        <label for="taskName">Add Task Name
+                            <input type="text" name="taskName" placeholder="Enter Task Name"
+                                maxlength="20" required>
+                        </label><br>
+                    </div class="taskDescription">  
+                    <div>
+                        <label for="taskDescription">Add Description
+                            <input type="text" name="taskDesc" placeholder="Enter Task Description"
+                                maxlength="30">
+                        </label> <br>
+                    </div>
+                    <div class="taskTags">
+                        <label for="taskTags">Add Tags
+                            <input type="text" name="taskTags" placeholder="Enter Task Tags"
+                                maxlength="10">
+                        </label><br>
+                    </div>
+                    <div class="taskDate">
+                        <div class="taskADate">
+                            <label for="taskDate">Assigned Date
+                                <input type="date" name="taskADate">
+                            </label>
+                        </div>
+                        <div class="taskDDate">
+                            <label for="taskDate">Due Date
+                                <input type="date" name="taskDDate" required>
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="taskColor">
+                        <label for="taskColor">Tag Color
+                            <input type="color" data-validation="required" name="taskColor" placeholder="Enter Task Tags">
+                        </label><br>
+                    </div>
                     <button class="submit" type="submit" value="Validate" onclick="toaster()">Add Task</button>
                     <!-- <div id="toaster-success"><p>Added Task!</p</div> -->
                 </form>
