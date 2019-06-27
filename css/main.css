@@ -592,7 +592,7 @@ button:hover {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 300px;
+  min-width: 300px;
 }
 
 .result-container .title-item .task-color {
@@ -615,8 +615,10 @@ button:hover {
 }
 
 .result-container .date-item {
-  width: 300px;
   display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .result-container .date-item p {
@@ -625,7 +627,6 @@ button:hover {
 }
 
 .result-container .icon-item {
-  width: 300px;
   display: inline-block;
   justify-self: flex-end;
   -ms-flex-item-align: end;
@@ -821,13 +822,16 @@ button:hover {
   display: none;
 }
 
-.error {
+#taskName-error {
+  color: red;
   margin: 0px;
+  font-size: 14px;
 }
 
-.help-block.form-error {
+#taskDDate-error {
   color: red;
-  font-size: 13px;
+  margin: 0px;
+  font-size: 14px;
 }
 
 #task-illustration {
@@ -844,19 +848,69 @@ button:hover {
   left: 97%;
 }
 
-#toaster-success {
-  width: 337px;
-  height: 50px;
+#toaster {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #C2185B;
   border-radius: 3px;
-  border: 2px solid #F8BBD0;
-  color: #212121;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
 }
 
-#toaster-success p {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-  font-weight: 400;
+#toaster.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {

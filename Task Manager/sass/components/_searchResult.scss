@@ -18,7 +18,7 @@
     .title-item{
         display:inline-block;
         align-self: center;
-        width:300px;
+        min-width:300px;
         .task-color{
             display: inline-block;
             justify-self: center;
@@ -36,15 +36,16 @@
         }
     }
     .date-item{
-        width:300px;
+        // width:300px;
         display:inline-block;
+        align-self: center;
         p{
             margin:0px;
             font-size:12px;
         }
     }
     .icon-item{
-        width:300px;
+        // width:300px;
         display:inline-block;
         justify-self: flex-end;
         align-self: flex-end;

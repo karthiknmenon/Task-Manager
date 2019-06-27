@@ -30,16 +30,16 @@
             <img src="/Task Manager/images/search-solid.svg" id="search-icon">
             <form id="search-form" autocomplete="OFF">
                 <label for="search-task">
-                    
+
                     <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="search()"
                         id="tSearch" onfocus="hide()" onblur="show()">
                 </label>
             </form>
             <!-- search-result -->
             <div id="search-re">
-                    <!-- <div class="result-container"> <div class="title-item"> <div class="task-color"></div> <h3>Title</h3> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> </div> <div class="date-item"> <p>Due Date:xx|xx|xx</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div> -->
+                    <div id="toaster">Task Added ! </div>
             </div>
-          
+
             <!-- search result ends here -->
         </div>
         <!-- on add task -->
@@ -48,29 +48,30 @@
                 onclick='goback()'>
             <img src="/Task Manager/images/task-illustration.png" type="image/png" id="task-illustration">
             <div class="task-body--new">
-                <form class="new-form" name="newTaskForm" action="index.html" autocomplete="off">
+                <!-- form starts here -->
+                <form class="new-form" id="newForm" name="newTaskForm" autocomplete="off">
                     <label for="taskName">Add Task Name
-                        <input type="text" data-validation="required" name="taskName" placeholder="Enter Task Name" 
-                        data-validation-error-msg="Enter Task Name !" maxlength="20">
+                        <input type="text" name="taskName" placeholder="Enter Task Name"
+                            maxlength="20" required>
                     </label><br>
                     <label for="taskDescription">Add Description
-                        <input data-validation="text" type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="30">
+                        <input type="text" name="taskDesc" placeholder="Enter Task Description"
+                            maxlength="30">
                     </label> <br>
                     <label for="taskTags">Add Tags
-                        <input data-validation="text" type="text" name="taskTags" placeholder="Enter Task Tags" maxlength="10">
+                        <input type="text" name="taskTags" placeholder="Enter Task Tags"
+                            maxlength="10">
                     </label><br>
                     <label for="taskDate">Assigned Date
-                        <input data-validation="date" data-validation-format="yyyy-mm-dd" type="date" name="taskADate" placeholder="Enter Task Tags"
-                        data-validation-error-msg="Enter Date">
+                        <input type="date" name="taskADate">
                     </label>
                     <label for="taskDate">Due Date
-                        <input data-validation="date" data-validation-format="yyyy-mm-dd"  type="date" name="taskDDate" placeholder="Enter Task Tags"
-                        data-validation-error-msg="Enter Date">
+                        <input type="date" name="taskDDate" required>
                     </label><br>
                     <label for="taskDate">Tag Color
                         <input type="color" data-validation="required" name="taskColor" placeholder="Enter Task Tags">
                     </label><br>
-                    <button class="submit" type="submit" value="Validate">Add Task</button>
+                    <button class="submit" type="submit" value="Validate" onclick="toaster()">Add Task</button>
                     <!-- <div id="toaster-success"><p>Added Task!</p</div> -->
                 </form>
             </div>
@@ -80,12 +81,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- data validation -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
     <script>
-        $.validate({
-            lang: 'en'
-        });
+        $("#newForm").validate();
     </script>
     <!-- main JS file -->
     <script type="text/javascript" src="../Task Manager/js/main.js"></script>

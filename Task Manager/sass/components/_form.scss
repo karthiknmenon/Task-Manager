@@ -1,144 +1,163 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-%default{
+
+%default {
     border: none;
     outline: none;
     display: block;
 }
-form{
-    @include margin(50px,50px,50px,42px);
+
+form {
+    @include margin(50px, 50px, 50px, 42px);
 }
-input{
+
+input {
     @extend %default;
     box-sizing: border-box;
-    margin-top:8px;
+    margin-top: 8px;
     width: $formWidth;
     height: $formHeight;
     border: $formBorder;
     border-radius: $formRadius;
-    text-indent:16px;
+    text-indent: 16px;
     // padding: $formPadding;
-    padding:0px;
-    &:focus{
+    padding: 0px;
+
+    &:focus {
         border: 1px solid #03A9F4;
         transition: all 5ms linear;
-        
+
     }
 }
-label{
+
+label {
     display: inline-block;
-    margin-top:17px;
+    margin-top: 17px;
 }
-input[type=date]
-{
-    width:150px;
+
+input[type=date] {
+    width: 150px;
     text-indent: 6px;
     font-family: 'Montserrat';
     font-weight: 100;
-   
+
 }
-input[type=date]:nth-of-type(1)
-{
-    margin-right:8px;
+
+input[type=date]:nth-of-type(1) {
+    margin-right: 8px;
 }
-input[type=color]{
+
+input[type=color] {
     @extend %default;
-    border:1px;
-    display:inline;
-    margin-bottom:16px;
+    border: 1px;
+    display: inline;
+    margin-bottom: 16px;
     width: $formColorWidth;
     height: $formColorHeight;
 }
-::placeholder{
+
+::placeholder {
     font-family: 'Montserrat';
     font-weight: $placeholderWeight;
 }
-::selection{
+
+::selection {
     background-color: $selectionColor;
 }
-button{
+
+button {
     @extend %default;
-    margin-top:16px;
+    margin-top: 16px;
     box-sizing: border-box;
-    background:transparent;
+    background: transparent;
     width: $addButtonWidth;
     height: $addButtonHeight;
     border: $addButtonBorder;
     border-radius: $addButtonRadius;
     font-family: 'Montserrat';
     font-weight: $addButtonFontWeight;
-    font-size:$addButtonFontSize;
-    &:hover{
+    font-size: $addButtonFontSize;
+
+    &:hover {
         background-color: $addButtonHoverColor;
         color: $whiteColor;
         transition: all 100ms ease-in;
     }
 }
-@media only screen and (max-width: 767px){
-    .new-form{
-        @include margin(400px,50px,50px,42px);
+
+@media only screen and (max-width: 767px) {
+    .new-form {
+        @include margin(400px, 50px, 50px, 42px);
     }
-    input{
+
+    input {
         @include formDefault();
         box-sizing: border-box;
-        margin-top:8px;
+        margin-top: 8px;
         width: 200px;
         height: $formHeight;
         border: $formBorder;
         border-radius: $formRadius;
-        text-indent:16px;
+        text-indent: 16px;
         // padding: $formPadding;
-        padding:0px;
-        &:focus{
+        padding: 0px;
+
+        &:focus {
             border: 1px solid #03A9F4;
             transition: all 5ms linear;
-            
+
         }
     }
-    label{
+
+    label {
         display: inline-block;
-        margin-top:17px;
+        margin-top: 17px;
     }
-    input[type=date]
-    {
-        width:200px;
+
+    input[type=date] {
+        width: 200px;
         text-indent: 6px;
         font-family: 'Montserrat';
         font-weight: 100;
-       
+
     }
-    input[type=date]:nth-of-type(1)
-    {
-        margin-right:8px;
+
+    input[type=date]:nth-of-type(1) {
+        margin-right: 8px;
     }
-    input[type=color]{
+
+    input[type=color] {
         @include formDefault();
-        border:1px;
-        display:inline;
-        margin-bottom:16px;
+        border: 1px;
+        display: inline;
+        margin-bottom: 16px;
         width: $formColorWidth;
         height: $formColorHeight;
     }
-    ::placeholder{
+
+    ::placeholder {
         font-family: 'Montserrat';
         font-weight: $placeholderWeight;
     }
-    ::selection{
+
+    ::selection {
         background-color: $selectionColor;
     }
-    button{
+
+    button {
         @include formDefault();
-        margin-top:16px;
+        margin-top: 16px;
         box-sizing: border-box;
-        background:transparent;
+        background: transparent;
         width: 200px;
         height: $addButtonHeight;
         border: $addButtonBorder;
         border-radius: $addButtonRadius;
         font-family: 'Montserrat';
         font-weight: $addButtonFontWeight;
-        font-size:$addButtonFontSize;
-        &:hover{
+        font-size: $addButtonFontSize;
+
+        &:hover {
             background-color: $addButtonHoverColor;
             color: $whiteColor;
             transition: all 100ms ease-in;
