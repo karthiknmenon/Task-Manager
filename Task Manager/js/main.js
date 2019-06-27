@@ -29,9 +29,11 @@ function color(obj) {
 function black(obj) {
     obj.style.filter = "grayscale(1)";
 }
-var dataSet = [];
+// to check if dataSet is empty 
+
 // new task form
 $(document).ready(function () {
+    var dataSet = JSON.parse(localStorage.getItem("dataSet")) || [];
     $(document).on('submit', '.new-form', function () {
         var tDDate = new Date();
         var tName = $('.new-form').find('input[name="taskName"]').val();
