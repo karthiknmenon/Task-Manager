@@ -7,6 +7,24 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #E91E63;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+  }
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -30,54 +48,6 @@ body {
   font-family: "Montserrat";
   font-weight: 100;
   margin: 0 auto;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  background: #E91E63;
-}
-
-@media only screen and (max-width: 767px) {
-  body {
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0px;
-  }
-}
-
-.taskCard {
-  position: relative;
-  background: white;
-  font-family: "Montserrat";
-  font-weight: 100;
-  margin: 0 auto;
-}
-
-.taskCard {
-  position: absolute;
-  width: 1041px;
-  height: 600px;
-  background-color: white;
-  right: 7%;
-  top: 7%;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-@media only screen and (max-width: 767px) {
-  .taskCard {
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    width: 300px;
-    height: 1000px;
-    overflow-x: hidden;
-  }
 }
 
 .task-box {
@@ -398,38 +368,6 @@ body {
   }
 }
 
-.task-body--add {
-  display: none;
-}
-
-#task-illustration {
-  position: absolute;
-  width: 550px;
-  height: 500px;
-  top: 5%;
-  left: 47%;
-}
-
-#close {
-  position: absolute;
-  top: 1%;
-  left: 97%;
-}
-
-@media only screen and (max-width: 767px) {
-  #task-illustration {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 5%;
-    left: 0%;
-  }
-  #close {
-    top: 1%;
-    left: 90%;
-  }
-}
-
 input, input[type=color], button {
   border: none;
   outline: none;
@@ -438,6 +376,23 @@ input, input[type=color], button {
 
 form {
   margin: 50px 50px 50px 42px;
+}
+
+.taskDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 input {
@@ -623,125 +578,121 @@ button:hover {
   }
 }
 
-#tSearch {
-  border: none;
-  border-bottom: 2px solid #BDBDBD;
+.result-area {
+  padding: 1px;
+}
+
+#add-task {
+  display: block;
+}
+
+.result-container {
   width: 900px;
-  border-radius: 0;
-  margin: 10px 40px;
-  text-indent: 35px;
+  margin-left: 55px;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#tSearch:focus {
-  border-bottom: 2px solid #03A9F4;
-  -webkit-transition: all 50ms ease-in;
-  transition: all 50ms ease-in;
+.result-container .title-item {
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  min-width: 300px;
 }
 
-#search-icon {
-  margin: 20px 5px 10px 5px;
-  position: absolute;
-  height: 15px;
-  width: 15px;
-  left: 8%;
-  bottom: 42%;
-  opacity: 0.3;
-  -webkit-transition: all 50ms ease-in;
-  transition: all 50ms ease-in;
+.result-container .title-item .task-color {
+  display: inline-block;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 11px;
+  width: 5px;
 }
 
-@media only screen and (max-width: 767px) {
-  #tSearch {
-    position: relative;
-    bottom: 600px;
-    right: 80px;
-    border: none;
-    border-bottom: 2px solid #BDBDBD;
-    width: 298px;
-    border-radius: 0;
-    text-indent: 35px;
-  }
-  #tSearch:focus {
-    border-bottom: 2px solid #03A9F4;
-    -webkit-transition: all 50ms ease-in;
-    transition: all 50ms ease-in;
-  }
-  #search-icon {
-    margin: 20px 5px 10px 5px;
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    left: 3%;
-    bottom: 96%;
-    opacity: 0.3;
-    -webkit-transition: all 50ms ease-in;
-    transition: all 50ms ease-in;
-    z-index: 5;
-  }
-}
-
-.search-result {
-  position: relative;
-}
-
-.search-result h3 {
-  margin-left: 70px;
-  font-weight: 300;
-  margin-bottom: 0px;
-}
-
-.search-result #disc {
-  float: left;
-  margin-left: 70px;
-  margin-right: 100px;
-  width: 300px;
-  font-weight: 200;
-  font-size: 12px;
-}
-
-.search-result #date {
+.result-container .title-item h3 {
+  display: inline-block;
+  font-weight: 400;
   margin: 0px;
-  margin-top: 15px;
+}
+
+.result-container .title-item p {
+  margin: 0px;
   font-size: 12px;
 }
 
-.search-result .res-icons {
+.result-container .date-item {
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.result-container .date-item p {
+  margin: 0px;
+  font-size: 12px;
+}
+
+.result-container .icon-item {
+  display: inline-block;
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#completed {
+  position: relative;
+  opacity: 0.5;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  opacity: 0.5;
-  position: absolute;
-  bottom: 1px;
-  left: 800px;
-  top: 35px;
 }
 
-.search-result .res-icons #completed {
-  height: 20px;
-  width: 20px;
-  opacity: 0.5;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+#completed:focus {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
-.search-result .res-icons #priority {
-  height: 20px;
-  width: 20px;
+#priority {
+  position: relative;
   opacity: 0.5;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
-.search-result .res-icons #archive {
-  height: 20px;
-  width: 20px;
+#priority:focus {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+#priority:active {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+#archive {
+  position: relative;
   opacity: 0.5;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+#archive:focus {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 @media only screen and (max-width: 767px) {
   .search-result {
-    display: none;
     position: relative;
     right: 43px;
     bottom: 620px;
@@ -791,6 +742,205 @@ button:hover {
     opacity: 0.5;
     -webkit-filter: grayscale(100);
             filter: grayscale(100);
+  }
+}
+
+#tSearch {
+  position: relative;
+  border: none;
+  border-bottom: 2px solid #BDBDBD;
+  width: 900px;
+  border-radius: 0;
+  margin: 10px 40px;
+  text-indent: 35px;
+}
+
+#tSearch:focus {
+  border-bottom: 2px solid #03A9F4;
+  -webkit-transition: all 50ms ease-in;
+  transition: all 50ms ease-in;
+}
+
+#search-icon {
+  position: absolute;
+  left: 90px;
+  top: 325px;
+  z-index: 5;
+  height: 15px;
+  width: 15px;
+  opacity: 0.3;
+  -webkit-transition: all 50ms ease-in;
+  transition: all 50ms ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  #tSearch {
+    position: relative;
+    bottom: 80px;
+    right: 81px;
+    border: none;
+    border-bottom: 2px solid #BDBDBD;
+    width: 298px;
+    border-radius: 0;
+    text-indent: 35px;
+  }
+  #tSearch:focus {
+    border-bottom: 2px solid #03A9F4;
+    -webkit-transition: all 50ms ease-in;
+    transition: all 50ms ease-in;
+  }
+  #search-icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 3%;
+    top: 10px;
+    opacity: 0.3;
+    -webkit-transition: all 50ms ease-in;
+    transition: all 50ms ease-in;
+    z-index: 5;
+  }
+}
+
+.taskCard {
+  position: relative;
+  background: white;
+  font-family: "Montserrat";
+  font-weight: 100;
+  margin: 0 auto;
+}
+
+.taskCard {
+  position: absolute;
+  width: 1041px;
+  background-color: white;
+  right: 7%;
+  top: 7%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 767px) {
+  .taskCard {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 300px;
+    height: 1000px;
+    overflow-x: hidden;
+  }
+  #new-task-card {
+    display: none;
+  }
+}
+
+.task-body--add {
+  display: none;
+}
+
+#taskName-error {
+  color: red;
+  margin: 0px;
+  font-size: 14px;
+}
+
+#taskDDate-error {
+  color: red;
+  margin: 0px;
+  font-size: 14px;
+}
+
+#task-illustration {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  top: 5%;
+  left: 47%;
+}
+
+#close {
+  position: absolute;
+  top: 1%;
+  left: 97%;
+}
+
+#toaster {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #C2185B;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+}
+
+#toaster.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #task-illustration {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 0%;
+  }
+  #close {
+    top: 1%;
+    left: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */

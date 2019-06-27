@@ -1,5 +1,0 @@
-add task
-members
-deadline
-completed
-add members

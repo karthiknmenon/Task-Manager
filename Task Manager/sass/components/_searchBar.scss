@@ -1,34 +1,37 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-#tSearch{
+#tSearch {
     position: relative;
     border: none;
     border-bottom: 2px solid #BDBDBD;
     width: 900px;
     border-radius: 0;
     margin: 10px 40px;
-    &:focus{
+
+    &:focus {
         border-bottom: 2px solid #03A9F4;
         transition: all 50ms ease-in;
     }
+
     text-indent:35px;
 }
-#search-icon{
+
+#search-icon {
     position: absolute;
     left: 90px;
     top: 325px;
     z-index: 5;
     height: 15px;
-    width:15px;
+    width: 15px;
     opacity: 0.3;
     transition: all 50ms ease-in;
 }
 
 
 //phone
-@media only screen and (max-width: 767px){
-    #tSearch{
+@media only screen and (max-width: 767px) {
+    #tSearch {
         position: relative;
         bottom: 80px;
         right: 81px;
@@ -36,20 +39,23 @@
         border-bottom: 2px solid #BDBDBD;
         width: 298px;
         border-radius: 0;
-        &:focus{
+
+        &:focus {
             border-bottom: 2px solid #03A9F4;
             transition: all 50ms ease-in;
         }
+
         text-indent:35px;
     }
-    #search-icon{
+
+    #search-icon {
         position: absolute;
         height: 15px;
         width: 15px;
         left: 3%;
-        top:10px;
+        top: 10px;
         opacity: 0.3;
         transition: all 50ms ease-in;
-        z-index:5;
+        z-index: 5;
     }
 }

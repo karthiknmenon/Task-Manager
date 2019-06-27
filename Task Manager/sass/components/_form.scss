@@ -10,14 +10,13 @@
 form {
     @include margin(50px, 50px, 50px, 42px);
 }
-.taskDate{
+
+.taskDate {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
     align-content: center
-
-    
 }
 
 input {

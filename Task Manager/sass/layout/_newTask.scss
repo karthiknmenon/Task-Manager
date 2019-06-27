@@ -4,12 +4,14 @@
 .task-body--add {
     display: none;
 }
-#taskName-error{
+
+#taskName-error {
     color: red;
     margin: 0px;
     font-size: 14px;
 }
-#taskDDate-error{
+
+#taskDDate-error {
     color: red;
     margin: 0px;
     font-size: 14px;
@@ -34,7 +36,7 @@
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
-    background-color:#C2185B;
+    background-color: #C2185B;
     border-radius: 3px;
     color: #fff;
     text-align: center;
@@ -56,6 +58,7 @@
         bottom: 0;
         opacity: 0;
     }
+
     to {
         bottom: 30px;
         opacity: 1;

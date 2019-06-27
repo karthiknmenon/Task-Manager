@@ -1,15 +1,21 @@
 @import "../abstracts/variables";
-html,body{
+
+html,
+body {
     width: 100%;
-    overflow-x:hidden;
-   
+    overflow-x: hidden;
+
 }
-body{
+
+body {
     background: $bodyBgColor;
 }
-@media only screen and (max-width: 767px){
 
-   body {width: 100%;
-    overflow-x:hidden;
-    margin:0px;}
+@media only screen and (max-width: 767px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0px;
+    }
 }

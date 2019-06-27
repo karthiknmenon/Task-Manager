@@ -1,91 +1,106 @@
 @import "../abstracts/variables";
-.result-area{
-   padding:1px;
-}
-#add-task{
-    display: block; 
+
+.result-area {
+    padding: 1px;
 }
 
-.result-container{
-    width:900px;
-    margin-left:55px;
-    margin-bottom:25px;
-    display:flex;
+#add-task {
+    display: block;
+}
+
+.result-container {
+    width: 900px;
+    margin-left: 55px;
+    margin-bottom: 25px;
+    display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-  
-    .title-item{
-        display:inline-block;
+
+    .title-item {
+        display: inline-block;
         align-self: center;
-        min-width:300px;
-        .task-color{
+        min-width: 300px;
+
+        .task-color {
             display: inline-block;
             justify-self: center;
-            height:11px;
-            width:5px;
+            height: 11px;
+            width: 5px;
         }
-        h3{
+
+        h3 {
             display: inline-block;
             font-weight: 400;
-            margin:0px;
+            margin: 0px;
         }
-        p{
-            margin:0px;
-            font-size:12px;
+
+        p {
+            margin: 0px;
+            font-size: 12px;
         }
     }
-    .date-item{
+
+    .date-item {
         // width:300px;
-        display:inline-block;
+        display: inline-block;
         align-self: center;
-        p{
-            margin:0px;
-            font-size:12px;
+
+        p {
+            margin: 0px;
+            font-size: 12px;
         }
     }
-    .icon-item{
+
+    .icon-item {
         // width:300px;
-        display:inline-block;
+        display: inline-block;
         justify-self: flex-end;
         align-self: flex-end;
     }
-   
-}
-#completed{
-    position: relative;
-    opacity:0.5;
-    filter: grayscale(1);
-    &:focus{
-        filter: grayscale(0);
-    }
-    
-}
-#priority{
-    position: relative;
-    opacity:0.5;
-    filter: grayscale(1);
-    &:focus{
-        filter: grayscale(0);
-    }
-    &:active{
-        filter:grayscale(1);
-    }
-}
-#archive{
-    position: relative;
-    opacity:0.5;
-    filter: grayscale(1);
-    &:focus{
-        filter: grayscale(0);
-    }
-    
+
 }
 
-@media only screen and (max-width: 767px){
-    
-    .search-result{
-      
+#completed {
+    position: relative;
+    opacity: 0.5;
+    filter: grayscale(1);
+
+    &:focus {
+        filter: grayscale(0);
+    }
+
+}
+
+#priority {
+    position: relative;
+    opacity: 0.5;
+    filter: grayscale(1);
+
+    &:focus {
+        filter: grayscale(0);
+    }
+
+    &:active {
+        filter: grayscale(1);
+    }
+}
+
+#archive {
+    position: relative;
+    opacity: 0.5;
+    filter: grayscale(1);
+
+    &:focus {
+        filter: grayscale(0);
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .search-result {
+
         // text-indent:70px;
         position: relative;
         right: 43px;
@@ -93,43 +108,50 @@
         height: 50px;
         /* width: 6700px; */
         background-color: #bdbdbd6b;
-        h3{
-            margin-left:12px;
+
+        h3 {
+            margin-left: 12px;
             font-weight: 300;
-            margin-bottom:0px;
+            margin-bottom: 0px;
         }
-        #disc{
-            display:none;
+
+        #disc {
+            display: none;
         }
-        #date{
+
+        #date {
             margin: 0px;
             margin-top: 12px;
-            font-size:12px;
+            font-size: 12px;
         }
-        .res-icons{
+
+        .res-icons {
             // display: none;
-            filter:grayscale(1);
-            opacity:0.5;
+            filter: grayscale(1);
+            opacity: 0.5;
             position: absolute;
             bottom: 1px;
             left: 800px;
             top: 35px;
-            #completed{
-                height:20px;
-                width:20px;
-                opacity:0.5;
+
+            #completed {
+                height: 20px;
+                width: 20px;
+                opacity: 0.5;
                 filter: grayscale(100);
             }
-            #priority{
-                height:20px;
-                width:20px;
-                opacity:0.5;
+
+            #priority {
+                height: 20px;
+                width: 20px;
+                opacity: 0.5;
                 filter: grayscale(100);
             }
-            #archive{
-                height:20px;
-                width:20px;
-                opacity:0.5;
+
+            #archive {
+                height: 20px;
+                width: 20px;
+                opacity: 0.5;
                 filter: grayscale(100);
             }
         }

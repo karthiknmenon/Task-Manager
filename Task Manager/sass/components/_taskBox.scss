@@ -1,6 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-.task-box{
+
+.task-box {
     position: relative;
     top: $tboxTop;
     left: $tboxLeft;
@@ -8,32 +9,38 @@
     height: $tboxHeight;
     background-color: $taskBoxColor;
     border-radius: $tboxBorderRadius;
-    .task-box__tag{
+
+    .task-box__tag {
         position: relative;
-        top:$tboxTagTop;
-        left:$tboxTagLeft; 
-        height: $tboxTagHeight; 
+        top: $tboxTagTop;
+        left: $tboxTagLeft;
+        height: $tboxTagHeight;
         width: $tboxTagWidth;
         background-color: $tboxTagBgColor;
         border-radius: $tboxTagBorRadius;
     }
-   
+
 }
-%star{ 
-    height:15px;
-    width:15px;
+
+%star {
+    height: 15px;
+    width: 15px;
     transform: translate(380px, -133px);
-    margin:2px;
+    margin: 2px;
 }
-#priori-off{
-   @extend %star;
-}
-#priori-on{
+
+#priori-off {
     @extend %star;
 }
-#archive-off{
+
+#priori-on {
     @extend %star;
 }
-#completed-off{
+
+#archive-off {
+    @extend %star;
+}
+
+#completed-off {
     @extend %star;
 }

@@ -1,43 +1,49 @@
-@mixin margin($top, $right, $bottom, $left){
+@mixin margin($top, $right, $bottom, $left) {
     margin: $top $right $bottom $left;
 }
-@mixin padding($top, $right, $bottom, $left){
+
+@mixin padding($top, $right, $bottom, $left) {
     padding: $top $right $bottom $left;
 }
-@mixin dropShadow($x, $y, $blur, $radius){
+
+@mixin dropShadow($x, $y, $blur, $radius) {
     filter: drop-shadow($x $y $blur $radius);
 }
-@mixin taskBodyCard()
-{
+
+@mixin taskBodyCard() {
     float: left;
-    @include margin(0px,10px,30px,10px);
+    @include margin(0px, 10px, 30px, 10px);
     // margin-left:56px;
     top: 20px;
     // left: 100px;
     position: relative;
     height: 100px;
-    width:250px;
+    width: 250px;
     background: $whiteColor;
     border: 1px solid rgba(236, 236, 236, 0.5);
     box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
-    #add-task{
-            position: absolute;
-            height: 70px;
-            top:10px;
-            left:80px;    
+
+    #add-task {
+        position: absolute;
+        height: 70px;
+        top: 10px;
+        left: 80px;
     }
-    h2{
+
+    h2 {
         position: relative;
         // top:20px;
-        left:80px;
+        left: 80px;
         font-weight: 200;
         margin: 20px auto;
     }
-    &:hover{
+
+    &:hover {
         box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
     }
 }
-@mixin formDefault(){
+
+@mixin formDefault() {
     border: none;
     outline: none;
     display: block;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="/Task Manager/css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <title>Task Manager</title>
 </head>
@@ -37,7 +37,7 @@
             </form>
             <!-- search-result -->
             <div id="search-re">
-                    <div id="toaster">Task Added ! </div>
+                <div id="toaster">Task Added ! </div>
             </div>
 
             <!-- search result ends here -->
@@ -52,20 +52,17 @@
                 <form class="new-form" id="newForm" name="newTaskForm" autocomplete="off">
                     <div class="taskName">
                         <label for="taskName">Add Task Name
-                            <input type="text" name="taskName" placeholder="Enter Task Name"
-                                maxlength="20" required>
+                            <input type="text" name="taskName" placeholder="Enter Task Name" maxlength="20" required>
                         </label><br>
-                    </div class="taskDescription">  
+                    </div class="taskDescription">
                     <div>
                         <label for="taskDescription">Add Description
-                            <input type="text" name="taskDesc" placeholder="Enter Task Description"
-                                maxlength="30">
+                            <input type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="30">
                         </label> <br>
                     </div>
                     <div class="taskTags">
                         <label for="taskTags">Add Tags
-                            <input type="text" name="taskTags" placeholder="Enter Task Tags"
-                                maxlength="10">
+                            <input type="text" name="taskTags" placeholder="Enter Task Tags" maxlength="10">
                         </label><br>
                     </div>
                     <div class="taskDate">
@@ -82,7 +79,8 @@
                     </div>
                     <div class="taskColor">
                         <label for="taskColor">Tag Color
-                            <input type="color" data-validation="required" name="taskColor" placeholder="Enter Task Tags">
+                            <input type="color" data-validation="required" name="taskColor"
+                                placeholder="Enter Task Tags">
                         </label><br>
                     </div>
                     <button class="submit" type="submit" value="Validate" onclick="toaster()">Add Task</button>
