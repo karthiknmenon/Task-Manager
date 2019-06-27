@@ -1,32 +1,34 @@
+
+    
 // to add new tasks
 $('#toaster-success').hide();
 function addTasks() {
-    var x = document.getElementsByClassName('task-body--view');
+    var x = $('.task-body--view');
     x[0].style.display = "none";
     reveal();
 }
 // to display new task form
 function reveal() {
-    var x = document.getElementsByClassName('task-body--add');
+    var x = $('.task-body--add');
     $(".new-form")[0].reset();
     x[0].style.display = "inline";
 }
 // to exit new task form
 function goback() {
-    var x = document.getElementsByClassName('task-body--add');
-    var y = document.getElementsByClassName('task-body--view');
+    var x = $('.task-body--add');
+    var y = $('.task-body--view');
     x[0].style.display = "none";
     y[0].style.display = "block";
 }
 // to hide search icon
 function hide() {
-    var x = document.getElementById('search-icon');
+    var x = $('#search-icon');
     x.style.visibility = "hidden";
 
 }
 // to bring back search icon
 function show() {
-    var y = document.getElementById('search-icon');
+    var y = $('#search-icon');
     y.style.visibility = "visible";
   
 }
@@ -56,24 +58,24 @@ $(document).ready(function() {
 });
 // create new task
 function createTask(tName,tDesc,tTags,tDDate,tADate,tColor){
-    var card_element = ' <div class="result-area"> <li> <div id="task-color" style="background-color:'+tColor+'"></div><h3>'+tName+'</h3> <p id="disc">'+tDesc+'</p> <p id="date">Due Date: '+tDDate+'</p> <img id="completed" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-archive-24px.svg"> </li></div><br>'
+    var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:'+tColor+'"></div> <h3>'+tName+'</h3> <p>'+tDesc+'</p> </div> <div class="date-item"> <p>Due Date:'+tDDate+'</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
     $("#search-re").append(card_element);
 }
 //search functiom
 function search() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = $("#tSearch");
+    var input, filter, ul, li, a, i, txtValue,co;
+    input = document.getElementById("tSearch");
     filter = input.value.toUpperCase();
     ul = document.getElementById("search-re");
-    li = ul.getElementsByTagName("li");
+    co = document.getElementsByClassName("result-container")
+    li = ul.getElementsByClassName("title-item");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("h3")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            // opacity
-            li[i].style.display = "block";
+            co[i].style.display = "";
         } else {
-            li[i].style.display = "none";
+            co[i].style.display = "none";
         }
     }
 }

@@ -5,87 +5,82 @@
 #add-task{
     display: block; 
 }
-.search-result{
-    // text-indent:70px;
-    position: relative;
-    ul{
-   
-        list-style-type: none;
-        li{
-            padding:5px;
-            margin:5px;
-            #task-color{
-                position: relative;
-                bottom: 0px;
-                /* right: 30px; */
-                top: 72px;
-                left: 60px;
-                height:50px;
-                width:4px;
-                // background-color: $selectionColor;
-            }       
-            h3{
-                margin-left:70px;
-                font-weight: 300;
-                margin-bottom:0px;
-            }
-            #disc{
-                // display: block;
-                float:left;
-                margin-left:70px;
-                margin-right:100px;
-                width:300px;
-                font-weight: 200;
-                font-size:12px;
-                // text-align: justify;
-            }
-            #date{
-                margin: 0px;
-                // margin-top: 10px;
-                font-size:12px;
-                position: relative;
-                right:60px;
-            }
-              
-            #completed{
-                position: relative;
-                left: 280px;
-                bottom: 20px;
-                opacity:0.5;
-                filter: grayscale(1);
-                &:focus{
-                    filter: grayscale(0);
-                }
-                
-            }
-            #priority{
-                position: relative;
-                left: 280px;
-                bottom: 20px;
-                 opacity:0.5;
-                filter: grayscale(1);
-                &:focus{
-                    filter: grayscale(0);
-                }
-                &:active{
-                    filter:grayscale(1);
-                }
-            }
-            #archive{
-                position: relative;
-                left: 280px;
-                bottom: 20px;
-                opacity:0.5;
-                filter: grayscale(1);
-                &:focus{
-                    filter: grayscale(0);
-                }
-                
-            }
-        
+
+.result-container{
+    width:900px;
+    margin-left:55px;
+    margin-bottom:25px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+  
+    .title-item{
+        display:inline-block;
+        align-self: center;
+        width:300px;
+        .task-color{
+            display: inline-block;
+            justify-self: center;
+            height:11px;
+            width:5px;
+        }
+        h3{
+            display: inline-block;
+            font-weight: 400;
+            margin:0px;
+        }
+        p{
+            margin:0px;
+            font-size:12px;
         }
     }
+    .date-item{
+        width:300px;
+        display:inline-block;
+        p{
+            margin:0px;
+            font-size:12px;
+        }
+    }
+    .icon-item{
+        width:300px;
+        display:inline-block;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+   
 }
+#completed{
+    position: relative;
+    opacity:0.5;
+    filter: grayscale(1);
+    &:focus{
+        filter: grayscale(0);
+    }
+    
+}
+#priority{
+    position: relative;
+    opacity:0.5;
+    filter: grayscale(1);
+    &:focus{
+        filter: grayscale(0);
+    }
+    &:active{
+        filter:grayscale(1);
+    }
+}
+#archive{
+    position: relative;
+    opacity:0.5;
+    filter: grayscale(1);
+    &:focus{
+        filter: grayscale(0);
+    }
+    
+}
+
 @media only screen and (max-width: 767px){
     
     .search-result{

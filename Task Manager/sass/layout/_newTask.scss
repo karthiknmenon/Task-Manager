@@ -3,6 +3,15 @@
 .task-body--add{
     display: none;
 }
+.error{
+    margin:0px;
+}
+.help-block.form-error{ 
+    
+        color: red;
+        font-size: 13px;
+    
+}
 #task-illustration{
     // display: inline;
     position: absolute;
