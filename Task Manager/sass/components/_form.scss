@@ -29,6 +29,7 @@ input {
     border-radius: $formRadius;
     text-indent: $formInputTextIndent;
     padding: 0px;
+
     &:focus {
         border: 1px solid #03A9F4;
         transition: all 5ms linear;
@@ -138,6 +139,13 @@ button {
         margin-bottom: 16px;
         width: $formColorWidth;
         height: $formColorHeight;
+    }
+    .taskDate {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center
     }
 
     ::placeholder {

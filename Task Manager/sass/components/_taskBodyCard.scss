@@ -119,6 +119,18 @@
 @media only screen and (max-width: 767px) {
     .task-body__card {
         @include taskBodyCard();
+        position: relative;
+        height: 30px;
+        width: 250px;
+        #add-task{
+            position: absolute;
+            height: 35px;
+            top: -2px;
+            left: -2px;
+        }
+        h2{
+            top: -14px;
+        }
     }
 
     .task-body__card--preview {
