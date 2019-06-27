@@ -36,7 +36,9 @@
                 </label>
             </form>
             <div class="search-result">
-                    <ul id="search-re"></ul>
+                    <ul id="search-re">
+                            <!-- <div class="result-area"> <li> <div id="task-color"></div><h3>asdasd</h3> <p id="disc">'+tDesc+'</p> <p id="date">Due Date: '+tDDate+'</p> <img id="completed" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" ondbclick="black(this)" src="/Task Manager/images/outline-archive-24px.svg"> </li></div><br> -->
+                    </ul>
             </div>
         </div>
         <!-- on add task -->
@@ -47,7 +49,7 @@
             <div class="task-body--new">
                 <form class="new-form" name="newTaskForm" action="index.html" autocomplete="off">
                     <label for="taskName">Add Task Name
-                        <input data-validation="text" type="text" name="taskName" required placeholder="Enter Task Name">
+                        <input data-validation="text" type="text" name="taskName" placeholder="Enter Task Name">
                     </label><br>
                     <label for="taskDescription">Add Description
                         <input data-validation="text" type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="80">
@@ -59,7 +61,7 @@
                         <input data-validation="date" data-validation-format="yyyy-mm-dd" type="date" name="taskADate" placeholder="Enter Task Tags">
                     </label>
                     <label for="taskDate">Due Date
-                        <input data-validation="date" data-validation-format="yyyy-mm-dd" required type="date" name="taskDDate" placeholder="Enter Task Tags">
+                        <input data-validation="date" data-validation-format="yyyy-mm-dd"  type="date" name="taskDDate" placeholder="Enter Task Tags">
                     </label><br>
                     <label for="taskDate">Tag Color
                         <input data-validation="color" type="color" name="taskColor" placeholder="Enter Task Tags">
@@ -81,7 +83,6 @@
         });
     </script>
     <script type="text/javascript" src="../Task Manager/js/index.js"></script>
-    <script type="text/javascript" src="../Task Manager/js/form.js"></script>
 </body>
 
 </html>

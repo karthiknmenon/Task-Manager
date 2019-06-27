@@ -7,6 +7,24 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,900&display=swap");
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #E91E63;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+  }
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -30,53 +48,6 @@ body {
   font-family: "Montserrat";
   font-weight: 100;
   margin: 0 auto;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  background: #E91E63;
-}
-
-@media only screen and (max-width: 767px) {
-  body {
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0px;
-  }
-}
-
-.taskCard {
-  position: relative;
-  background: white;
-  font-family: "Montserrat";
-  font-weight: 100;
-  margin: 0 auto;
-}
-
-.taskCard {
-  position: absolute;
-  width: 1041px;
-  background-color: white;
-  right: 7%;
-  top: 7%;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-@media only screen and (max-width: 767px) {
-  .taskCard {
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    width: 300px;
-    height: 1000px;
-    overflow-x: hidden;
-  }
 }
 
 .task-box {
@@ -397,38 +368,6 @@ body {
   }
 }
 
-.task-body--add {
-  display: none;
-}
-
-#task-illustration {
-  position: absolute;
-  width: 550px;
-  height: 500px;
-  top: 5%;
-  left: 47%;
-}
-
-#close {
-  position: absolute;
-  top: 1%;
-  left: 97%;
-}
-
-@media only screen and (max-width: 767px) {
-  #task-illustration {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 5%;
-    left: 0%;
-  }
-  #close {
-    top: 1%;
-    left: 90%;
-  }
-}
-
 input, input[type=color], button {
   border: none;
   outline: none;
@@ -622,65 +561,12 @@ button:hover {
   }
 }
 
-#tSearch {
-  position: relative;
-  border: none;
-  border-bottom: 2px solid #BDBDBD;
-  width: 900px;
-  border-radius: 0;
-  margin: 10px 40px;
-  text-indent: 35px;
-}
-
-#tSearch:focus {
-  border-bottom: 2px solid #03A9F4;
-  -webkit-transition: all 50ms ease-in;
-  transition: all 50ms ease-in;
-}
-
-#search-icon {
-  position: absolute;
-  left: 90px;
-  top: 325px;
-  z-index: 5;
-  height: 15px;
-  width: 15px;
-  opacity: 0.3;
-  -webkit-transition: all 50ms ease-in;
-  transition: all 50ms ease-in;
-}
-
-@media only screen and (max-width: 767px) {
-  #tSearch {
-    position: relative;
-    bottom: 215px;
-    right: 81px;
-    border: none;
-    border-bottom: 2px solid #BDBDBD;
-    width: 298px;
-    border-radius: 0;
-    text-indent: 35px;
-  }
-  #tSearch:focus {
-    border-bottom: 2px solid #03A9F4;
-    -webkit-transition: all 50ms ease-in;
-    transition: all 50ms ease-in;
-  }
-  #search-icon {
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    left: 3%;
-    top: 10px;
-    opacity: 0.3;
-    -webkit-transition: all 50ms ease-in;
-    transition: all 50ms ease-in;
-    z-index: 5;
-  }
-}
-
 .result-area {
   padding: 1px;
+}
+
+#add-task {
+  display: block;
 }
 
 .search-result {
@@ -694,6 +580,16 @@ button:hover {
 .search-result ul li {
   padding: 5px;
   margin: 5px;
+}
+
+.search-result ul li #task-color {
+  position: absolute;
+  bottom: 0px;
+  /* right: 30px; */
+  top: 32px;
+  left: 100px;
+  height: 50px;
+  width: 4px;
 }
 
 .search-result ul li h3 {
@@ -714,6 +610,8 @@ button:hover {
 .search-result ul li #date {
   margin: 0px;
   font-size: 12px;
+  position: relative;
+  right: 60px;
 }
 
 .search-result ul li #completed {
@@ -814,6 +712,128 @@ button:hover {
     opacity: 0.5;
     -webkit-filter: grayscale(100);
             filter: grayscale(100);
+  }
+}
+
+#tSearch {
+  position: relative;
+  border: none;
+  border-bottom: 2px solid #BDBDBD;
+  width: 900px;
+  border-radius: 0;
+  margin: 10px 40px;
+  text-indent: 35px;
+}
+
+#tSearch:focus {
+  border-bottom: 2px solid #03A9F4;
+  -webkit-transition: all 50ms ease-in;
+  transition: all 50ms ease-in;
+}
+
+#search-icon {
+  position: absolute;
+  left: 90px;
+  top: 325px;
+  z-index: 5;
+  height: 15px;
+  width: 15px;
+  opacity: 0.3;
+  -webkit-transition: all 50ms ease-in;
+  transition: all 50ms ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  #tSearch {
+    position: relative;
+    bottom: 80px;
+    right: 81px;
+    border: none;
+    border-bottom: 2px solid #BDBDBD;
+    width: 298px;
+    border-radius: 0;
+    text-indent: 35px;
+  }
+  #tSearch:focus {
+    border-bottom: 2px solid #03A9F4;
+    -webkit-transition: all 50ms ease-in;
+    transition: all 50ms ease-in;
+  }
+  #search-icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 3%;
+    top: 10px;
+    opacity: 0.3;
+    -webkit-transition: all 50ms ease-in;
+    transition: all 50ms ease-in;
+    z-index: 5;
+  }
+}
+
+.taskCard {
+  position: relative;
+  background: white;
+  font-family: "Montserrat";
+  font-weight: 100;
+  margin: 0 auto;
+}
+
+.taskCard {
+  position: absolute;
+  width: 1041px;
+  background-color: white;
+  right: 7%;
+  top: 7%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 767px) {
+  .taskCard {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 300px;
+    height: 1000px;
+    overflow-x: hidden;
+  }
+  #new-task-card {
+    display: none;
+  }
+}
+
+.task-body--add {
+  display: none;
+}
+
+#task-illustration {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  top: 5%;
+  left: 47%;
+}
+
+#close {
+  position: absolute;
+  top: 1%;
+  left: 97%;
+}
+
+@media only screen and (max-width: 767px) {
+  #task-illustration {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 0%;
+  }
+  #close {
+    top: 1%;
+    left: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */

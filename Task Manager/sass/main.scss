@@ -1,11 +1,11 @@
+@import "../sass/abstracts/mixins";
+@import "../sass/pages/mainPage";
 @import "../sass/pages/mainPage";
 @import "../sass/components/taskCard";
-@import "../sass/pages/mainPage";
-@import "../sass/layout/taskCardLayout";
-@import "../sass/abstracts/mixins";
 @import "../sass/components/taskBox";
 @import "../sass/components/taskBodyCard";
-@import "../sass/layout/newTask";
 @import "../sass/components/form";
-@import "../sass/components/searchBar";
 @import "../sass/components/searchResult";
+@import "../sass/components/searchBar";
+@import "../sass/layout/taskCardLayout";
+@import "../sass/layout/newTask";
