@@ -58,6 +58,7 @@ function colorCompleted(obj) {
                 localStorage.setItem('x', JSON.stringify(x));
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                location.reload(true);
 
             } else {
                 x[i].isCompleted = false;
@@ -65,9 +66,13 @@ function colorCompleted(obj) {
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
                 obj.style.filter = "grayscale(1)";
+                location.reload(true);
             }
         }
     }
+}
+function reloadPage(){
+    location.reload(true);
 }
 // for archive
 function colorArchived(obj) {
@@ -83,6 +88,7 @@ function colorArchived(obj) {
                 localStorage.setItem('x', JSON.stringify(x));
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                location.reload(true);
 
             } else {
                 x[i].isArchived = false;
@@ -90,6 +96,7 @@ function colorArchived(obj) {
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
                 obj.style.filter = "grayscale(1)";
+                location.reload(true);
             }
         }
     }
@@ -108,6 +115,7 @@ function colorImportant(obj) {
                 localStorage.setItem('x', JSON.stringify(x));
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                location.reload(true);
 
             } else {
                 x[i].isImportant = false;
@@ -115,9 +123,12 @@ function colorImportant(obj) {
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
                 obj.style.filter = "grayscale(1)";
+                location.reload(true);
             }
         }
     }
+    
+
 }
 
 
@@ -185,18 +196,14 @@ $(document).ready(function () {
     }
 
 })
-// create new task card
-// function createTask(tName, tDesc, tTags, tDDate, tADate, tColor) {
-//     var card = ' <div class="task-body__card--preview"> <div id="tag-color" style="background-color'+tColor+'"></div> <h5>'+tName+'</h5> <div id="sep"></div> <p>'+tDesc+'</p> <div class="date-c"> <img src="../Task Manager/images/outline-calendar_today-24px.svg" id="card-calendar"> <p id="due-date">'+tDDate+'</p> </div> <div class="icons"> <img src="../Task Manager/images/outline-done-24px.svg" alt="'+tName+'" id="completed" onclick="colorCompleted(this)"> <img src="../Task Manager/images/outline-star_border-24px (1).svg" alt="'+tName+'" id="priority"> <img src="../Task Manager/images/outline-archive-24px.svg" alt="'+tName+'" id="archive"> </div> </div>'
-//     $(".featured-task--container").append(card);
-// }
+
 // to load top 3 tasks after refresh
-$(document).ready(function () {
+$(document).ready(function createCard () {
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
 
-    for (i = (x.length-1); i > (x.length-4) ; i--) {
+    for (i = (x.length - 1); i > (x.length - 4); i--) {
         var imp = 1,
             arc = 1,
             com = 1;
@@ -212,7 +219,7 @@ $(document).ready(function () {
         if (x[i].isCompleted == true) {
             com = 0;
         }
-        var card = ' <div class="task-body__card--preview"> <div id="tag-color" style="background-color:'+x[i].TaskColor+'"></div> <h5>'+x[i].TaskName+'</h5> <div id="sep"></div> <p>'+x[i].TaskDec+'</p> <div class="date-c"> <img src="../Task Manager/images/outline-calendar_today-24px.svg" id="card-calendar"> <p id="due-date">'+x[i].DueDate+'</p> </div> <div class="icons"> <img src="../Task Manager/images/outline-done-24px.svg" alt="' + x[i].TaskName + '" id="completed" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')"> <img src="../Task Manager/images/outline-star_border-24px (1).svg" alt="' + x[i].TaskName + '" id="priority" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')"> <img src="../Task Manager/images/outline-archive-24px.svg" alt="' + x[i].TaskName + '" id="archive" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')"> </div> </div>'
+        var card = ' <div class="task-body__card--preview"> <div id="tag-color" style="background-color:' + x[i].TaskColor + '"></div> <h5>' + x[i].TaskName + '</h5> <div id="sep"></div> <p>' + x[i].TaskDec + '</p> <div class="date-c"> <img src="../Task Manager/images/outline-calendar_today-24px.svg" id="card-calendar"> <p id="due-date">' + x[i].DueDate + '</p> </div> <div class="icons"> <img src="../Task Manager/images/outline-done-24px.svg" alt="' + x[i].TaskName + '" id="completed" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')"> <img src="../Task Manager/images/outline-star_border-24px (1).svg" alt="' + x[i].TaskName + '" id="priority" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')"> <img src="../Task Manager/images/outline-archive-24px.svg" alt="' + x[i].TaskName + '" id="archive" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')"> </div> </div>'
         $(".featured-task--container").append(card);
 
     }
