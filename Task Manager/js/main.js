@@ -1,26 +1,26 @@
 // on click event to mark task as completed
-$("document").ready(function(){
-    $('#completed').on('click', function() {
-      color(this);
+$("document").ready(function () {
+    $('#completed').on('click', function () {
+        color(this);
     })
 
-  });
+});
 //   on click event to mark task as important
-  $("document").ready(function(){
+$("document").ready(function () {
 
-    $('#priority').on('click', function() {
-      color(this);
+    $('#priority').on('click', function () {
+        color(this);
     })
 
-  });
+});
 //   on click event to mark task as archived
-  $("document").ready(function(){
+$("document").ready(function () {
 
-    $('#archive').on('click', function() {
-      color(this);
+    $('#archive').on('click', function () {
+        color(this);
     })
 
-  });
+});
 // to add new tasks
 function addTasks() {
     var x = $('.task-body--view').css("display", "none");
@@ -45,13 +45,81 @@ function show() {
     $('#search-icon').css("visibility", "visible");
 }
 
-function color(obj) {
-    obj.style.filter = "grayscale(0)";
+function colorCompleted(obj) {
+    var altName = obj.alt;
+    console.log(altName);
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].TaskName == altName) {
+            if (x[i].isCompleted == false) {
+                obj.style.filter = "grayscale(0)";
+                x[i].isCompleted = true;
+                localStorage.setItem('x', JSON.stringify(x));
+                dataSet = x;
+                var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+
+            } else {
+                x[i].isCompleted = false;
+                localStorage.setItem('x', JSON.stringify(x));
+                dataSet = x;
+                var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                obj.style.filter = "grayscale(1)";
+            }
+        }
+    }
+}
+// for archive
+function colorArchived(obj) {
+    var altName = obj.alt;
+    console.log(altName);
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].TaskName == altName) {
+            if (x[i].isArchived == false) {
+                obj.style.filter = "grayscale(0)";
+                x[i].isArchived = true;
+                localStorage.setItem('x', JSON.stringify(x));
+                dataSet = x;
+                var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+
+            } else {
+                x[i].isArchived = false;
+                localStorage.setItem('x', JSON.stringify(x));
+                dataSet = x;
+                var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                obj.style.filter = "grayscale(1)";
+            }
+        }
+    }
+}
+// for priority
+function colorImportant(obj) {
+    var altName = obj.alt;
+    console.log(altName);
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].TaskName == altName) {
+            if (x[i].isImportant == false) {
+                obj.style.filter = "grayscale(0)";
+                x[i].isImportant = true;
+                localStorage.setItem('x', JSON.stringify(x));
+                dataSet = x;
+                var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+
+            } else {
+                x[i].isImportant = false;
+                localStorage.setItem('x', JSON.stringify(x));
+                dataSet = x;
+                var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                obj.style.filter = "grayscale(1)";
+            }
+        }
+    }
 }
 
-function black(obj) {
-    obj.style.filter = "grayscale(1)";
-}
 
 // initialize dataSet array to null or previous object if defined.
 // call object create method on submit
@@ -86,7 +154,7 @@ $(document).ready(function () {
 });
 // create new task
 function createTask(tName, tDesc, tTags, tDDate, tADate, tColor) {
-    var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + tColor + '"></div> <h3>' + tName + '</h3> <p>' + tDesc + '</p> </div> <div class="date-item"> <p>Due Date:' + tDDate + '</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-done-24px.svg" alt="complete"> <img id="priority" onclick="color(this)" class="sIcon" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
+    var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + tColor + '"></div> <h3>' + tName + '</h3> <p>' + tDesc + '</p> </div> <div class="date-item"> <p>Due Date:' + tDDate + '</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" alt="' + tName + '" onclick="colorCompleted(this)" src="/Task Manager/images/outline-done-24px.svg" alt="complete"> <img id="priority" onclick="colorImportant(this)" alt="' + tName + '" class="sIcon" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + tName + '" onclick="colorArchived(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
     $("#search-re").append(card_element);
 }
 // to load tasks on refrest
@@ -94,8 +162,24 @@ $(document).ready(function () {
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
+
     for (i = 0; i < x.length; i++) {
-        var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p>' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item"> <img id="completed" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" onclick="color(this)" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
+        var imp = 1,
+            arc = 1,
+            com = 1;
+        // check if imp in local storage
+        if (x[i].isImportant == true) {
+            imp = 0;
+        }
+        // check if archived in local storage
+        if (x[i].isArchived == true) {
+            arc = 0;
+        }
+        // check if completed in local storage
+        if (x[i].isCompleted == true) {
+            com = 0;
+        }
+        var card_element = '<div class="result-container"> <div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p>' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item"> <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> </div>'
         $("#search-re").append(card_element);
 
     }
