@@ -126,7 +126,6 @@ body {
   display: block;
   height: 2px;
   width: 180px;
-  background-color: #03A9F4;
 }
 
 .task-body__card--preview #sep {
@@ -152,28 +151,46 @@ body {
   margin-bottom: 5px;
 }
 
-.task-body__card--preview #card-calendar {
-  display: inline;
-  padding: 0px, 3px, 0px, 6px;
-  margin-left: 10px;
+.task-body__card--preview .date-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 8px;
+}
+
+.task-body__card--preview .date-c #card-calendar {
+  display: inline-block;
   height: 12px;
   width: 12px;
   opacity: 0.2;
+  margin: 0px;
 }
 
-.task-body__card--preview #due-date {
+.task-body__card--preview .date-c #due-date {
+  margin: 0px;
   font-size: 12px;
-  position: absolute;
-  display: inline;
-  bottom: 20px;
+  display: inline-block;
   color: #BDBDBD;
-  padding: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .task-body__card--preview .icons {
   display: none;
   position: relative;
   left: 55%;
+  bottom: 5px;
 }
 
 .task-body__card--preview #completed {
@@ -205,21 +222,6 @@ body {
 
 .task-body__card--preview:hover .icons {
   display: block;
-}
-
-.task-body__card--preview:hover #archive:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.task-body__card--preview:hover #priority:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.task-body__card--preview:hover #completed:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
 }
 
 @media only screen and (max-width: 767px) {

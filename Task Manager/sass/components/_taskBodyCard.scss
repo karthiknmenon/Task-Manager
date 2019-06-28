@@ -22,7 +22,7 @@
         display: block;
         height: 2px;
         width: 180px;
-        background-color: #03A9F4;
+        // background-color: #03A9F4;
     }
 
     #sep {
@@ -41,6 +41,7 @@
     }
 
     h5 {
+        // text-align: center;
         padding: 5px;
         text-indent: 3px;
         font-weight: 400;
@@ -48,28 +49,36 @@
         margin-bottom: 5px;
     }
 
-    #card-calendar {
-        display: inline;
-        padding: 0px, 3px, 0px, 6px;
-        margin-left: 10px;
-        height: 12px;
-        width: 12px;
-        opacity: 0.2;
-    }
+    .date-c {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 8px;
 
-    #due-date {
-        font-size: 12px;
-        position: absolute;
-        display: inline;
-        bottom: 20px;
-        color: #BDBDBD;
-        padding: 10px;
+        #card-calendar {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            opacity: 0.2;
+            margin: 0px;
+        }
+
+        #due-date {
+            margin: 0px;
+            font-size: 12px;
+            display: inline-block;
+            color: #BDBDBD;
+            // padding: 10px;
+            align-self: center;
+        }
     }
 
     .icons {
         display: none;
         position: relative;
         left: 55%;
+        bottom: 5px;
     }
 
     #completed {
@@ -100,18 +109,6 @@
         .icons {
             display: block;
         }
-
-        #archive:hover {
-            filter: grayscale(0);
-        }
-
-        #priority:hover {
-            filter: grayscale(0);
-        }
-
-        #completed:hover {
-            filter: grayscale(0);
-        }
     }
 }
 
@@ -124,13 +121,15 @@
 
         height: 30px;
         width: 250px;
-        #add-task{
+
+        #add-task {
             position: absolute;
             height: 35px;
             top: -2px;
             left: -2px;
         }
-        h2{
+
+        h2 {
             top: -14px;
         }
     }
