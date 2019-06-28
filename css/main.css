@@ -235,6 +235,7 @@ body {
     -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
             box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
     position: relative;
+    top: -50px;
     height: 30px;
     width: 250px;
   }
@@ -616,6 +617,10 @@ button:hover {
   display: block;
 }
 
+#mob-header {
+  display: none;
+}
+
 .result-container {
   width: 900px;
   margin-left: 55px;
@@ -724,7 +729,12 @@ button:hover {
 @media only screen and (max-width: 767px) {
   #search-re {
     position: absolute;
-    bottom: 420px;
+    bottom: 520px;
+  }
+  #search-re #mob-header {
+    display: block;
+    font-weight: 300;
+    text-align: center;
   }
   .result-container {
     width: 300px;
@@ -849,7 +859,7 @@ button:hover {
 @media only screen and (max-width: 767px) {
   #tSearch {
     position: relative;
-    bottom: 145px;
+    bottom: 105px;
     right: 81px;
     border: none;
     border-bottom: 2px solid #BDBDBD;
@@ -867,7 +877,7 @@ button:hover {
     height: 15px;
     width: 15px;
     left: 3%;
-    top: 10px;
+    top: 43px;
     opacity: 0.3;
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;

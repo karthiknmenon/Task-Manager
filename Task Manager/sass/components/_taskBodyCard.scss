@@ -120,6 +120,8 @@
     .task-body__card {
         @include taskBodyCard();
         position: relative;
+        top: -50px;
+
         height: 30px;
         width: 250px;
         #add-task{

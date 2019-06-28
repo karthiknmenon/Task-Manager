@@ -7,7 +7,9 @@
 #add-task {
     display: block;
 }
-
+#mob-header{
+    display: none;
+}
 .result-container {
     width: 900px;
     margin-left: 55px;
@@ -100,8 +102,14 @@
 @media only screen and (max-width: 767px) {
     #search-re{
         position: absolute;
-        bottom:420px;
+        bottom:520px;
+        #mob-header{
+            display: block;
+            font-weight: 300;
+            text-align: center;
+        }
     }
+    
     .result-container {
         width: 300px;
         margin:0px;
