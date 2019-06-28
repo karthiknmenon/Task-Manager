@@ -7,9 +7,11 @@
 #add-task {
     display: block;
 }
-#mob-header{
+
+#mob-header {
     display: none;
 }
+
 .result-container {
     width: 900px;
     margin-left: 55px;
@@ -100,102 +102,108 @@
 }
 
 @media only screen and (max-width: 767px) {
-    #search-re{
+    #search-re {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
         position: relative;
         bottom: 110px;
-        #mob-header{
+
+        #mob-header {
             display: block;
             font-weight: 300;
             text-align: center;
         }
     }
-    
+
     .result-container {
         width: 300px;
-        margin:0px;
+        margin: 0px;
         margin-bottom: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    
+        display: inline-block;
+        // flex-direction: column;
+        // justify-content: space-around;
+        align-self: center;
+
         .title-item {
             display: inline-block;
             align-self: center;
             min-width: 50px;
-    
+
             .task-color {
                 display: inline-block;
                 justify-self: center;
-                height: 11px;
-                width: 5px;
+                height: 15px;
+                width: 4px;
             }
-    
+
             h3 {
                 display: inline-block;
                 font-weight: 400;
                 margin: 0px;
             }
-    
+
             p {
+                text-indent: 10px;
                 margin: 0px;
                 font-size: 12px;
             }
         }
-    
+
         .date-item {
-            // width:300px;
+            text-indent: 10px;
             display: inline-block;
             align-self: center;
-    
+
             p {
                 margin: 0px;
                 font-size: 12px;
             }
         }
-    
+
         .icon-item {
             // width:300px;
             display: inline-block;
             justify-self: flex-end;
             align-self: flex-end;
         }
-    
+
     }
-    
+
     #completed {
         position: relative;
         opacity: 0.5;
         filter: grayscale(1);
-    
+
         &:focus {
             filter: grayscale(0);
         }
-    
+
     }
-    
+
     #priority {
         position: relative;
         opacity: 0.5;
         filter: grayscale(1);
-    
+
         &:focus {
             filter: grayscale(0);
         }
-    
+
         &:active {
             filter: grayscale(1);
         }
     }
-    
+
     #archive {
         position: relative;
         opacity: 0.5;
         filter: grayscale(1);
-    
+
         &:focus {
             filter: grayscale(0);
         }
-    
+
     }
 }

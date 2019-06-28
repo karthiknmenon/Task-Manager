@@ -239,6 +239,7 @@ body {
     border: 1px solid rgba(236, 236, 236, 0.5);
     -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
             box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+    display: none;
     position: relative;
     top: -50px;
     height: 30px;
@@ -280,6 +281,7 @@ body {
     border: 1px solid rgba(236, 236, 236, 0.5);
     -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
             box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+    display: none;
   }
   .task-body__card--preview #add-task {
     position: absolute;
@@ -733,6 +735,18 @@ button:hover {
 
 @media only screen and (max-width: 767px) {
   #search-re {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
     position: relative;
     bottom: 110px;
   }
@@ -745,18 +759,10 @@ button:hover {
     width: 300px;
     margin: 0px;
     margin-bottom: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: inline-block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .result-container .title-item {
     display: inline-block;
@@ -769,8 +775,8 @@ button:hover {
     display: inline-block;
     -ms-grid-column-align: center;
         justify-self: center;
-    height: 11px;
-    width: 5px;
+    height: 15px;
+    width: 4px;
   }
   .result-container .title-item h3 {
     display: inline-block;
@@ -778,10 +784,12 @@ button:hover {
     margin: 0px;
   }
   .result-container .title-item p {
+    text-indent: 10px;
     margin: 0px;
     font-size: 12px;
   }
   .result-container .date-item {
+    text-indent: 10px;
     display: inline-block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -864,13 +872,13 @@ button:hover {
 @media only screen and (max-width: 767px) {
   #tSearch {
     position: relative;
-    bottom: 105px;
-    right: 81px;
+    bottom: 80px;
+    right: 90px;
     border: none;
     border-bottom: 2px solid #BDBDBD;
-    width: 298px;
+    width: 600px;
     border-radius: 0;
-    text-indent: 35px;
+    text-indent: 45px;
   }
   #tSearch:focus {
     border-bottom: 2px solid #03A9F4;
@@ -882,7 +890,7 @@ button:hover {
     height: 15px;
     width: 15px;
     left: 3%;
-    top: 43px;
+    top: 12px;
     opacity: 0.3;
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;
@@ -910,12 +918,12 @@ button:hover {
 
 @media only screen and (max-width: 767px) {
   .taskCard {
+    /* margin: 45px; */
     right: 0;
     left: 0;
-    margin: 0 auto;
-    position: absolute;
-    width: 300px;
-    height: 1000px;
+    position: relative;
+    margin: 10px auto;
+    width: 350px;
     overflow-x: hidden;
   }
   #new-task-card {

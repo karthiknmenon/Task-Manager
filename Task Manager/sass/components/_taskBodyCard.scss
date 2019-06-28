@@ -118,6 +118,7 @@
 @media only screen and (max-width: 767px) {
     .task-body__card {
         @include taskBodyCard();
+        display: none;
         position: relative;
         top: -50px;
 
@@ -138,6 +139,7 @@
 
     .task-body__card--preview {
         @include taskBodyCard();
+        display:none;
 
         #tag-color {
             display: block;

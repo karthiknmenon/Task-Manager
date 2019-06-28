@@ -58,7 +58,7 @@ function colorCompleted(obj) {
                 localStorage.setItem('x', JSON.stringify(x));
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
-                location.reload(true);
+                history.go(0);
 
             } else {
                 x[i].isCompleted = false;
@@ -116,6 +116,7 @@ function colorImportant(obj) {
                 localStorage.setItem('x', JSON.stringify(x));
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
+                // createCard();
                 location.reload(true);
 
             } else {
@@ -124,7 +125,8 @@ function colorImportant(obj) {
                 dataSet = x;
                 var dataSet = localStorage.setItem('dataSet', JSON.stringify(dataSet));
                 obj.style.filter = "grayscale(1)";
-                location.reload(true);
+                createCard();
+                location.rseload(true);
             }
         }
     }

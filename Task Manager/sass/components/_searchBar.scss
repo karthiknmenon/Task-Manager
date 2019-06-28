@@ -33,18 +33,19 @@
 @media only screen and (max-width: 767px) {
     #tSearch {
         position: relative;
-        bottom: 105px;
-        right: 81px;
+        bottom: 80px;
+        right: 90px;
         border: none;
         border-bottom: 2px solid #BDBDBD;
-        width: 298px;
+        width: 600px;
         border-radius: 0;
 
         &:focus {
             border-bottom: 2px solid #03A9F4;
             transition: all 50ms ease-in;
         }
-        text-indent:35px;
+
+        text-indent:45px;
     }
 
     #search-icon {
@@ -52,7 +53,7 @@
         height: 15px;
         width: 15px;
         left: 3%;
-        top: 43px;
+        top: 12px;
         opacity: 0.3;
         transition: all 50ms ease-in;
         z-index: 5;
