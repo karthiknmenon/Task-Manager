@@ -728,8 +728,8 @@ button:hover {
 
 @media only screen and (max-width: 767px) {
   #search-re {
-    position: absolute;
-    bottom: 520px;
+    position: relative;
+    bottom: 110px;
   }
   #search-re #mob-header {
     display: block;
