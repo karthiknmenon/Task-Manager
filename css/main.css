@@ -129,6 +129,8 @@ body {
 }
 
 .task-body__card--preview #sep {
+  position: relative;
+  left: 12px;
   display: block;
   height: 1px;
   width: 130px;
@@ -144,6 +146,7 @@ body {
 }
 
 .task-body__card--preview h5 {
+  text-align: center;
   padding: 5px;
   text-indent: 3px;
   font-weight: 400;
@@ -165,7 +168,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .task-body__card--preview .date-c #card-calendar {

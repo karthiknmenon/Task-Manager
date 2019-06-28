@@ -71,7 +71,8 @@ function colorCompleted(obj) {
         }
     }
 }
-function reloadPage(){
+
+function reloadPage() {
     location.reload(true);
 }
 // for archive
@@ -127,7 +128,7 @@ function colorImportant(obj) {
             }
         }
     }
-    
+
 
 }
 
@@ -198,7 +199,7 @@ $(document).ready(function () {
 })
 
 // to load top 3 tasks after refresh
-$(document).ready(function createCard () {
+$(document).ready(function createCard() {
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
