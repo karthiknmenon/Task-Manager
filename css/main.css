@@ -628,6 +628,10 @@ button:hover {
   display: none;
 }
 
+#mob-menu {
+  display: none;
+}
+
 .result-container {
   width: 900px;
   margin-left: 55px;
@@ -644,6 +648,10 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.result-container #menu-mob {
+  display: none;
 }
 
 .result-container .title-item {
@@ -764,6 +772,12 @@ button:hover {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .result-container #mob-menu {
+    display: inline;
+    position: relative;
+    left: 250px;
+    bottom: 11px;
+  }
   .result-container .title-item {
     display: inline-block;
     -ms-flex-item-align: center;
@@ -798,12 +812,10 @@ button:hover {
   .result-container .date-item p {
     margin: 0px;
     font-size: 12px;
+    text-indent: 38px;
   }
   .result-container .icon-item {
-    display: inline-block;
-    justify-self: flex-end;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    display: none;
   }
   #completed {
     position: relative;

@@ -12,7 +12,15 @@
     display: none;
 }
 
+#mob-menu {
+    display: none;
+}
+
 .result-container {
+    #menu-mob {
+        display: none;
+    }
+
     width: 900px;
     margin-left: 55px;
     margin-bottom: 25px;
@@ -65,6 +73,7 @@
 
 }
 
+
 #completed {
     position: relative;
     opacity: 0.5;
@@ -115,6 +124,7 @@
             font-weight: 300;
             text-align: center;
         }
+
     }
 
     .result-container {
@@ -125,6 +135,13 @@
         // flex-direction: column;
         // justify-content: space-around;
         align-self: center;
+
+        #mob-menu {
+            display: inline;
+            position: relative;
+            left: 250px;
+            bottom: 11px;
+        }
 
         .title-item {
             display: inline-block;
@@ -159,14 +176,14 @@
             p {
                 margin: 0px;
                 font-size: 12px;
+                text-indent: 38px;
             }
         }
 
         .icon-item {
             // width:300px;
-            display: inline-block;
-            justify-self: flex-end;
-            align-self: flex-end;
+            display: none;
+
         }
 
     }
