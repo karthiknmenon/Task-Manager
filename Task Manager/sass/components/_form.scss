@@ -93,7 +93,7 @@ button {
 
 @media only screen and (max-width: 767px) {
     .new-form {
-        @include margin(400px, 50px, 50px, 42px);
+        @include margin(80px, 50px, 50px, 42px);
     }
 
     input {
