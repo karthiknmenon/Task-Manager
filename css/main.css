@@ -809,13 +809,15 @@ button:hover {
     height: 30px;
     width: 150px;
     border-radius: 3px;
-    background-color: #757575;
+    background-color: #FFFFFF;
     left: 150px;
     position: absolute;
   }
   .result-container .menu-s #close-mob {
     display: inline;
     position: relative;
+    z-index: 5;
+    top: 3px;
     margin-top: 2px;
     left: 125px;
   }
@@ -866,7 +868,9 @@ button:hover {
   }
   .result-container .icons-item-m {
     position: relative;
+    left: 20px;
     bottom: 25px;
+    margin-bottom: 1px;
     margin-left: 20px;
     display: inline;
   }

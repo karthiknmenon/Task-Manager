@@ -139,7 +139,7 @@
 
     .task-body__card--preview {
         @include taskBodyCard();
-        display:none;
+        display: none;
 
         #tag-color {
             display: block;

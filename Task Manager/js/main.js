@@ -44,15 +44,18 @@ function hide() {
 function show() {
     $('#search-icon').css("visibility", "visible");
 }
-function showMenu(obj){
+
+function showMenu(obj) {
     console.log(obj);
-    $('.menu-s').css("display","inline");
+    $('.menu-s').css("display", "inline");
 }
-function closeMenuMob(obj){
+
+function closeMenuMob(obj) {
     console.log(obj);
-    
-    $('.menu-s').css("display","none");
+
+    $('.menu-s').css("display", "none");
 }
+
 function colorCompleted(obj) {
     var altName = obj.alt;
     console.log(altName);

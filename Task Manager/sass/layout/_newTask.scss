@@ -16,12 +16,15 @@
     margin: 0px;
     font-size: 14px;
 }
-#mob-sep--form{
+
+#mob-sep--form {
     display: none;
 }
-#add-new-task{
+
+#add-new-task {
     display: none;
 }
+
 #task-illustration {
     // display: inline;
     position: absolute;
@@ -87,28 +90,32 @@
     #task-illustration {
         display: none;
     }
-    #mob-sep--form{
+
+    #mob-sep--form {
         display: block;
         height: 2px;
         width: 500px;
         position: relative;
-        top:40px;
-        background-color:#BDBDBD;
-        p{
+        top: 40px;
+        background-color: #BDBDBD;
+
+        p {
             font-weight: 400;
             position: relative;
-            left:10px;
-            bottom:29px;
+            left: 10px;
+            bottom: 29px;
             display: inline;
         }
     }
-    #add-new-task{
+
+    #add-new-task {
         display: inline;
         position: relative;
         left: 280px;
         bottom: 150px;
         height: 70px;
     }
+
     #close {
         top: 1%;
         left: 90%;
