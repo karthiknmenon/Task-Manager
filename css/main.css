@@ -519,7 +519,7 @@ button:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin-top: 8px;
-    width: 200px;
+    width: 280px;
     height: 43px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -536,7 +536,7 @@ button:hover {
     margin-top: 17px;
   }
   input[type=date] {
-    width: 200px;
+    width: 280px;
     text-indent: 6px;
     font-family: 'Montserrat';
     font-weight: 100;
@@ -600,7 +600,7 @@ button:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     background: transparent;
-    width: 200px;
+    width: 280px;
     height: 50px;
     border: 1px solid #03A9F4;
     border-radius: 3px;
@@ -784,6 +784,13 @@ button:hover {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .result-container #sep-mob {
+    margin: 20px;
+    height: 2px;
+    width: 280px;
+    background-color: #BDBDBD;
+    opacity: 0.3;
+  }
   .result-container #mob-menu {
     display: inline;
     position: relative;
@@ -806,6 +813,9 @@ button:hover {
     left: 125px;
   }
   .result-container .menu-s .icons-item-m {
+    display: block;
+  }
+  .result-container #t-desc {
     display: block;
   }
   .result-container .title-item {
@@ -995,6 +1005,10 @@ button:hover {
   font-size: 14px;
 }
 
+#add-new-task {
+  display: none;
+}
+
 #task-illustration {
   position: absolute;
   width: 550px;
@@ -1080,7 +1094,14 @@ button:hover {
     width: 300px;
     height: 300px;
     top: 5%;
-    left: 0%;
+    left: 5%;
+  }
+  #add-new-task {
+    display: inline;
+    position: relative;
+    left: 280px;
+    bottom: 150px;
+    height: 70px;
   }
   #close {
     top: 1%;

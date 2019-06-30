@@ -144,6 +144,14 @@
         // flex-direction: column;
         // justify-content: space-around;
         align-self: center;
+        #sep-mob{
+            margin:20px;
+            height: 2px;
+            width: 280px;
+            background-color: #BDBDBD;
+            opacity: 0.3;
+    
+        }
 
         #mob-menu {
             display: inline;
@@ -169,6 +177,9 @@
             .icons-item-m{
                 display: block;
             }
+        }
+        #t-desc{
+            display: block;
         }
 
         .title-item {
@@ -253,8 +264,10 @@
             }
 
         }
+        
 
     }
+   
 
 
 }

@@ -16,7 +16,9 @@
     margin: 0px;
     font-size: 14px;
 }
-
+#add-new-task{
+    display: none;
+}
 #task-illustration {
     // display: inline;
     position: absolute;
@@ -84,9 +86,16 @@
         width: 300px;
         height: 300px;
         top: 5%;
-        left: 0%;
+        left: 5%;
+        // margin:0 auto;
     }
-
+    #add-new-task{
+        display: inline;
+        position: relative;
+        left: 280px;
+        bottom: 150px;
+        height: 70px;
+    }
     #close {
         top: 1%;
         left: 90%;

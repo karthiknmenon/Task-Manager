@@ -100,7 +100,7 @@ button {
         @include formDefault();
         box-sizing: border-box;
         margin-top: 8px;
-        width: 200px;
+        width: 280px;
         height: $formHeight;
         border: $formBorder;
         border-radius: $formRadius;
@@ -121,7 +121,7 @@ button {
     }
 
     input[type=date] {
-        width: 200px;
+        width: 280px;
         text-indent: 6px;
         font-family: 'Montserrat';
         font-weight: 100;
@@ -163,7 +163,7 @@ button {
         margin-top: 16px;
         box-sizing: border-box;
         background: transparent;
-        width: 200px;
+        width: 280px;
         height: $addButtonHeight;
         border: $addButtonBorder;
         border-radius: $addButtonRadius;
