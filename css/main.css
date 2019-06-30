@@ -654,6 +654,18 @@ button:hover {
   display: none;
 }
 
+.result-container .menu-s {
+  display: none;
+}
+
+.result-container .menu-s #close-mob {
+  display: none;
+}
+
+.result-container .menu-s .icons-item-m {
+  display: none;
+}
+
 .result-container .title-item {
   display: inline-block;
   -ms-flex-item-align: center;
@@ -777,6 +789,24 @@ button:hover {
     position: relative;
     left: 250px;
     bottom: 11px;
+    opacity: 0.5;
+  }
+  .result-container .menu-s {
+    height: 30px;
+    width: 150px;
+    border-radius: 3px;
+    background-color: #757575;
+    left: 150px;
+    position: absolute;
+  }
+  .result-container .menu-s #close-mob {
+    display: inline;
+    position: relative;
+    margin-top: 2px;
+    left: 125px;
+  }
+  .result-container .menu-s .icons-item-m {
+    display: block;
   }
   .result-container .title-item {
     display: inline-block;
@@ -814,40 +844,46 @@ button:hover {
     font-size: 12px;
     text-indent: 38px;
   }
-  .result-container .icon-item {
+  .result-container .icons-item {
     display: none;
   }
-  #completed {
+  .result-container .icons-item-m {
+    position: relative;
+    bottom: 25px;
+    margin-left: 20px;
+    display: inline;
+  }
+  .result-container .icons-item-m #completed {
     position: relative;
     opacity: 0.5;
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
   }
-  #completed:focus {
+  .result-container .icons-item-m #completed:focus {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
   }
-  #priority {
+  .result-container .icons-item-m #priority {
     position: relative;
     opacity: 0.5;
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
   }
-  #priority:focus {
+  .result-container .icons-item-m #priority:focus {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
   }
-  #priority:active {
+  .result-container .icons-item-m #priority:active {
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
   }
-  #archive {
+  .result-container .icons-item-m #archive {
     position: relative;
     opacity: 0.5;
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
   }
-  #archive:focus {
+  .result-container .icons-item-m #archive:focus {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
   }

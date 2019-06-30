@@ -15,12 +15,7 @@
 #mob-menu {
     display: none;
 }
-
 .result-container {
-    #menu-mob {
-        display: none;
-    }
-
     width: 900px;
     margin-left: 55px;
     margin-bottom: 25px;
@@ -28,6 +23,20 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    #menu-mob {
+        display: none;
+    }
+
+    .menu-s {
+        display: none;
+        #close-mob{
+            display: none;
+        }
+        .icons-item-m{
+            display: none;
+        }
+    }
 
     .title-item {
         display: inline-block;
@@ -141,6 +150,25 @@
             position: relative;
             left: 250px;
             bottom: 11px;
+            opacity: 0.5;
+        }
+
+        .menu-s {
+            height: 30px;
+            width: 150px;
+            border-radius: 3px;
+            background-color:#757575;
+            left: 150px;
+            position: absolute;
+            #close-mob{
+                display: inline;
+                position: relative;
+                margin-top:2px;
+                left: 125px;
+            }
+            .icons-item-m{
+                display: block;
+            }
         }
 
         .title-item {
@@ -179,48 +207,54 @@
                 text-indent: 38px;
             }
         }
-
-        .icon-item {
-            // width:300px;
+        .icons-item{
             display: none;
+        }
+        .icons-item-m{
+            position: relative;
+            bottom:25px;
+            margin-left:20px;
+            display: inline;
+
+            #completed {
+                position: relative;
+                opacity: 0.5;
+                filter: grayscale(1);
+
+                &:focus {
+                    filter: grayscale(0);
+                }
+
+            }
+
+            #priority {
+                position: relative;
+                opacity: 0.5;
+                filter: grayscale(1);
+
+                &:focus {
+                    filter: grayscale(0);
+                }
+
+                &:active {
+                    filter: grayscale(1);
+                }
+            }
+
+            #archive {
+                position: relative;
+                opacity: 0.5;
+                filter: grayscale(1);
+
+                &:focus {
+                    filter: grayscale(0);
+                }
+
+            }
 
         }
 
     }
 
-    #completed {
-        position: relative;
-        opacity: 0.5;
-        filter: grayscale(1);
 
-        &:focus {
-            filter: grayscale(0);
-        }
-
-    }
-
-    #priority {
-        position: relative;
-        opacity: 0.5;
-        filter: grayscale(1);
-
-        &:focus {
-            filter: grayscale(0);
-        }
-
-        &:active {
-            filter: grayscale(1);
-        }
-    }
-
-    #archive {
-        position: relative;
-        opacity: 0.5;
-        filter: grayscale(1);
-
-        &:focus {
-            filter: grayscale(0);
-        }
-
-    }
 }
