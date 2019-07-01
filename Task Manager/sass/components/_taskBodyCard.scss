@@ -1,7 +1,9 @@
 @import "../abstracts/placeholders";
 @import "../abstracts/mixins";
+
 .task-body__card {
     @extend %task-body_card;
+    left: 20px;
 
     h2 {
         position: absolute;
@@ -17,7 +19,8 @@
 
 .task-body__card--preview {
     @extend %task-body_card;
-    // left:20px;
+
+    left:20px;
     #tag-color {
         display: block;
         height: 2px;
@@ -118,11 +121,10 @@
 //phone
 @media only screen and (max-width: 767px) {
     .task-body__card {
-        @include taskBodyCard(20px);
+        @include taskBodyCard();
         display: none;
         position: relative;
         top: -50px;
-
         height: 30px;
         width: 250px;
 
@@ -137,11 +139,11 @@
             top: -14px;
         }
     }
+
     .task-body__card--preview {
         // @extend %task-body_card-t;
-        @include taskBodyCard(70px);
-        // left:70px;
-    
+        @include taskBodyCard();
+        left: 70px;
         display: none;
 
         #tag-color {
@@ -245,5 +247,13 @@
                 filter: grayscale(0);
             }
         }
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .task-body__card{
+        left: 70px;
+    }
+    .task-body__card--preview{
+        left:70px;
     }
 }

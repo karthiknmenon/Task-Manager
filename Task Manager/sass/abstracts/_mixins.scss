@@ -10,12 +10,12 @@
     filter: drop-shadow($x $y $blur $radius);
 }
 
-@mixin taskBodyCard($var1) {
+@mixin taskBodyCard() {
     float: left;
     @include margin(0px, 10px, 30px, 10px);
     // margin-left:56px;
     top: 20px;
-    left: $var1;
+    left: 20px;
     position: relative;
     height: 100px;
     width: 250px;

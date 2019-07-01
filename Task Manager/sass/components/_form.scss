@@ -178,8 +178,9 @@ button {
         }
     }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+
     .new-form {
         @include margin(80px, 50px, 50px, 42px);
     }
@@ -265,5 +266,5 @@ button {
             transition: all 100ms ease-in;
         }
     }
-    
-  }
+
+}

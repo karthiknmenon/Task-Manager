@@ -118,6 +118,10 @@ body {
           box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
 }
 
+.task-body__card {
+  left: 20px;
+}
+
 .task-body__card h2 {
   position: absolute;
   font-family: Montserrat;
@@ -127,6 +131,10 @@ body {
   line-height: 20px;
   top: 53%;
   left: 23%;
+}
+
+.task-body__card--preview {
+  left: 20px;
 }
 
 .task-body__card--preview #tag-color {
@@ -283,7 +291,7 @@ body {
     float: left;
     margin: 0px 10px 30px 10px;
     top: 20px;
-    left: 70px;
+    left: 20px;
     position: relative;
     height: 100px;
     width: 250px;
@@ -291,6 +299,7 @@ body {
     border: 1px solid rgba(236, 236, 236, 0.5);
     -webkit-box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
             box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+    left: 70px;
     display: none;
   }
   .task-body__card--preview #add-task {
@@ -397,6 +406,15 @@ body {
   .task-body__card--preview:hover #completed:hover {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .task-body__card {
+    left: 70px;
+  }
+  .task-body__card--preview {
+    left: 70px;
   }
 }
 
