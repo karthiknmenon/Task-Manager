@@ -62,9 +62,9 @@ function closeMenuMob(obj) {
 
 function closeFilter() {
     $('.filter-icon').css("display", "none");
-    $(".complete-f").css("filter","grayscale(1)");
-    $(".priority-f").css("filter","grayscale(1)");
-    $(".archive-f").css("filter","grayscale(1)");
+    $(".complete-f").css("filter", "grayscale(1)");
+    $(".priority-f").css("filter", "grayscale(1)");
+    $(".archive-f").css("filter", "grayscale(1)");
     $('#filter').css("display", "inline");
     $('#filter-close').css("display", "none");
     $('#filter-close').css("transition", "all 200ms ease-in");
@@ -104,14 +104,14 @@ function showFilter() {
 // to filter out completed tasks
 function filterDone() {
     $("#search-re").empty();
-    $(".completed-f").css("filter","grayscale(0)");
-    $(".priority-f").css("filter","grayscale(1)");
-    $(".archive-f").css("filter","grayscale(1)");
+    $(".completed-f").css("filter", "grayscale(0)");
+    $(".priority-f").css("filter", "grayscale(1)");
+    $(".archive-f").css("filter", "grayscale(1)");
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
 
-    for (i = (x.length - 1); i >= 0 ; i--) {
+    for (i = (x.length - 1); i >= 0; i--) {
         var imp = 1,
             arc = 1,
             com = 1;
@@ -135,14 +135,14 @@ function filterDone() {
 function filterArchive() {
 
     $("#search-re").empty();
-    $(".archive-f").css("filter","grayscale(0)");
-    $(".priority-f").css("filter","grayscale(1)");
-    $(".completed-f").css("filter","grayscale(1)");
+    $(".archive-f").css("filter", "grayscale(0)");
+    $(".priority-f").css("filter", "grayscale(1)");
+    $(".completed-f").css("filter", "grayscale(1)");
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
 
-    for (i = (x.length - 1); i >= 0 ; i--) {
+    for (i = (x.length - 1); i >= 0; i--) {
         var imp = 1,
             arc = 1,
             com = 1;
@@ -166,14 +166,14 @@ function filterArchive() {
 // to filter out important tasks
 function filterImp() {
     $("#search-re").empty();
-    $(".priority-f").css("filter","grayscale(0)");
-    $(".completed-f").css("filter","grayscale(1)");
-    $(".archive-f").css("filter","grayscale(1)");
+    $(".priority-f").css("filter", "grayscale(0)");
+    $(".completed-f").css("filter", "grayscale(1)");
+    $(".archive-f").css("filter", "grayscale(1)");
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
 
-    for (i = (x.length - 1); i >= 0 ; i--) {
+    for (i = (x.length - 1); i >= 0; i--) {
         var imp = 1,
             arc = 1,
             com = 1;
