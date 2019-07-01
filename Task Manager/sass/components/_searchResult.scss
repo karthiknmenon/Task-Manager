@@ -41,7 +41,9 @@ img{
         &:hover {
             filter: grayscale(0);
         }
-    
+        &:active {
+            filter: grayscale(1);
+        }
     }
     
     #priority {
@@ -66,7 +68,9 @@ img{
         &:hover {
             filter: grayscale(0);
         }
-    
+        &:active {
+            filter: grayscale(1);
+        }
     }
 }
 #filter-close{

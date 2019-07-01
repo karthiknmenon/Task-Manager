@@ -686,6 +686,11 @@ img {
           filter: grayscale(0);
 }
 
+.filter-icon #completed:active {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 .filter-icon #priority {
   position: relative;
   opacity: 0.5;
@@ -713,6 +718,11 @@ img {
 .filter-icon #archive:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+
+.filter-icon #archive:active {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 #filter-close {
@@ -1231,8 +1241,7 @@ img {
     left: 280px;
     bottom: 150px;
     height: 70px;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 230px;
   }
