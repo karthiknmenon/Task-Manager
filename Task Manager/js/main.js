@@ -1,3 +1,5 @@
+$('#filter-close').css("display", "none");
+$('.filter-icon').css("display", "none");
 // on click event to mark task as completed
 $("document").ready(function () {
     $('#completed').on('click', function () {
@@ -28,7 +30,7 @@ function addTasks() {
 }
 // to display new task form
 function reveal() {
-    $('.task-body--add').css("display", "inline");
+    $('.task-body--add').css("display", "flex");
     $(".new-form")[0].reset();
 }
 // to exit new task form
@@ -44,22 +46,143 @@ function hide() {
 function show() {
     $('#search-icon').css("visibility", "visible");
 }
-
+// show mobile--navbar
 function showMenu(obj) {
     // console.log(obj.alt);
     // obj.classList.add('menu-s');
     y = document.getElementById(obj.alt);
-    y.style.display="inline";
+    y.style.display = "inline-block";
 }
-
+// close mobile--navbar
 function closeMenuMob(obj) {
     // console.log(obj.alt);
     y = document.getElementById(obj.alt);
-    y.style.display="none";
-   
-
+    y.style.display = "none";
 }
 
+function closeFilter() {
+    $('.filter-icon').css("display", "none");
+    $('#filter').css("display", "inline");
+    $('#filter-close').css("display", "none");
+    $('#filter-close').css("transition", "all 200ms ease-in");
+    $("#search-re").empty();
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    var i = 0;
+
+    for (i = 0; i < x.length; i++) {
+        var imp = 1,
+            arc = 1,
+            com = 1;
+        // check if imp in local storage
+        if (x[i].isImportant == true) {
+            imp = 0;
+        }
+        // check if archived in local storage
+        if (x[i].isArchived == true) {
+            arc = 0;
+        }
+        // check if completed in local storage
+        if (x[i].isCompleted == true) {
+            com = 0;
+        }
+        var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
+        $("#search-re").append(card_element);
+
+    }
+}
+
+
+function showFilter() {
+    $('.filter-icon').css("display", "inline");
+    $('#filter').css("display", "none");
+    $('#filter-close').css("display", "inline");
+    $('#filter-close').css("transition", "all 200ms ease-in");
+}
+
+function filterDone(){
+    $("#search-re").empty();
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    var i = 0;
+
+    for (i = (x.length - 1); i > (x.length - 4); i--) {
+        var imp = 1,
+            arc = 1,
+            com = 1;
+        // check if imp in local storage
+        if (x[i].isImportant == true) {
+            imp = 0;
+        }
+        // check if archived in local storage
+        if (x[i].isArchived == true) {
+            arc = 0;
+        }
+        // check if completed in local storage
+        if (x[i].isCompleted == true) {
+            com = 0;
+            var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
+            $("#search-re").append(card_element);
+            }
+    }
+}
+function filterArchive(){
+    
+    $("#search-re").empty();
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    var i = 0;
+
+    for (i = (x.length - 1); i > (x.length - 4); i--) {
+        var imp = 1,
+            arc = 1,
+            com = 1;
+        // check if imp in local storage
+        if (x[i].isImportant == true) {
+            imp = 0;
+        }
+        // check if completed in local storage
+        if (x[i].isCompleted == true) {
+            com = 0;
+            
+            }
+              // check if archived in local storage
+        if (x[i].isArchived == true) {
+            arc = 0;
+            var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
+            $("#search-re").append(card_element);
+        }
+    }
+}
+function filterImp(){
+    $("#search-re").empty();
+    var retrievedObject = localStorage.getItem('dataSet');
+    var x = JSON.parse(retrievedObject);
+    var i = 0;
+
+    for (i = (x.length - 1); i > (x.length - 4); i--) {
+        var imp = 1,
+            arc = 1,
+            com = 1;
+        // check if imp in local storage
+        if (x[i].isImportant == true) {
+            imp = 0;
+            var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
+            $("#search-re").append(card_element);
+        }
+        // check if completed in local storage
+        if (x[i].isCompleted == true) {
+            com = 0;
+            
+            }
+              // check if archived in local storage
+        if (x[i].isArchived == true) {
+            arc = 0;
+           
+        }
+    }
+}
+        
 function colorCompleted(obj) {
     var altName = obj.alt;
     console.log(altName);
@@ -208,7 +331,7 @@ $(document).ready(function () {
         if (x[i].isCompleted == true) {
             com = 0;
         }
-        var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="'+ x[i].TaskName +'"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item"> <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
+        var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
         $("#search-re").append(card_element);
 
     }

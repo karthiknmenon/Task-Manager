@@ -92,10 +92,10 @@
     }
 
     #mob-sep--form {
-        display: block;
+        display: inline;
         height: 2px;
         width: 500px;
-        position: relative;
+        position: absolute;
         top: 40px;
         background-color: #BDBDBD;
 
@@ -114,11 +114,34 @@
         left: 280px;
         bottom: 150px;
         height: 70px;
+        position: sticky;
+    background: rgba(0,0,0,0.2);
+    border-radius: 230px;
+        
     }
 
     #close {
         top: 1%;
         left: 90%;
+    }
+    #toaster {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #C2185B;
+        border-radius: 3px;
+        color: #fff;
+        text-align: center;
+        padding: 16px;
+        position: fixed;
+        left: 50%;
+        bottom: 630px;
+        font-size: 16px;
+    }
+    
+    #toaster.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
 }
 

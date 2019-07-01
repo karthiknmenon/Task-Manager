@@ -1,5 +1,7 @@
 @import "../abstracts/variables";
-
+img{
+    cursor: pointer;
+}
 .result-area {
     padding: 1px;
 }
@@ -11,11 +13,66 @@
 #mob-header {
     display: none;
 }
-
+#search-re{
+    margin-top: 20px;
+}
 #mob-menu {
     display: none;
 }
-
+.filter-r{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+#filter{
+    display: inline;
+    position: relative;
+    left:100px;
+}
+.filter-icon{
+    position: relative;
+    left:105px;
+    #completed {
+        position: relative;
+        opacity: 0.5;
+        filter: grayscale(1);
+    
+        &:hover {
+            filter: grayscale(0);
+        }
+    
+    }
+    
+    #priority {
+        position: relative;
+        opacity: 0.5;
+        filter: grayscale(1);
+    
+        &:hover {
+            filter: grayscale(0);
+        }
+    
+        &:active {
+            filter: grayscale(1);
+        }
+    }
+    
+    #archive {
+        position: relative;
+        opacity: 0.5;
+        filter: grayscale(1);
+    
+        &:hover {
+            filter: grayscale(0);
+        }
+    
+    }
+}
+#filter-close{
+    position: relative;
+    left:100px;
+}
 .result-container {
     width: 900px;
     margin-left: 55px;
@@ -91,7 +148,7 @@
     opacity: 0.5;
     filter: grayscale(1);
 
-    &:focus {
+    &:hover {
         filter: grayscale(0);
     }
 
@@ -102,7 +159,7 @@
     opacity: 0.5;
     filter: grayscale(1);
 
-    &:focus {
+    &:hover {
         filter: grayscale(0);
     }
 
@@ -116,7 +173,7 @@
     opacity: 0.5;
     filter: grayscale(1);
 
-    &:focus {
+    &:hover {
         filter: grayscale(0);
     }
 
@@ -138,7 +195,11 @@
         }
 
     }
-
+    .filter-r{
+        position: relative;
+        bottom: 120px;
+        right: 57px;
+    }
     .result-container {
         width: 300px;
         margin: 0px;
@@ -166,21 +227,26 @@
         }
 
         .menu-s {
-            height: 30px;
-            width: 150px;
+            position: absolute;
+            padding: 2px;
+            height:30px;
+            width: 130px;
             border-radius: 3px;
             background-color: #FFFFFF;
-            // opacity: 0.5;
-            left: 150px;
-            position: absolute;
+            right: 50px;
+            -webkit-box-shadow: -8px -5px 57px -8px rgba(97,97,97,1);
+            -moz-box-shadow: -8px -5px 57px -8px rgba(97,97,97,1);
+            box-shadow: -8px -5px 57px -8px rgba(97,97,97,0.6);
+            
 
             #close-mob {
-                display: inline;
+                display: inline-block;
                 position: relative;
                 z-index: 5;
-                top: 3px;
-                margin-top: 2px;
-                left: 125px;
+                // top: -3px;
+                /* margin-top: 2px; */
+                left: 100px;
+                top: 2px;
             }
 
             .icons-item-m {
@@ -235,30 +301,34 @@
 
         .icons-item-m {
             position: relative;
-            left: 20px;
+            width: 130px;
+            height: 0px;
             bottom: 25px;
+            right: 12px;
+            // left: 20px;
+            // bottom: 25px;
             margin-bottom: 1px;
             margin-left: 20px;
-            display: inline;
+            display: inline-block;
 
-            #completed {
+            #completed-m {
                 position: relative;
                 opacity: 0.5;
                 filter: grayscale(1);
 
-                &:focus {
+                &:hover {
                     filter: grayscale(0);
                 }
 
             }
 
-            #priority {
+            #priority-m {
                 position: relative;
                 opacity: 0.5;
                 filter: grayscale(1);
 
-                &:focus {
-                    filter: grayscale(0);
+                &:hover {
+                    filter: grayscale(0.6);
                 }
 
                 &:active {
@@ -266,13 +336,13 @@
                 }
             }
 
-            #archive {
+            #archive-m {
                 position: relative;
                 opacity: 0.5;
                 filter: grayscale(1);
 
-                &:focus {
-                    filter: grayscale(0);
+                &:hover {
+                    filter: grayscale(0.6);
                 }
 
             }
