@@ -787,6 +787,8 @@ a {
 }
 
 #search-re {
+  bottom: 40px;
+  position: relative;
   margin-top: 20px;
 }
 
@@ -807,12 +809,14 @@ a {
           justify-content: flex-start;
   -ms-flex-line-pack: end;
       align-content: flex-end;
+  bottom: 40px;
+  position: relative;
 }
 
 #filter {
   display: inline;
   position: relative;
-  left: 105px;
+  left: 98px;
   /* top: 0px; */
   top: 0px;
 }
@@ -875,7 +879,7 @@ a {
 
 #filter-close {
   position: relative;
-  left: 100px;
+  left: 97px;
 }
 
 .result-container {
@@ -1014,7 +1018,7 @@ a {
     -ms-flex-line-pack: center;
         align-content: center;
     position: relative;
-    bottom: 110px;
+    bottom: 130px;
   }
   #search-re #mob-header {
     display: block;
@@ -1188,18 +1192,19 @@ a {
             justify-content: flex-start;
     -ms-flex-line-pack: end;
         align-content: flex-end;
+    bottom: 30px;
   }
   #f-text {
     display: inline;
     position: relative;
     top: -47px;
-    left: 80px;
+    left: 85px;
     margin: 0px;
   }
   #filter {
     display: inline;
     position: relative;
-    left: 54px;
+    left: 57px;
     top: -50px;
   }
   .filter-icon {
@@ -1493,7 +1498,7 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .taskCard {
     /* margin: 45px; */
     right: 0;

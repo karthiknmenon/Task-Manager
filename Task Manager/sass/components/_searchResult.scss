@@ -35,6 +35,8 @@ a {
 }
 
 #search-re {
+    bottom: 40px;
+    position: relative;
     margin-top: 20px;
 }
 
@@ -47,12 +49,15 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-content: flex-end;
+    bottom: 40px;
+    position: relative;
 }
 
 #filter {
     display: inline;
     position: relative;
-    left: 105px;
+    left: 98px;
+
     /* top: 0px; */
     top: 0px;
 }
@@ -106,7 +111,7 @@ a {
 
 #filter-close {
     position: relative;
-    left: 100px;
+    left: 97px;
 }
 
 .result-container {
@@ -223,8 +228,7 @@ a {
         justify-content: flex-start;
         align-content: center;
         position: relative;
-        bottom: 110px;
-
+        bottom: 130px;
         #mob-header {
             display: block;
             font-weight: 300;
@@ -416,19 +420,20 @@ a {
         flex-direction: row;
         justify-content: flex-start;
         align-content: flex-end;
+        bottom: 30px;
     }
     #f-text {
         display: inline;
         position: relative;
         top: -47px;
-        left: 80px;
+        left: 85px;
         margin:0px;
     }
 
     #filter {
         display: inline;
         position: relative;
-        left: 54px;
+        left: 57px;
         top: -50px;
     }
 
