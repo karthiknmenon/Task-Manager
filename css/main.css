@@ -418,6 +418,15 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .task-body__card {
+    left: 70px;
+  }
+  .task-body__card--preview {
+    left: 70px;
+  }
+}
+
 input, input[type=color], button {
   border: none;
   outline: none;
@@ -537,6 +546,114 @@ button:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .new-form {
+    margin: 80px 50px 50px 42px;
+  }
+  input {
+    border: none;
+    outline: none;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-top: 8px;
+    width: 280px;
+    height: 43px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    text-indent: 16px;
+    padding: 0px;
+  }
+  input:focus {
+    border: 1px solid #03A9F4;
+    -webkit-transition: all 5ms linear;
+    transition: all 5ms linear;
+  }
+  label {
+    display: inline-block;
+    margin-top: 17px;
+  }
+  input[type=date] {
+    width: 280px;
+    text-indent: 6px;
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  input[type=date]:nth-of-type(1) {
+    margin-right: 8px;
+  }
+  input[type=color] {
+    border: none;
+    outline: none;
+    display: block;
+    border: 1px;
+    display: inline;
+    margin-bottom: 16px;
+    width: 30px;
+    height: 30px;
+  }
+  .taskDate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  ::-webkit-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  :-ms-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  ::-ms-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  ::placeholder {
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
+  ::-moz-selection {
+    background-color: #03A9F4;
+  }
+  ::selection {
+    background-color: #03A9F4;
+  }
+  button {
+    border: none;
+    outline: none;
+    display: block;
+    margin-top: 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: transparent;
+    width: 280px;
+    height: 50px;
+    border: 1px solid #03A9F4;
+    border-radius: 3px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 15px;
+  }
+  button:hover {
+    background-color: #03A9F4;
+    color: #FFFFFF;
+    -webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
   .new-form {
     margin: 80px 50px 50px 42px;
   }
@@ -1400,6 +1517,12 @@ a {
   transition: all 50ms ease-in;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  #search-icon {
+    top: 555px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   #tSearch {
     position: relative;
@@ -1499,6 +1622,21 @@ a {
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+  .taskCard {
+    /* margin: 45px; */
+    right: 0;
+    left: 0;
+    position: relative;
+    margin: 10px auto;
+    width: 700px;
+    overflow-x: hidden;
+  }
+  #new-task-card {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .taskCard {
     /* margin: 45px; */
     right: 0;
@@ -1670,9 +1808,24 @@ a {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  #task-illustration {
+    top: 150px;
+    left: 325px;
+    display: inline;
+    height: 400px;
+    width: 400px;
+  }
+  #close {
+    top: 1%;
+    left: 94%;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   #task-illustration {
     top: 150px;
+    left: 325px;
     display: inline;
     height: 400px;
     width: 400px;

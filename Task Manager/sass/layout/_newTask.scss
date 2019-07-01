@@ -146,16 +146,30 @@
         animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
 }
-
+@media (min-width: 768px) and (max-width: 1200px) {
+    #task-illustration{
+        top: 150px;
+        left:325px;
+        display: inline;
+        height: 400px;
+        width: 400px;
+    }
+    #close {
+        top: 1%;
+        left: 94%;
+    }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
 
     #task-illustration {
         top: 150px;
+        left:325px;
         display: inline;
         height: 400px;
         width: 400px;
 
     }
+    
 
     #close {
         top: 1%;

@@ -257,3 +257,11 @@
         left:70px;
     }
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+    .task-body__card{
+        left: 70px;
+    }
+    .task-body__card--preview{
+        left:70px;
+    }
+}

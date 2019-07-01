@@ -31,7 +31,12 @@
     transition: all 50ms ease-in;
 }
 
-
+@media (min-width: 768px) and (max-width: 1200px){
+    #search-icon{
+        // position;
+        top:555px;
+    }
+}
 //phone
 @media only screen and (max-width: 767px) {
     #tSearch {
