@@ -756,6 +756,12 @@ img {
   cursor: pointer;
 }
 
+#a-open {
+  position: relative;
+  /* margin-right: 40px; */
+  left: -40px;
+}
+
 .result-area {
   padding: 1px;
 }
@@ -794,7 +800,7 @@ img {
 #filter {
   display: inline;
   position: relative;
-  left: 96px;
+  left: 135px;
 }
 
 .filter-icon {
@@ -859,8 +865,8 @@ img {
 }
 
 .result-container {
-  width: 900px;
-  margin-left: 55px;
+  width: 1200px;
+  margin-left: 16px;
   margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1172,7 +1178,7 @@ img {
   #filter {
     display: inline;
     position: relative;
-    left: 68px;
+    left: 94px;
     bottom: 50px;
   }
   .filter-icon {
@@ -1224,13 +1230,14 @@ img {
   }
   #filter-close {
     position: relative;
-    left: 68px;
+    left: 55px;
     bottom: 50px;
   }
   .result-container {
     width: 700px;
     margin-left: 55px;
     margin-bottom: 25px;
+    right: 15px;
     bottom: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1604,9 +1611,9 @@ img {
   }
   #add-new-task {
     display: inline;
-    position: relative;
-    left: 280px;
-    bottom: 150px;
+    right: 30px;
+    /* left: 280px; */
+    bottom: 0px;
     height: 70px;
     position: fixed;
     background: rgba(0, 0, 0, 0.2);

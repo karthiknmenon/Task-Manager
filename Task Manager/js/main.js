@@ -62,6 +62,7 @@ function closeMenuMob(obj) {
 
 function closeFilter() {
     $('.filter-icon').css("display", "none");
+    $('#text').css("display","inline");
     $(".complete-f").css("filter", "grayscale(1)");
     $(".priority-f").css("filter", "grayscale(1)");
     $(".archive-f").css("filter", "grayscale(1)");
@@ -97,6 +98,7 @@ function closeFilter() {
 
 function showFilter() {
     $('.filter-icon').css("display", "inline");
+    $('#text').css("display","none");
     $('#filter').css("display", "none");
     $('#filter-close').css("display", "inline");
     $('#filter-close').css("transition", "all 200ms ease-in");

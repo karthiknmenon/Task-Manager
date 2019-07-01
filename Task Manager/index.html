@@ -38,10 +38,13 @@
             </form>
             <!-- search-result -->
             <div class="filter-r">
-                <a  onclick="showFilter()"><img src="../Task Manager/images/outline-filter_list-24px (1).svg"
-                        id="filter"></a>
-                <a  onclick="closeFilter()"><img src="../Task Manager/images/outline-close-24px.svg"
-                        id="filter-close"></a>
+                <div>
+                    <!-- <p id="text">Filter</p> -->
+                    <a  id="a-open" onclick="showFilter()"><img src="../Task Manager/images/outline-filter_list-24px (1).svg"
+                            id="filter"></a>
+                    <a  onclick="closeFilter()"><img src="../Task Manager/images/outline-close-24px.svg"
+                            id="filter-close"></a>
+                </div>
                 <div class="filter-icon">
                     <a onclick="filterDone()"><img src="../Task Manager/images/outline-done-24px.svg"
                             class="completed-f" id="completed"></a>
