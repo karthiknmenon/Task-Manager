@@ -92,7 +92,7 @@ body {
   margin: 0px 5px 30px 5px;
   margin-left: 56px;
   top: 20px;
-  left: 20px;
+  left: 70px;
   position: relative;
   height: 200px;
   width: 180px;
@@ -240,6 +240,7 @@ body {
     float: left;
     margin: 0px 10px 30px 10px;
     top: 20px;
+    left: 20px;
     position: relative;
     height: 100px;
     width: 250px;
@@ -282,6 +283,7 @@ body {
     float: left;
     margin: 0px 10px 30px 10px;
     top: 20px;
+    left: 70px;
     position: relative;
     height: 100px;
     width: 250px;
@@ -1157,7 +1159,8 @@ img {
   }
   .filter-icon {
     position: relative;
-    left: 105px;
+    left: 68px;
+    bottom: 50px;
   }
   .filter-icon #completed {
     position: relative;
@@ -1203,7 +1206,8 @@ img {
   }
   #filter-close {
     position: relative;
-    left: 100px;
+    left: 68px;
+    bottom: 50px;
   }
   .result-container {
     width: 700px;

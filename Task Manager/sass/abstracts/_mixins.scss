@@ -10,12 +10,12 @@
     filter: drop-shadow($x $y $blur $radius);
 }
 
-@mixin taskBodyCard() {
+@mixin taskBodyCard($var1) {
     float: left;
     @include margin(0px, 10px, 30px, 10px);
     // margin-left:56px;
     top: 20px;
-    // left: 100px;
+    left: $var1;
     position: relative;
     height: 100px;
     width: 250px;
@@ -43,6 +43,38 @@
     }
 }
 
+@mixin taskBodyCardT() {
+    float: left;
+    @include margin(0px, 10px, 30px, 10px);
+    // margin-left:56px;
+    position: relative;
+    top: 20px;
+    left: 70px;
+    height: 100px;
+    width: 250px;
+    background: $whiteColor;
+    border: 1px solid rgba(236, 236, 236, 0.5);
+    box-shadow: 4px 4px 20px rgba(205, 205, 205, 0.2);
+
+    #add-task {
+        position: absolute;
+        height: 70px;
+        top: 10px;
+        left: 80px;
+    }
+
+    h2 {
+        position: relative;
+        // top:20px;
+        left: 80px;
+        font-weight: 200;
+        margin: 20px auto;
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 20px rgba(117, 117, 117, 0.31);
+    }
+}
 @mixin formDefault() {
     border: none;
     outline: none;

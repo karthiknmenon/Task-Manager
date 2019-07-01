@@ -1,5 +1,5 @@
 @import "../abstracts/placeholders";
-
+@import "../abstracts/mixins";
 .task-body__card {
     @extend %task-body_card;
 
@@ -17,7 +17,7 @@
 
 .task-body__card--preview {
     @extend %task-body_card;
-
+    // left:20px;
     #tag-color {
         display: block;
         height: 2px;
@@ -118,7 +118,7 @@
 //phone
 @media only screen and (max-width: 767px) {
     .task-body__card {
-        @include taskBodyCard();
+        @include taskBodyCard(20px);
         display: none;
         position: relative;
         top: -50px;
@@ -137,9 +137,11 @@
             top: -14px;
         }
     }
-
     .task-body__card--preview {
-        @include taskBodyCard();
+        // @extend %task-body_card-t;
+        @include taskBodyCard(70px);
+        // left:70px;
+    
         display: none;
 
         #tag-color {
