@@ -766,6 +766,18 @@ img {
   padding: 1px;
 }
 
+a {
+  height: 24px;
+}
+
+#f-text {
+  display: inline;
+  position: relative;
+  top: 2px;
+  left: 130px;
+  margin: 0px;
+}
+
 #add-task {
   display: block;
 }
@@ -800,7 +812,9 @@ img {
 #filter {
   display: inline;
   position: relative;
-  left: 135px;
+  left: 105px;
+  /* top: 0px; */
+  top: 0px;
 }
 
 .filter-icon {
@@ -1175,11 +1189,18 @@ img {
     -ms-flex-line-pack: end;
         align-content: flex-end;
   }
+  #f-text {
+    display: inline;
+    position: relative;
+    top: -47px;
+    left: 80px;
+    margin: 0px;
+  }
   #filter {
     display: inline;
     position: relative;
-    left: 94px;
-    bottom: 50px;
+    left: 54px;
+    top: -50px;
   }
   .filter-icon {
     position: relative;

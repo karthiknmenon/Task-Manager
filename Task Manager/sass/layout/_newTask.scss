@@ -116,15 +116,16 @@
         bottom: 0px;
         height: 70px;
         position: fixed;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0, 0, 0, 0.2);
         border-radius: 230px;
-        
+
     }
 
     #close {
         top: 1%;
         left: 90%;
     }
+
     #toaster {
         visibility: hidden;
         min-width: 250px;
@@ -139,28 +140,30 @@
         bottom: 630px;
         font-size: 16px;
     }
-    
+
     #toaster.show {
         visibility: visible;
         animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+
     #task-illustration {
-        top:150px;
+        top: 150px;
         display: inline;
         height: 400px;
-        width:400px;
+        width: 400px;
 
     }
+
     #close {
         top: 1%;
         left: 95%;
     }
-    
-  }
-  
+
+}
+
 // .task-body--view{
 //     display: none;
 // }
