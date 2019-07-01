@@ -99,6 +99,9 @@ function closeFilter() {
 
 function showFilter() {
     $('.filter-icon').css("display", "inline");
+    $(".completed-f").css("filter", "grayscale(1)");
+    $(".priority-f").css("filter", "grayscale(1)");
+    $(".archive-f").css("filter", "grayscale(1)");
     $('#f-text').css("display","none");
     $('#filter').css("display", "none");
     $('#filter-close').css("display", "inline");

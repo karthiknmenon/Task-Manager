@@ -23,7 +23,7 @@
 #search-icon {
     position: absolute;
     left: 90px;
-    top: 325px;
+    top: 275px;
     z-index: 5;
     height: 15px;
     width: 15px;
@@ -68,6 +68,35 @@
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+    #tSearch {
+        position: relative;
+        bottom: 30px;
+        right: 30px;
+        border: none;
+        border-bottom: 2px solid #BDBDBD;
+        width: 600px;
+        border-radius: 0;
+
+        &:focus {
+            border-bottom: 2px solid #03A9F4;
+            transition: all 50ms ease-in;
+        }
+
+        text-indent:45px;
+    }
+
+    #search-icon {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        left: 8%;
+        top: 525px;
+        opacity: 0.3;
+        transition: all 50ms ease-in;
+        z-index: 5;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
     #tSearch {
         position: relative;
         bottom: 30px;
