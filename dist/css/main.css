@@ -44,7 +44,9 @@ body {
     margin: 0px;
   }
 }
-
+#github{
+  text-decoration: none;
+}
 .taskCard {
   position: relative;
   background: white;
