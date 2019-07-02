@@ -1009,6 +1009,7 @@ a {
 }
 
 .result-container {
+  min-height: 70px;
   width: 1200px;
   margin-left: 16px;
   margin-bottom: 25px;
@@ -1175,6 +1176,7 @@ a {
     top: -173px;
   }
   .result-container {
+    min-height: 140px;
     width: 300px;
     margin: 0px;
     margin-bottom: 50px;
@@ -1244,7 +1246,9 @@ a {
   }
   .result-container .title-item p {
     width: 300px;
-    overflow-x: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0px;
     font-size: 12px;
   }
@@ -1616,6 +1620,7 @@ a {
   }
   .result-container {
     width: 700px;
+    min-height: 100px;
     margin-left: 55px;
     margin-bottom: 25px;
     right: 15px;
@@ -1812,8 +1817,8 @@ a {
     position: absolute;
     height: 15px;
     width: 15px;
-    left: 8%;
-    top: 525px;
+    left: 60px;
+    top: 295px;
     opacity: 0.3;
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;
@@ -1841,8 +1846,9 @@ a {
     position: absolute;
     height: 15px;
     width: 15px;
-    left: 8%;
-    top: 525px;
+    /* left: 20%; */
+    left: 60px;
+    top: 295px;
     opacity: 0.3;
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;

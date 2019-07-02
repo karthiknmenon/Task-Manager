@@ -408,7 +408,7 @@ $(document).ready(function createCard() {
 })
 //search functiom
 function search() {
-    var input, filter, ul, li, a, i, txtValue, co;
+    var input, filter, ul, li, a, i, txtValue, co,kl=0;
     input = document.getElementById("tSearch");
     filter = input.value.toUpperCase();
     ul = document.getElementById("search-re");
@@ -416,8 +416,9 @@ function search() {
     li = ul.getElementsByClassName("title-item");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("h3")[0];
-        txtValue = a.textContent || a.innerText;
+        txtValue =  a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            kl=1;
             co[i].style.display = "";
         } else {
             co[i].style.display = "none";

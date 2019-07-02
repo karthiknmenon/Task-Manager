@@ -119,6 +119,7 @@ a {
 }
 
 .result-container {
+    min-height: 70px;
     width: 1200px;
     margin-left: 16px;
     margin-bottom: 25px;
@@ -265,6 +266,7 @@ a {
     }
 
     .result-container {
+        min-height: 140px;
         width: 300px;
         margin: 0px;
         margin-bottom: 50px;
@@ -344,9 +346,11 @@ a {
             }
 
             p {
-                // white-space: nowrap; 
+
                 width:300px;
-                overflow-x: hidden;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 // text-indent: 10px;
                 margin: 0px;
                 font-size: 12px;
@@ -738,6 +742,7 @@ a {
     .result-container {
 
         width: 700px;
+        min-height: 100px;
         margin-left: 55px;
         margin-bottom: 25px;
         right: 15px;
