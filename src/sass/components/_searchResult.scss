@@ -17,7 +17,9 @@ img {
 a {
     height: 24px;
 }
-
+#sep-mob{
+    display: none;
+}
 #f-text {
     display: inline;
     position: relative;
@@ -120,8 +122,8 @@ a {
 
 .result-container {
     min-height: 70px;
-    width: 1200px;
-    margin-left: 16px;
+    width: 100%;
+    padding-left: 30px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: row;
@@ -243,6 +245,9 @@ a {
         }
 
     }
+    #sep-mob{
+        display: block;
+    }
     #filter{
         top: -2px;
         left: 148px;
@@ -296,7 +301,7 @@ a {
 
         .menu-s {
             position: absolute;
-            left: 150px;
+            left: 170px;
             top: 20px;
             // position: sticky;
             padding: 2px;
@@ -742,11 +747,13 @@ a {
 
     .result-container {
 
-        width: 700px;
+        width: 100%;
         min-height: 100px;
-        margin-left: 55px;
+        margin-left:0px;
+        // padding-left:40px;
+        // padding-right:40px;
         margin-bottom: 25px;
-        right: 15px;
+        // right: 15px;
         bottom: 200px;
         display: flex;
         flex-direction: row;
@@ -774,7 +781,7 @@ a {
         .title-item {
             display: inline-block;
             align-self: center;
-            min-width: 200px;
+            // min-width: 100px;
             overflow-wrap: wrap;
             width:300px;
 

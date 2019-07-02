@@ -891,6 +891,10 @@ a {
   height: 24px;
 }
 
+#sep-mob {
+  display: none;
+}
+
 #f-text {
   display: inline;
   position: relative;
@@ -1007,8 +1011,8 @@ a {
 
 .result-container {
   min-height: 70px;
-  width: 1200px;
-  margin-left: 16px;
+  width: 100%;
+  padding-left: 30px;
   margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1151,6 +1155,9 @@ a {
     font-weight: 300;
     text-align: center;
   }
+  #sep-mob {
+    display: block;
+  }
   #filter {
     top: -2px;
     left: 148px;
@@ -1199,7 +1206,7 @@ a {
   }
   .result-container .menu-s {
     position: absolute;
-    left: 150px;
+    left: 170px;
     top: 20px;
     padding: 2px;
     height: 30px;
@@ -1617,11 +1624,10 @@ a {
     bottom: 50px;
   }
   .result-container {
-    width: 700px;
+    width: 100%;
     min-height: 100px;
-    margin-left: 55px;
+    margin-left: 0px;
     margin-bottom: 25px;
-    right: 15px;
     bottom: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1655,7 +1661,6 @@ a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    min-width: 200px;
     overflow-wrap: wrap;
     width: 300px;
   }
