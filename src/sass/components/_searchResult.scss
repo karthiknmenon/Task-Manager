@@ -50,7 +50,10 @@ a {
     justify-content: flex-start;
     align-content: flex-end;
     bottom: 40px;
+    // position: relative;
     position: relative;
+    left: 775px;
+    top: -87px;
 }
 
 #filter {
@@ -241,6 +244,9 @@ a {
         position: relative;
         bottom: 120px;
         right: 57px;
+        position: relative;
+        left: 130px;
+        top: -173px;
     }
 
     .result-container {
@@ -420,7 +426,10 @@ a {
         flex-direction: row;
         justify-content: flex-start;
         align-content: flex-end;
-        bottom: 30px;
+        position: relative;
+        left: 480px;
+        top: -70px;
+    
     }
     #f-text {
         display: inline;
@@ -630,6 +639,9 @@ a {
         justify-content: flex-start;
         align-content: flex-end;
         bottom: 30px;
+        position: relative;
+        left: 480px;
+        top: -70px;
     }
     #f-text {
         display: inline;
