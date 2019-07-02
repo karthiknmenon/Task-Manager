@@ -171,6 +171,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 5px;
+  overflow-wrap: break-word;
 }
 
 .task-body__card--preview .date-c {
