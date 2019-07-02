@@ -147,6 +147,8 @@ a {
         display: inline-block;
         align-self: center;
         min-width: 300px;
+        overflow-wrap: break-word;
+        width: 400px;
 
         .task-color {
             display: inline-block;
@@ -310,7 +312,9 @@ a {
         .title-item {
             display: inline-block;
             align-self: center;
-            min-width: 50px;
+            min-width: 80px;
+            width: 50px;
+            overflow-wrap: break-word;
 
             .task-color {
                 display: inline-block;
@@ -533,7 +537,9 @@ a {
         .title-item {
             display: inline-block;
             align-self: center;
-            min-width: 300px;
+            min-width: 200px;
+            overflow-wrap: wrap;
+            width:300px;
 
             .task-color {
                 display: inline-block;
@@ -745,7 +751,9 @@ a {
         .title-item {
             display: inline-block;
             align-self: center;
-            min-width: 300px;
+            min-width: 200px;
+            overflow-wrap: wrap;
+            width:300px;
 
             .task-color {
                 display: inline-block;
