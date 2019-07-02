@@ -254,7 +254,7 @@ a {
     .result-container {
         width: 300px;
         margin: 0px;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         display: inline-block;
         // flex-direction: column;
         // justify-content: space-around;
@@ -273,18 +273,21 @@ a {
             display: inline;
             position: relative;
             left: 250px;
-            bottom: 11px;
+            // bottom: 11px;
+            top: 25px;
             opacity: 0.5;
         }
 
         .menu-s {
-            position: absolute;
+            position: relative;
+            top: 50px;
+            left:110px;
             padding: 2px;
             height: 30px;
             width: 130px;
             border-radius: 3px;
             background-color: #FFFFFF;
-            right: 50px;
+            // right: 50px;
             -webkit-box-shadow: -8px -5px 57px -8px rgba(97, 97, 97, 1);
             -moz-box-shadow: -8px -5px 57px -8px rgba(97, 97, 97, 1);
             box-shadow: -8px -5px 57px -8px rgba(97, 97, 97, 0.6);
@@ -312,9 +315,7 @@ a {
         .title-item {
             display: inline-block;
             align-self: center;
-            min-width: 80px;
-            width: 50px;
-            overflow-wrap: break-word;
+            min-width: 100px;
 
             .task-color {
                 display: inline-block;
@@ -330,21 +331,23 @@ a {
             }
 
             p {
-                text-indent: 10px;
+                width:300px;
+                overflow-x: hidden;
+                // text-indent: 10px;
                 margin: 0px;
                 font-size: 12px;
             }
         }
 
         .date-item {
-            text-indent: 10px;
+            // text-indent: 10px;
             display: inline-block;
             align-self: center;
 
             p {
                 margin: 0px;
                 font-size: 12px;
-                text-indent: 38px;
+                // text-indent: 38px;
             }
         }
 

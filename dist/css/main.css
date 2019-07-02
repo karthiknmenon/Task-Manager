@@ -1164,7 +1164,7 @@ a {
   .result-container {
     width: 300px;
     margin: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     display: inline-block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1181,17 +1181,18 @@ a {
     display: inline;
     position: relative;
     left: 250px;
-    bottom: 11px;
+    top: 25px;
     opacity: 0.5;
   }
   .result-container .menu-s {
-    position: absolute;
+    position: relative;
+    top: 50px;
+    left: 110px;
     padding: 2px;
     height: 30px;
     width: 130px;
     border-radius: 3px;
     background-color: #FFFFFF;
-    right: 50px;
     -webkit-box-shadow: -8px -5px 57px -8px #616161;
     box-shadow: -8px -5px 57px -8px rgba(97, 97, 97, 0.6);
   }
@@ -1214,9 +1215,7 @@ a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    min-width: 80px;
-    width: 50px;
-    overflow-wrap: break-word;
+    min-width: 100px;
   }
   .result-container .title-item .task-color {
     display: inline-block;
@@ -1231,12 +1230,12 @@ a {
     margin: 0px;
   }
   .result-container .title-item p {
-    text-indent: 10px;
+    width: 300px;
+    overflow-x: hidden;
     margin: 0px;
     font-size: 12px;
   }
   .result-container .date-item {
-    text-indent: 10px;
     display: inline-block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1245,7 +1244,6 @@ a {
   .result-container .date-item p {
     margin: 0px;
     font-size: 12px;
-    text-indent: 38px;
   }
   .result-container .icons-item {
     display: none;
@@ -2036,9 +2034,9 @@ a {
   }
   #add-new-task {
     display: inline;
-    right: 30px;
+    right: 8%;
     /* left: 280px; */
-    bottom: 0px;
+    bottom: 5%;
     height: 70px;
     position: fixed;
     background: rgba(0, 0, 0, 0.2);
