@@ -1180,6 +1180,7 @@ a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    position: relative;
   }
   .result-container #sep-mob {
     margin: 20px;
@@ -1196,9 +1197,9 @@ a {
     opacity: 0.5;
   }
   .result-container .menu-s {
-    position: relative;
-    top: 50px;
-    left: 110px;
+    position: absolute;
+    left: 150px;
+    top: 20px;
     padding: 2px;
     height: 30px;
     width: 130px;
@@ -1242,9 +1243,10 @@ a {
   }
   .result-container .title-item p {
     width: 300px;
-    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0px;
+    margin-top: 20px;
     font-size: 12px;
   }
   .result-container .date-item {
@@ -1838,9 +1840,8 @@ a {
     transition: all 50ms ease-in;
   }
   #search-holder {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 298px;
+    position: absolute;
+    top: 526px;
     z-index: 5;
   }
   #search-icon {

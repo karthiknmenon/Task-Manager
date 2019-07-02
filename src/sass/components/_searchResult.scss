@@ -274,6 +274,7 @@ a {
         // flex-direction: column;
         // justify-content: space-around;
         align-self: center;
+        position: relative;
 
         #sep-mob {
             margin: 20px;
@@ -294,9 +295,10 @@ a {
         }
 
         .menu-s {
-            position: relative;
-            top: 50px;
-            left:110px;
+            position: absolute;
+            left: 150px;
+            top: 20px;
+            // position: sticky;
             padding: 2px;
             height: 30px;
             width: 130px;
@@ -346,13 +348,12 @@ a {
             }
 
             p {
-
+                // text-align:justify;
                 width:300px;
-                white-space: nowrap;
                 overflow: hidden;
-                // text-overflow: ellipsis;
-                // text-indent: 10px;
+                text-overflow: ellipsis;
                 margin: 0px;
+                margin-top:20px;
                 font-size: 12px;
             }
         }

@@ -114,8 +114,9 @@
         text-indent:45px;
     }
     #search-holder{
-        position: sticky;
-        top: 298px;
+        position: absolute;
+        top: 526px;
+        // z-index: 5;
     
         z-index: 5;
     }
