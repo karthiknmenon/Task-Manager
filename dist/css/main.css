@@ -1222,9 +1222,8 @@ a {
     display: inline-block;
     position: relative;
     z-index: 5;
-    /* margin-top: 2px; */
     left: 100px;
-    top: 2px;
+    top: 3px;
   }
   .result-container .menu-s .icons-item-m {
     display: block;
