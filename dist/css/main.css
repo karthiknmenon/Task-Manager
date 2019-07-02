@@ -1192,7 +1192,8 @@ a {
     position: relative;
   }
   .result-container #sep-mob {
-    margin: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     height: 2px;
     width: 280px;
     background-color: #BDBDBD;
