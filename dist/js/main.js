@@ -53,6 +53,7 @@ function showMenu(obj) {
     // obj.classList.add('menu-s');
     y = document.getElementById(obj.alt);
     y.style.display = "inline-block";
+    
 }
 // close mobile--navbar
 function closeMenuMob(obj) {
@@ -63,6 +64,7 @@ function closeMenuMob(obj) {
 
 function closeFilter() {
     $('.filter-icon').css("display", "none");
+    // $('.filter-r').css("left","813px");
     $('#f-text').css("display", "inline");
     $(".complete-f").css("filter", "grayscale(1)");
     $(".priority-f").css("filter", "grayscale(1)");
@@ -99,6 +101,7 @@ function closeFilter() {
 
 function showFilter() {
     $('.filter-icon').css("display", "inline");
+    // $('.filter-r').css("left","775px");
     $(".completed-f").css("filter", "grayscale(1)");
     $(".priority-f").css("filter", "grayscale(1)");
     $(".archive-f").css("filter", "grayscale(1)");

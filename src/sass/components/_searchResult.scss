@@ -52,7 +52,7 @@ a {
     bottom: 40px;
     // position: relative;
     position: relative;
-    left: 775px;
+    left: 813px;
     top: -87px;
 }
 
@@ -67,7 +67,8 @@ a {
 
 .filter-icon {
     position: relative;
-    left: 105px;
+    left: 65px;
+
 
     #completed {
         position: relative;
@@ -114,7 +115,7 @@ a {
 
 #filter-close {
     position: relative;
-    left: 97px;
+    left: 63px;
 }
 
 .result-container {
@@ -241,7 +242,19 @@ a {
         }
 
     }
-
+    #filter{
+        top: -2px;
+        left: 148px;
+    }
+    #f-text{
+        left: 175px;
+    }
+    #filter-close{
+        left: 103px;
+    }
+    .filter-icon{
+        left: 105px;
+    }
     .filter-r {
         position: relative;
         bottom: 120px;
@@ -331,6 +344,7 @@ a {
             }
 
             p {
+                // white-space: nowrap; 
                 width:300px;
                 overflow-x: hidden;
                 // text-indent: 10px;
@@ -656,14 +670,14 @@ a {
         display: inline;
         position: relative;
         top: -47px;
-        left: 85px;
+        left: 130px;
         margin:0px;
     }
 
     #filter {
         display: inline;
         position: relative;
-        left: 57px;
+        left: 107px;
         top: -50px;
     }
 
@@ -717,7 +731,7 @@ a {
 
     #filter-close {
         position: relative;
-        left: 55px;
+        left: 65px;
         bottom: 50px;
     }
 
