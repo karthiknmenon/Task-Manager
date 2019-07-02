@@ -476,11 +476,6 @@ input:focus {
   transition: all 5ms linear;
 }
 
-label {
-  display: inline-block;
-  margin-top: 17px;
-}
-
 input[type=date] {
   width: 150px;
   text-indent: 6px;
@@ -1012,8 +1007,8 @@ a {
 .result-container {
   min-height: 70px;
   width: 100%;
-  padding-left: 30px;
-  margin-bottom: 25px;
+  padding-left: 20px;
+  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1181,11 +1176,12 @@ a {
     top: -173px;
   }
   .result-container {
-    min-height: 140px;
+    min-height: 50px;
     width: 300px;
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: inline-block;
+    top: -60px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -1418,9 +1414,11 @@ a {
   }
   .result-container {
     width: 100%;
-    min-height: 100px;
+    min-height: 50px;
     margin-left: 0px;
-    margin-bottom: 25px;
+    padding-left: 20px;
+    top: -80px;
+    margin-bottom: 10px;
     right: 15px;
     bottom: 200px;
     display: -webkit-box;
@@ -1456,6 +1454,7 @@ a {
         -ms-grid-row-align: center;
         align-self: center;
     min-width: 200px;
+    width: 200px;
     overflow-wrap: wrap;
     width: 300px;
   }
@@ -1628,9 +1627,11 @@ a {
   }
   .result-container {
     width: 100%;
-    min-height: 100px;
+    min-height: 50px;
     margin-left: 0px;
-    margin-bottom: 25px;
+    padding-left: 10px;
+    top: -80px;
+    margin-bottom: 10px;
     bottom: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1660,12 +1661,13 @@ a {
     display: none;
   }
   .result-container .title-item {
+    min-width: 200px;
+    width: 200px;
     display: inline-block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     overflow-wrap: wrap;
-    width: 300px;
   }
   .result-container .title-item .task-color {
     display: inline-block;
@@ -1759,7 +1761,7 @@ a {
 #search-icon {
   position: absolute;
   left: 90px;
-  top: 275px;
+  top: 245px;
   z-index: 5;
   height: 15px;
   width: 15px;

@@ -17,15 +17,17 @@ img {
 a {
     height: 24px;
 }
-#sep-mob{
+
+#sep-mob {
     display: none;
 }
+
 #f-text {
     display: inline;
     position: relative;
     top: 2px;
     left: 130px;
-    margin:0px;
+    margin: 0px;
 }
 
 #add-task {
@@ -123,8 +125,8 @@ a {
 .result-container {
     min-height: 70px;
     width: 100%;
-    padding-left: 30px;
-    margin-bottom: 25px;
+    padding-left: 20px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -238,6 +240,7 @@ a {
         align-content: center;
         position: relative;
         bottom: 130px;
+
         #mob-header {
             display: block;
             font-weight: 300;
@@ -245,23 +248,29 @@ a {
         }
 
     }
-    #sep-mob{
+
+    #sep-mob {
         display: block;
     }
-    #filter{
+
+    #filter {
         top: -2px;
         left: 148px;
     }
-    #f-text{
-        font-size:14px;
+
+    #f-text {
+        font-size: 14px;
         left: 175px;
     }
-    #filter-close{
+
+    #filter-close {
         left: 103px;
     }
-    .filter-icon{
+
+    .filter-icon {
         left: 105px;
     }
+
     .filter-r {
         position: relative;
         bottom: 120px;
@@ -272,13 +281,12 @@ a {
     }
 
     .result-container {
-        min-height: 140px;
+        min-height: 50px;
         width: 300px;
         margin: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         display: inline-block;
-        // flex-direction: column;
-        // justify-content: space-around;
+        top: -60px;
         align-self: center;
         position: relative;
 
@@ -354,11 +362,11 @@ a {
 
             p {
                 // text-align:justify;
-                width:300px;
+                width: 300px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 margin: 0px;
-                margin-top:20px;
+                margin-top: 20px;
                 font-size: 12px;
             }
         }
@@ -460,15 +468,16 @@ a {
         position: relative;
         left: 480px;
         top: -70px;
-    
+
     }
+
     #f-text {
-        font-size:14px;
+        font-size: 14px;
         display: inline;
         position: relative;
         top: -47px;
         left: 85px;
-        margin:0px;
+        margin: 0px;
     }
 
     #filter {
@@ -535,12 +544,12 @@ a {
     .result-container {
 
         width: 100%;
-        min-height: 100px;
-        margin-left:0px;
-        // padding-left:40px;
-        // padding-right:40px;
-        margin-bottom: 25px;
-        right: 15px;    
+        min-height: 50px;
+        margin-left: 0px;
+        padding-left: 20px;
+        top: -80px;
+        margin-bottom: 10px;
+        right: 15px;
         bottom: 200px;
         display: flex;
         flex-direction: row;
@@ -569,8 +578,9 @@ a {
             display: inline-block;
             align-self: center;
             min-width: 200px;
+            width: 200px;
             overflow-wrap: wrap;
-            width:300px;
+            width: 300px;
 
             .task-color {
                 display: inline-block;
@@ -649,6 +659,7 @@ a {
     }
 
 }
+
 @media (min-width: 768px) and (max-width: 1200px) {
     .result-area {
         padding: 1px;
@@ -680,12 +691,13 @@ a {
         left: 480px;
         top: -70px;
     }
+
     #f-text {
         display: inline;
         position: relative;
         top: -47px;
         left: 130px;
-        margin:0px;
+        margin: 0px;
     }
 
     #filter {
@@ -752,11 +764,11 @@ a {
     .result-container {
 
         width: 100%;
-        min-height: 100px;
-        margin-left:0px;
-        // padding-left:40px;
-        // padding-right:40px;
-        margin-bottom: 25px;
+        min-height: 50px;
+        margin-left: 0px;
+        padding-left:10px;
+        top: -80px;
+        margin-bottom: 10px;
         // right: 15px;
         bottom: 200px;
         display: flex;
@@ -783,11 +795,12 @@ a {
         }
 
         .title-item {
+            min-width: 200px;
+            width: 200px;
             display: inline-block;
             align-self: center;
             // min-width: 100px;
             overflow-wrap: wrap;
-            width:300px;
 
             .task-color {
                 display: inline-block;
