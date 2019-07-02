@@ -389,8 +389,9 @@ $(document).ready(function createCard() {
         var imp = 1,
             arc = 1,
             com = 1;
+        if(x[i])
         // check if imp in local storage
-        if (x[i].isImportant == true) {
+       { if (x[i].isImportant == true) {
             imp = 0;
         }
         // check if archived in local storage
@@ -402,7 +403,7 @@ $(document).ready(function createCard() {
             com = 0;
         }
         var card = ' <div class="task-body__card--preview"> <div id="tag-color" style="background-color:' + x[i].TaskColor + '"></div> <h5>' + x[i].TaskName + '</h5> <div id="sep"></div> <p>' + x[i].TaskDec + '</p> <div class="date-c"> <img src=" /dist/images/outline-calendar_today-24px.svg" id="card-calendar"> <p id="due-date">' + x[i].DueDate + '</p> </div> <div class="icons"> <img src=" /dist/images/outline-done-24px.svg" alt="' + x[i].TaskName + '" id="completed" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')"> <img src=" /dist/images/outline-star_border-24px (1).svg" alt="' + x[i].TaskName + '" id="priority" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')"> <img src=" /dist/images/outline-archive-24px.svg" alt="' + x[i].TaskName + '" id="archive" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')"> </div> </div>'
-        $(".featured-task--container").append(card);
+        $(".featured-task--container").append(card);}
 
     }}
 
