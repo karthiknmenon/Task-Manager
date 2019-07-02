@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <title>Task Manager</title>
+</head>
+
+<body>
+    <div class="taskCard">
+        <!-- landing page -->
+        <div class="task-body--view">
+
+            <!-- new task card -->
+            <div class="task-body__card" style='cursor: pointer' onclick='addTasks()'>
+                <img src="images/outline-add-24px.svg" id="add-task">
+                <h2>New Task</h2>
+            </div>
+
+            <!-- task cards container -->
+            <div class="featured-task--container">
+
+            </div>
+            <!-- task cards container ends here -->
+
+            <!-- search-form -->
+            <img src="images/search-solid.svg" id="search-icon">
+            <form id="search-form" autocomplete="OFF">
+                <label for="search-task">
+
+                    <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="search()"
+                        id="tSearch" onfocus="hide()" onblur="show()">
+                </label>
+            </form>
+            <!-- search-result -->
+            <div class="filter-r">
+                <p id="f-text">Filter</p>
+                <div>
+                    <!-- <p id="text">Filter</p> -->
+                    <!-- <p id="f-text">Filter</p> -->
+                    <a id="a-open" onclick="showFilter()"><img src="images/outline-filter_list-24px (1).svg"
+                            id="filter"></a>
+                    <a onclick="closeFilter()"><img src="images/outline-close-24px.svg" id="filter-close"></a>
+                </div>
+                <div class="filter-icon">
+                    <a onclick="filterDone()"><img src="images/outline-done-24px.svg" class="completed-f"
+                            id="completed"></a>
+                    <a onclick="filterImp()"><img src="images/outline-star_border-24px (1).svg" class="priority-f"
+                            id="priority"></a>
+                    <a onclick="filterArchive()"><img src="images/outline-archive-24px.svg" class="archive-f"
+                            id="archive"></a>
+                </div>
+            </div>
+            <div id="search-re">
+
+                <div id="toaster">Task Added ! </div>
+            </div>
+            <img src="images/outline-add-24px.svg" id="add-new-task" onclick="addTasks()">
+
+            <!-- search result ends here -->
+        </div>
+        <!-- on add task -->
+        <div class="task-body--add">
+            <img src="images/outline-close-24px.svg" id="close" style='cursor: pointer' onclick='goback()'>
+            <div id="mob-sep--form">
+                <p id="mob-form--header">Add Task</p>
+            </div>
+            <img src="images/task-illustration.png" type="image/png" id="task-illustration">
+            <div class="task-body--new">
+                <!-- form starts here -->
+                <form class="new-form" id="newForm" name="newTaskForm" autocomplete="off">
+                    <div class="taskName">
+                        <label for="taskName">Add Task Name
+                            <input type="text" name="taskName" placeholder="Enter Task Name" maxlength="20" required>
+                        </label><br>
+                    </div class="taskDescription">
+                    <div>
+                        <label for="taskDescription">Add Description
+                            <input type="text" name="taskDesc" placeholder="Enter Task Description" maxlength="30">
+                        </label> <br>
+                    </div>
+                    <div class="taskTags">
+                        <label for="taskTags">Add Tags
+                            <input type="text" name="taskTags" placeholder="Enter Task Tags" maxlength="10">
+                        </label><br>
+                    </div>
+                    <div class="taskDate">
+                        <div class="taskADate">
+                            <label for="taskDate">Assigned Date
+                                <input type="date" name="taskADate">
+                            </label>
+                        </div>
+                        <div class="taskDDate">
+                            <label for="taskDate">Due Date
+                                <input type="date" name="taskDDate" required>
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="taskColor">
+                        <label for="taskColor">Tag Color
+                            <input type="color" data-validation="required" name="taskColor"
+                                placeholder="Enter Task Tags">
+                        </label><br>
+                    </div>
+                    <button class="submit" type="submit" value="Validate" onclick="toaster()">Add Task</button>
+                    <!-- <div id="toaster-success"><p>Added Task!</p</div> -->
+                </form>
+            </div>
+        </div>
+        <h5 id="copyright">&copy; Karthik Menon</h5>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- data validation -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script>
+        $("#newForm").validate();
+    </script>
+    <!-- main JS file -->
+    <script type="text/javascript" src="js/main-min.js"></script>
+</body>
+
+</html>
