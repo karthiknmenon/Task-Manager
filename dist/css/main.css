@@ -1415,8 +1415,9 @@ a {
     bottom: 50px;
   }
   .result-container {
-    width: 700px;
-    margin-left: 55px;
+    width: 100%;
+    min-height: 100px;
+    margin-left: 0px;
     margin-bottom: 25px;
     right: 15px;
     bottom: 200px;
