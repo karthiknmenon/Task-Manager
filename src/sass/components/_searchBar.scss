@@ -113,21 +113,14 @@
 
         text-indent:45px;
     }
-    #search-holder{
-        position: absolute;
-        top: 526px;
-        // z-index: 5;
-    
-        z-index: 5;
-    }
     #search-icon {
-        position: absolute;
+        position: relative;
         height: 15px;
         width: 15px;
-        /* left: 20%; */
-        left: 60px;
-        top: -5px;
-        // top: 525px;
+        width: 15px;
+        left: 30px;
+        /* bottom: 200px; */
+        top: 15px;
         opacity: 0.3;
         transition: all 50ms ease-in;
         z-index: 5;

@@ -1839,18 +1839,14 @@ a {
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;
   }
-  #search-holder {
-    position: absolute;
-    top: 526px;
-    z-index: 5;
-  }
   #search-icon {
-    position: absolute;
+    position: relative;
     height: 15px;
     width: 15px;
-    /* left: 20%; */
-    left: 60px;
-    top: -5px;
+    width: 15px;
+    left: 30px;
+    /* bottom: 200px; */
+    top: 15px;
     opacity: 0.3;
     -webkit-transition: all 50ms ease-in;
     transition: all 50ms ease-in;
