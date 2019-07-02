@@ -53,7 +53,7 @@ function showMenu(obj) {
     // obj.classList.add('menu-s');
     y = document.getElementById(obj.alt);
     y.style.display = "inline-block";
-    
+
 }
 // close mobile--navbar
 function closeMenuMob(obj) {
@@ -136,7 +136,7 @@ function filterDone() {
         // check if completed in local storage
         if (x[i].isCompleted == true) {
             com = 0;
-            count+=1;
+            count += 1;
             var card_element = '<div class="result-container"> <img src="/dist/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/dist/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/dist/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/dist/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/dist/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/dist/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/dist/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/dist/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
             $("#search-re").append(card_element);
         }
@@ -408,7 +408,7 @@ $(document).ready(function createCard() {
 })
 //search functiom
 function search() {
-    var input, filter, ul, li, a, i, txtValue, co,kl=0;
+    var input, filter, ul, li, a, i, txtValue, co, kl = 0;
     input = document.getElementById("tSearch");
     filter = input.value.toUpperCase();
     ul = document.getElementById("search-re");
@@ -416,9 +416,9 @@ function search() {
     li = ul.getElementsByClassName("title-item");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("h3")[0];
-        txtValue =  a.innerText;
+        txtValue = a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            kl=1;
+            kl = 1;
             co[i].style.display = "";
         } else {
             co[i].style.display = "none";
