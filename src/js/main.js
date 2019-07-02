@@ -63,7 +63,7 @@ function closeMenuMob(obj) {
 
 function closeFilter() {
     $('.filter-icon').css("display", "none");
-    $('#f-text').css("display","inline");
+    $('#f-text').css("display", "inline");
     $(".complete-f").css("filter", "grayscale(1)");
     $(".priority-f").css("filter", "grayscale(1)");
     $(".archive-f").css("filter", "grayscale(1)");
@@ -102,7 +102,7 @@ function showFilter() {
     $(".completed-f").css("filter", "grayscale(1)");
     $(".priority-f").css("filter", "grayscale(1)");
     $(".archive-f").css("filter", "grayscale(1)");
-    $('#f-text').css("display","none");
+    $('#f-text').css("display", "none");
     $('#filter').css("display", "none");
     $('#filter-close').css("display", "inline");
     $('#filter-close').css("transition", "all 200ms ease-in");
@@ -115,30 +115,36 @@ function filterDone() {
     $(".archive-f").css("filter", "grayscale(1)");
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
-    var i = 0;
+    var i = 0,
+        count = 0;
 
     for (i = (x.length - 1); i >= 0; i--) {
         var imp = 1,
             arc = 1,
-            com = 1;
-        // check if imp in local storage
-        if (x[i].isImportant == true) {
-            imp = 0;
-        }
+            com = 1,
+
+            // check if imp in local storage
+            if (x[i].isImportant == true) {
+                imp = 0;
+            }
         // check if archived in local storage
         if (x[i].isArchived == true) {
             arc = 0;
         }
         // check if completed in local storage
         if (x[i].isCompleted == true) {
+            count += 1;
             com = 0;
             var card_element = '<div class="result-container"> <img src="../Task Manager/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/Task Manager/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date:' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/Task Manager/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/Task Manager/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/Task Manager/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
             $("#search-re").append(card_element);
         }
-        else{
-            
-        }
     }
+    console.log(count);
+
+    // if(count==0){
+    //     var element= '<h1>hey</h1>';v
+    //     $("#search-re").append(element);
+    // }
 }
 // to filter out archived tasks
 function filterArchive() {
