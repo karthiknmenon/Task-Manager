@@ -225,7 +225,7 @@ function filterImp() {
 
 function colorCompleted(obj) {
     var altName = obj.alt;
-    console.log(altName);
+    // console.log(altName);
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     for (var i = 0; i < x.length; i++) {
@@ -255,7 +255,7 @@ function colorCompleted(obj) {
 // for archive
 function colorArchived(obj) {
     var altName = obj.alt;
-    console.log(altName);
+    // console.log(altName);
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     for (var i = 0; i < x.length; i++) {
@@ -284,7 +284,7 @@ function colorArchived(obj) {
 // for priority
 function colorImportant(obj) {
     var altName = obj.alt;
-    console.log(altName);
+    // console.log(altName);
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     for (var i = 0; i < x.length; i++) {

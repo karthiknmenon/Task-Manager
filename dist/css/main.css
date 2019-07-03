@@ -2066,11 +2066,10 @@ a {
   }
   #add-new-task {
     display: inline;
+    position: fixed;
     right: 10%;
-    /* left: 280px; */
     bottom: 8%;
     height: 70px;
-    position: fixed;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 230px;
   }
