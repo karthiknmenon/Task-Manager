@@ -255,7 +255,7 @@ a {
 
     #filter {
         top: -2px;
-        left: 25px;
+        left: 65px;
     }
     #a-open{
         position: relative;
@@ -263,24 +263,27 @@ a {
     }
     #f-text {
         font-size: 14px;
-        left: 20px;
+        left: 60px;
+
     }
     #filter-close--a{
         position: relative;
         left:-40px;
     }
     #filter-close {
-        left: 0px;
+        left: 40px;
     }
 
     .filter-icon {
-        left: -40px;
+        left: 0px;
     }
 
     .filter-r {
+        width:110px;
         position: relative;
-        left: 280px;
+        left: 240px;
         top: -173px;
+    
     }
 
     .result-container {
@@ -321,7 +324,7 @@ a {
             height: 30px;
             width: 130px;
             border-radius: 3px;
-            background-color: #FFFFFF;
+            background-color: $whiteColor;
             // right: 50px;
             -webkit-box-shadow: -8px -5px 57px -8px rgba(97, 97, 97, 1);
             -moz-box-shadow: -8px -5px 57px -8px rgba(97, 97, 97, 1);
