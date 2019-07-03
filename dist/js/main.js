@@ -76,8 +76,8 @@ function closeFilter() {
     var retrievedObject = localStorage.getItem('dataSet');
     var x = JSON.parse(retrievedObject);
     var i = 0;
-
-    for (i = 0; i < x.length; i++) {
+    if (window.localStorage.length != 0)
+    {for (i = 0; i < x.length; i++) {
         var imp = 1,
             arc = 1,
             com = 1;
@@ -95,7 +95,7 @@ function closeFilter() {
         }
         var card_element = '<div class="result-container"> <img src="/dist/images/baseline-more_vert-24px.svg"  alt="' + x[i].TaskName + '" id="mob-menu"  onclick="showMenu(this)"> <div class="menu-s" id="' + x[i].TaskName + '"><img src="/dist/images/outline-close-24px.svg" id="close-mob"  alt="' + x[i].TaskName + '" onclick="closeMenuMob(this)" ><div class="icons-item-m"> <img id="completed-m" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/dist/images/outline-done-24px.svg"> <img id="priority-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/dist/images/outline-star_border-24px (1).svg"> <img id="archive-m" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/dist/images/outline-archive-24px.svg"> </div></div><div class="title-item"> <div class="task-color" style="background-color:' + x[i].TaskColor + '"></div> <h3>' + x[i].TaskName + '</h3> <p id="t-desc">' + x[i].TaskDec + '</p> </div> <div class="date-item"> <p>Due Date: ' + x[i].DueDate + '</p> </div> <div class="icons-item" > <img id="completed" alt="' + x[i].TaskName + '" class="sIcon" onclick="colorCompleted(this)" style="filter:grayscale(' + com + ')" src="/dist/images/outline-done-24px.svg"> <img id="priority" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorImportant(this)" style="filter:grayscale(' + imp + ')" src="/dist/images/outline-star_border-24px (1).svg"> <img id="archive" class="sIcon" alt="' + x[i].TaskName + '" onclick="colorArchived(this)" style="filter:grayscale(' + arc + ')" src="/dist/images/outline-archive-24px.svg"> </div> <div id="sep-mob"></div> </div>'
         $("#search-re").append(card_element);
-    }
+    }}
 }
 
 

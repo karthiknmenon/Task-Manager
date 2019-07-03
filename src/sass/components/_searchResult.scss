@@ -255,28 +255,31 @@ a {
 
     #filter {
         top: -2px;
-        left: 148px;
+        left: 25px;
     }
-
+    #a-open{
+        position: relative;
+        left:-70px;
+    }
     #f-text {
         font-size: 14px;
-        left: 175px;
+        left: 20px;
     }
-
+    #filter-close--a{
+        position: relative;
+        left:-40px;
+    }
     #filter-close {
-        left: 103px;
+        left: 0px;
     }
 
     .filter-icon {
-        left: 105px;
+        left: -40px;
     }
 
     .filter-r {
         position: relative;
-        bottom: 120px;
-        right: 57px;
-        position: relative;
-        left: 130px;
+        left: 280px;
         top: -173px;
     }
 
