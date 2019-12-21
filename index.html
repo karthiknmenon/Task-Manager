@@ -31,13 +31,13 @@
 
             <!-- search-form -->
             <div id="search-holder">
-                
+
             </div>
             <form id="search-form" autocomplete="OFF">
-                   
+
 
                 <label for="search-task">
-                        <img src="/dist/images/search-solid.svg" id="search-icon">
+                    <img src="/dist/images/search-solid.svg" id="search-icon">
                     <input type="text" name="search-task" placeholder="Search Tasks Here" onkeyup="search()"
                         id="tSearch" onfocus="hide()" onblur="show()">
                 </label>
@@ -48,7 +48,8 @@
                 <div>
                     <a id="a-open" onclick="showFilter()"><img src="/dist/images/outline-filter_list-24px (1).svg"
                             id="filter"></a>
-                    <a id="filter-close--a" onclick="closeFilter()"><img src="/dist/images/outline-close-24px.svg" id="filter-close"></a>
+                    <a id="filter-close--a" onclick="closeFilter()"><img src="/dist/images/outline-close-24px.svg"
+                            id="filter-close"></a>
                 </div>
                 <div class="filter-icon">
                     <a onclick="filterDone()"><img src="/dist/images/outline-done-24px.svg" class="completed-f"
@@ -130,6 +131,18 @@
     </script>
     <!-- main JS file -->
     <script type="text/javascript" src="/dist/js/main-min.js"></script>
+    <!-- manifest script -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("Will the service worker register?");
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (reg) {
+                    console.log("Yes, it did.");
+                }).catch(function (err) {
+                    console.log("No it didn't. This happened:", err)
+                });
+        }
+    </script>
 </body>
 
 </html>
