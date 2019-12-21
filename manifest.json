@@ -1,0 +1,21 @@
+{
+    "short_name": "ManageIT",
+    "name": "MangeIT - Mange all your tasks",
+    "icons": [
+      {
+        "src": "/dist/images/logo-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/dist/images/logo-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "https://taskmanager.karthikmenon.me/",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/maps/",
+    "theme_color": "#3367D6"
+  }
